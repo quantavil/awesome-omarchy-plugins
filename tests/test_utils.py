@@ -7,6 +7,7 @@ from utils import (
     format_count,
     format_stars,
     github_slug,
+    is_dead,
     is_excluded,
     normalize_plugin_entry,
     parse_repo_url,
@@ -122,6 +123,39 @@ class TestSortKeys:
         assert [r["stars"] for r in ordered] == [50, 5]
 
 
+class TestIsDead:
+    def test_explicit_dead_flag(self):
+        assert is_dead({"dead": True, "stars": 100, "last_updated": "2026-09-01"})
+
+    def test_archived_is_dead(self):
+        assert is_dead({"archived": True, "stars": 500, "last_updated": "2026-09-01"})
+
+    def test_na_last_updated_is_dead(self):
+        assert is_dead({"last_updated": "N/A", "stars": 10})
+        assert is_dead({"last_updated": None, "stars": 10})
+
+    def test_abandoned_under_three_stars(self):
+        # >180 days old and 0, 1, or 2 stars -> DEAD
+        import datetime
+        fixed_today = datetime.date(2026, 9, 8)
+        assert is_dead({"stars": 0, "last_updated": "2025-01-01"}, today=fixed_today)
+        assert is_dead({"stars": 1, "last_updated": "2025-01-01"}, today=fixed_today)
+        assert is_dead({"stars": 2, "last_updated": "2025-01-01"}, today=fixed_today)
+
+    def test_abandoned_survives_with_three_or_more_stars(self):
+        import datetime
+        fixed_today = datetime.date(2026, 9, 8)
+        # >180 days old but has >= 3 stars -> NOT dead
+        assert not is_dead({"stars": 3, "last_updated": "2025-01-01"}, today=fixed_today)
+        assert not is_dead({"stars": 10, "last_updated": "2025-01-01"}, today=fixed_today)
+
+    def test_fresh_repo_survives_with_zero_stars(self):
+        import datetime
+        fixed_today = datetime.date(2026, 9, 8)
+        # Recent activity (<180 days) even with 0 stars -> NOT dead
+        assert not is_dead({"stars": 0, "last_updated": "2026-09-01"}, today=fixed_today)
+
+
 class TestExclusions:
     def test_healthy_plugin_listed(self):
         assert not is_excluded({"stars": 0, "last_updated": "2026-09-01", "archived": False})
@@ -132,6 +166,11 @@ class TestExclusions:
     def test_dead_repo_always_excluded(self):
         assert is_excluded({"stars": 10, "last_updated": "N/A", "archived": False})
         assert is_excluded({"stars": 100, "last_updated": "2026-09-01", "dead": True})
+
+    def test_abandoned_repo_excluded(self):
+        import datetime
+        fixed_today = datetime.date(2026, 9, 8)
+        assert is_excluded({"stars": 1, "last_updated": "2025-01-01"}, today=fixed_today)
 
     def test_min_stars_opt_in(self):
         plugin = {"stars": 3, "last_updated": "2026-09-01", "archived": False}

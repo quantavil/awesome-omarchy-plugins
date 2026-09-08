@@ -302,6 +302,30 @@ def plugin_age_days(plugin: Dict[str, Any], today: Optional[datetime.date] = Non
     return (today - pushed).days
 
 
+def is_dead(plugin: Dict[str, Any], today: Optional[datetime.date] = None) -> bool:
+    """Decide whether a plugin repository is considered dead.
+
+    A repository is declared dead if:
+    1. Explicitly dead or unreachable (HTTP 404/410, private, or last_updated is N/A)
+    2. Maintainer archived it on GitHub (archived is True)
+    3. Compound abandonment: untouched in >6 months (180 days) AND has <3 stars (0, 1, or 2 stars)
+    """
+    if plugin.get("dead"):
+        return True
+    if plugin.get("archived"):
+        return True
+    if (plugin.get("last_updated") or "N/A") == "N/A":
+        return True
+
+    # Compound abandonment: untouched in >180 days and fewer than 3 stars
+    age = plugin_age_days(plugin, today=today)
+    stars = int(plugin.get("stars", 0) or 0)
+    if age is not None and age > 180 and stars < 3:
+        return True
+
+    return False
+
+
 def is_excluded(
     plugin: Dict[str, Any],
     min_stars: int = 0,
@@ -310,15 +334,10 @@ def is_excluded(
 ) -> bool:
     """Decide whether a plugin is hidden from generated lists (kept in JSON).
 
-    Always excluded: archived repos and confirmed dead repos (HTTP 404/410
-    or deleted/renamed/private — `last_updated` stays `N/A`).
-    Opt-in: `min_stars` drops low-star entries, `stale_days` (> 0) drops
-    entries not pushed within that window. Stars are off by default because
-    they punish brand-new plugins; staleness is off by default (0 = disabled).
+    Always excluded: dead repos (404/archived/abandoned >180 days with <3 stars).
+    Opt-in: additional custom min_stars or stale_days cutoffs.
     """
-    if plugin.get("archived") or plugin.get("dead"):
-        return True
-    if (plugin.get("last_updated") or "N/A") == "N/A":
+    if is_dead(plugin, today=today):
         return True
     try:
         if int(plugin.get("stars", 0)) < min_stars:

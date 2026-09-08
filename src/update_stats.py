@@ -30,6 +30,7 @@ from utils import (  # noqa: E402
     get_github_headers,
     get_github_token,
     github_slug,
+    is_dead,
     is_excluded,
     load_plugins,
     normalize_plugin_entry,
@@ -466,9 +467,11 @@ async def main_async(args: argparse.Namespace) -> None:
     token = get_github_token(args.token)
 
     if not args.render_only:
-        # Group by unique repo
+        # Group by unique repo (skipping permanently dead/abandoned repos to save API quota)
         unique_repos: Dict[str, Dict[str, Any]] = {}
         for plugin in plugins:
+            if is_dead(plugin):
+                continue
             key = f"{plugin['owner'].lower()}/{plugin['repo'].lower()}"
             unique_repos.setdefault(
                 key,
@@ -524,6 +527,11 @@ async def main_async(args: argparse.Namespace) -> None:
                     plugin[field] = stats[field]
             if not plugin.get("description") and stats.get("repo_description"):
                 plugin["description"] = stats["repo_description"]
+
+        # Re-evaluate dead status after merging live stats
+        for plugin in plugins:
+            if is_dead(plugin):
+                plugin["dead"] = True
 
     # Persist and regenerate markdown
     regenerate_catalogs(
