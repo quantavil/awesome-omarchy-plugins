@@ -28,6 +28,7 @@ from rich.table import Table
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from utils import (  # noqa: E402
+    BY_UPDATED_PATH,
     PLUGIN_CATEGORIES,
     README_PATH,
     atomic_write_text,
@@ -179,18 +180,20 @@ def generate_markdown_list(plugins: List[Dict[str, Any]], grouped: bool = True) 
     return "\n".join(content_sections)
 
 
-def update_readme(markdown_list: str, total_count: int) -> bool:
-    """Update README.md with generated markdown content between markers atomically."""
-    if not README_PATH.exists():
-        console.print(f"[red]Error: {README_PATH} not found![/red]")
+def update_readme(
+    markdown_list: str, total_count: int, path: Path = README_PATH
+) -> bool:
+    """Update a catalog markdown file with generated content between markers atomically."""
+    if not path.exists():
+        console.print(f"[red]Error: {path} not found![/red]")
         return False
 
-    with open(README_PATH, "r", encoding="utf-8") as f:
+    with open(path, "r", encoding="utf-8") as f:
         content = f.read()
 
     if START_MARKER not in content or END_MARKER not in content:
         console.print(
-            f"[red]Error: Markers {START_MARKER} and {END_MARKER} not found in {README_PATH}[/red]"
+            f"[red]Error: Markers {START_MARKER} and {END_MARKER} not found in {path}[/red]"
         )
         return False
 
@@ -216,7 +219,7 @@ def update_readme(markdown_list: str, total_count: int) -> bool:
     new_content = re.sub(COUNT_MARKER_REGEX, count_replacement, new_content)
     new_content = re.sub(UPDATED_MARKER_REGEX, updated_replacement, new_content)
 
-    atomic_write_text(README_PATH, new_content)
+    atomic_write_text(path, new_content)
     return True
 
 
@@ -433,17 +436,33 @@ async def main_async(args: argparse.Namespace) -> None:
     if args.dry_run:
         console.print("\n[bold]Generated Markdown Output:[/bold]\n")
         print(markdown_list)
+        return
+
+    if update_readme(markdown_list, len(normalized)):
+        console.print(
+            f"[bold green]✓ Successfully updated README.md with "
+            f"{len(normalized)} plugins![/bold green]"
+        )
     else:
-        if update_readme(markdown_list, len(normalized)):
-            console.print(
-                f"[bold green]✓ Successfully updated README.md with "
-                f"{len(normalized)} plugins![/bold green]"
-            )
-        else:
-            console.print(
-                "[yellow]Tip: Ensure README.md exists with markers "
-                "<!-- PLUGINS_LIST_START --> and <!-- PLUGINS_LIST_END -->[/yellow]"
-            )
+        console.print(
+            "[yellow]Tip: Ensure README.md exists with markers "
+            "<!-- PLUGINS_LIST_START --> and <!-- PLUGINS_LIST_END -->[/yellow]"
+        )
+
+    # Second view: same catalog, each category sorted by most recently updated.
+    updated_key, updated_reverse = get_sort_key("updated")
+    by_updated = sorted(normalized, key=updated_key, reverse=updated_reverse)
+    by_updated_markdown = generate_markdown_list(by_updated, grouped=not args.flat)
+    if update_readme(by_updated_markdown, len(by_updated), path=BY_UPDATED_PATH):
+        console.print(
+            f"[bold green]✓ Successfully updated BY_UPDATED.md with "
+            f"{len(by_updated)} plugins![/bold green]"
+        )
+    else:
+        console.print(
+            "[yellow]Tip: Ensure BY_UPDATED.md exists with markers "
+            "<!-- PLUGINS_LIST_START --> and <!-- PLUGINS_LIST_END -->[/yellow]"
+        )
 
 
 def main() -> None:

@@ -13,6 +13,8 @@
   A curated directory of awesome Omarchy plugins, widgets, and shells with automated live stats.
   Derived from the <a href="https://github.com/omacom/omarchy-plugin-marketplace">omarchy-plugin-marketplace registry</a>,
   enriched with live ⭐ stars, 🍴 forks, and last-updated dates from GitHub.
+  <br />
+  Switch view: <strong>⭐ sorted by stars</strong> · <a href="BY_UPDATED.md">🕒 sorted by last updated</a>
 </p>
 
 ---

@@ -20,6 +20,7 @@ from urllib.parse import urlparse
 ROOT_DIR = Path(__file__).resolve().parent.parent
 PLUGINS_JSON_PATH = ROOT_DIR / "plugins.json"
 README_PATH = ROOT_DIR / "README.md"
+BY_UPDATED_PATH = ROOT_DIR / "BY_UPDATED.md"
 
 # Upstream marketplace snapshot this catalog is derived from.
 REGISTRY_URL = (

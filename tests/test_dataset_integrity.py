@@ -3,7 +3,13 @@
 import json
 import re
 
-from utils import PLUGIN_CATEGORIES, PLUGINS_JSON_PATH, README_PATH, github_slug
+from utils import (
+    BY_UPDATED_PATH,
+    PLUGIN_CATEGORIES,
+    PLUGINS_JSON_PATH,
+    README_PATH,
+    github_slug,
+)
 
 
 class TestDatasetIntegrity:
@@ -116,3 +122,47 @@ class TestReadmeSynchronization:
                 assert expected_anchor in content, (
                     f"TOC link for '{category}' mismatches GFM anchor '{expected_anchor}'"
                 )
+
+
+class TestSecondSortView:
+    def test_by_updated_markers_exist(self):
+        assert BY_UPDATED_PATH.exists(), "BY_UPDATED.md must exist"
+        content = BY_UPDATED_PATH.read_text(encoding="utf-8")
+        assert "<!-- PLUGINS_LIST_START -->" in content
+        assert "<!-- PLUGINS_LIST_END -->" in content
+        assert "<!-- TOTAL_PLUGINS_COUNT -->" in content
+        assert "<!-- LAST_UPDATED -->" in content
+
+    def test_by_updated_badge_count_matches_dataset(self):
+        with open(PLUGINS_JSON_PATH, "r", encoding="utf-8") as f:
+            plugins = json.load(f)
+
+        content = BY_UPDATED_PATH.read_text(encoding="utf-8")
+        match = re.search(
+            r"<!-- TOTAL_PLUGINS_COUNT -->.*?(\d+).*?<!-- /TOTAL_PLUGINS_COUNT -->",
+            content,
+        )
+        assert match is not None, "TOTAL_PLUGINS_COUNT badge marker not found in BY_UPDATED.md"
+        badge_count = int(match.group(1))
+        assert badge_count == len(plugins), (
+            f"BY_UPDATED count badge ({badge_count}) does not match plugins.json ({len(plugins)})"
+        )
+
+    def test_views_cross_link(self):
+        readme = README_PATH.read_text(encoding="utf-8")
+        by_updated = BY_UPDATED_PATH.read_text(encoding="utf-8")
+        assert "BY_UPDATED.md" in readme, "README.md must link to BY_UPDATED.md"
+        assert "README.md" in by_updated, "BY_UPDATED.md must link back to README.md"
+
+    def test_all_plugin_repos_in_by_updated(self):
+        with open(PLUGINS_JSON_PATH, "r", encoding="utf-8") as f:
+            plugins = json.load(f)
+
+        content = BY_UPDATED_PATH.read_text(encoding="utf-8").lower()
+        seen_repos = set()
+        for p in plugins:
+            repo_url = p.get("repo_url", "").lower()
+            if repo_url in seen_repos:
+                continue
+            seen_repos.add(repo_url)
+            assert repo_url in content, f"Repository {p.get('repo_url')} missing from BY_UPDATED.md"

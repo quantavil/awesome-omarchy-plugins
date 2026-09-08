@@ -1,5 +1,6 @@
 """Unit tests for shared utilities."""
 
+from update_stats import get_sort_key
 from utils import (
     PLUGIN_CATEGORIES,
     format_count,
@@ -80,3 +81,26 @@ class TestNormalizePluginEntry:
         assert "Widgets" in PLUGIN_CATEGORIES
         assert "Kids" in PLUGIN_CATEGORIES
         assert len(PLUGIN_CATEGORIES) == 9
+
+
+class TestSortKeys:
+    def test_updated_sort_orders_by_date_then_stars(self):
+        key, reverse = get_sort_key("updated")
+        assert reverse is True
+        rows = [
+            {"last_updated": "2026-01-01", "stars": 999},
+            {"last_updated": "2026-09-01", "stars": 1},
+            {"last_updated": "N/A", "stars": 5000},
+        ]
+        ordered = sorted(rows, key=key, reverse=reverse)
+        assert [r["last_updated"] for r in ordered] == ["2026-09-01", "2026-01-01", "N/A"]
+
+    def test_stars_sort_orders_by_stars(self):
+        key, reverse = get_sort_key("stars")
+        assert reverse is True
+        rows = [
+            {"stars": 5, "forks": 0, "last_updated": "2026-09-01"},
+            {"stars": 50, "forks": 0, "last_updated": "2026-01-01"},
+        ]
+        ordered = sorted(rows, key=key, reverse=reverse)
+        assert [r["stars"] for r in ordered] == [50, 5]
