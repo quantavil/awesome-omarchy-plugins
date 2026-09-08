@@ -1,0 +1,21 @@
+name: ✏️ Update Plugin Metadata
+description: Fix a plugin description, category, or repository URL.
+title: "[Metadata Update]: <Plugin Name>"
+labels: ["metadata-update", "triage"]
+body:
+  - type: input
+    id: repo_url
+    attributes:
+      label: Repository URL
+      description: The current repository URL of the plugin to update.
+      placeholder: https://github.com/owner/repository
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What should change?
+      description: Describe the correction (description, category, tags, new URL, etc.).
+    validations:
+      required: true

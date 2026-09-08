@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📖 Contributing Guidelines
+    url: https://github.com/quantavil/awesome-omarchy-plugins/blob/main/CONTRIBUTING.md
+    about: Read our contribution guidelines and guidelines for adding plugins.
+  - name: 🚀 Submit a Pull Request
+    url: https://github.com/quantavil/awesome-omarchy-plugins/pulls
+    about: Direct Pull Requests with plugins.json changes are fast-tracked!
