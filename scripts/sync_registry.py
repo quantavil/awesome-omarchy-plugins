@@ -17,10 +17,9 @@ import sys
 import urllib.request
 from pathlib import Path
 from typing import Any, Dict, List
+from urllib.parse import urlparse
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
-
-from urllib.parse import urlparse
 
 from utils import (  # noqa: E402
     REGISTRY_URL,
@@ -44,9 +43,7 @@ def build_skeleton(registry: Dict[str, Any]) -> List[Dict[str, Any]]:
     for source in registry.get("sources", []):
         repo_url = source["repo"].rstrip("/")
         parts = urlparse(repo_url).path.strip("/").split("/")
-        owner, repo = (
-            (parts[0], parts[1].removesuffix(".git")) if len(parts) >= 2 else ("?", "?")
-        )
+        owner, repo = (parts[0], parts[1].removesuffix(".git")) if len(parts) >= 2 else ("?", "?")
         added = source.get("addedAt", "")
         stype = source.get("type", "plugin-source")
         if stype == "suite" and "catalog" in source:
@@ -77,8 +74,8 @@ def build_skeleton(registry: Dict[str, Any]) -> List[Dict[str, Any]]:
                             "plugin_id": pid,
                             "owner": owner,
                             "repo": repo,
-                            "name": repo,
-                            "description": "",
+                            "name": plugin.get("name") or pid or repo,
+                            "description": plugin.get("description", ""),
                             "category": plugin.get("category", "Other"),
                             "tags": plugin.get("tags", []),
                             "repo_url": repo_url,
@@ -99,15 +96,36 @@ def main() -> None:
     print(f"Fetching registry from {args.registry_url} ...")
     registry = fetch_registry(args.registry_url)
     skeleton = build_skeleton(registry)
+
+    if not skeleton:
+        print("Error: Upstream registry returned empty skeleton! Aborting sync.", file=sys.stderr)
+        sys.exit(1)
+
     print(f"Upstream: {len(registry.get('sources', []))} sources -> {len(skeleton)} plugin entries")
 
-    # Preserve enriched stats for entries that still exist (keyed by plugin_id).
     existing: Dict[str, Dict[str, Any]] = {p["plugin_id"]: p for p in load_plugins()}
+
+    # Safety check: prevent catastrophic catalog truncation on upstream outages
+    if existing and len(skeleton) < len(existing) * 0.7:
+        print(
+            f"Error: Upstream returned {len(skeleton)} entries, "
+            f"but existing catalog has {len(existing)}! "
+            "Aborting sync to prevent catalog destruction.",
+            file=sys.stderr,
+        )
+        sys.exit(1)
+
     preserved = added = 0
     merged: List[Dict[str, Any]] = []
     for entry in skeleton:
         old = existing.get(entry["plugin_id"])
-        if old and old.get("stars", 0) > 0:
+        # Preserve enriched stats if valid last_updated, description, or stars exist
+        is_enriched = old and (
+            old.get("last_updated") not in (None, "", "N/A")
+            or old.get("stars", 0) > 0
+            or old.get("description")
+        )
+        if is_enriched:
             for key in (
                 "stars",
                 "forks",
@@ -116,12 +134,15 @@ def main() -> None:
                 "license",
                 "language",
                 "archived",
+                "dead",
                 "open_issues",
                 "default_branch",
                 "description",
                 "name",
+                "category",
+                "tags",
             ):
-                if old.get(key) not in (None, "", 0, "N/A", "Unknown"):
+                if old.get(key) not in (None, "", 0, "N/A", "Unknown", []):
                     entry[key] = old[key]
                 elif key in ("description", "name") and old.get(key):
                     entry[key] = old[key]
@@ -130,11 +151,7 @@ def main() -> None:
             added += 1
         merged.append(entry)
 
-    retired = [
-        pid
-        for pid in existing
-        if pid not in {e["plugin_id"] for e in skeleton}
-    ]
+    retired = [pid for pid in existing if pid not in {e["plugin_id"] for e in skeleton}]
     print(
         f"Preserved stats for {preserved} entries, "
         f"{added} new/unenriched, {len(retired)} removed upstream"

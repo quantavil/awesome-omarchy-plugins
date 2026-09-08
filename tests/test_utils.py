@@ -3,6 +3,7 @@
 from update_stats import get_sort_key
 from utils import (
     PLUGIN_CATEGORIES,
+    atomic_write_text,
     format_count,
     format_stars,
     github_slug,
@@ -57,6 +58,20 @@ class TestParseRepoUrl:
     def test_short_slug(self):
         owner, repo, host = parse_repo_url("owner/my-plugin")
         assert (owner, repo, host) == ("owner", "my-plugin", "github.com")
+
+    def test_ssh_protocol_prefix(self):
+        owner, repo, host = parse_repo_url("ssh://git@github.com/owner/my-plugin.git")
+        assert (owner, repo, host) == ("owner", "my-plugin", "github.com")
+
+    def test_schemeless_url(self):
+        owner, repo, host = parse_repo_url("github.com/owner/my-plugin")
+        assert (owner, repo, host) == ("owner", "my-plugin", "github.com")
+
+    def test_repo_named_src_or_archive(self):
+        owner, repo, host = parse_repo_url("https://github.com/my-org/src")
+        assert (owner, repo, host) == ("my-org", "src", "github.com")
+        owner2, repo2, host2 = parse_repo_url("https://github.com/archive/dweb-mirror")
+        assert (owner2, repo2, host2) == ("archive", "dweb-mirror", "github.com")
 
     def test_invalid(self):
         assert parse_repo_url("not-a-url") == (None, None, None)
@@ -116,6 +131,7 @@ class TestExclusions:
 
     def test_dead_repo_always_excluded(self):
         assert is_excluded({"stars": 10, "last_updated": "N/A", "archived": False})
+        assert is_excluded({"stars": 100, "last_updated": "2026-09-01", "dead": True})
 
     def test_min_stars_opt_in(self):
         plugin = {"stars": 3, "last_updated": "2026-09-01", "archived": False}
@@ -127,3 +143,31 @@ class TestExclusions:
         assert not is_excluded(plugin)
         assert is_excluded(plugin, stale_days=30)
         assert not is_excluded(plugin, stale_days=9999)
+
+
+class TestAtomicWrite:
+    def test_successful_write(self, tmp_path):
+        target = tmp_path / "test.txt"
+        atomic_write_text(target, "hello world")
+        assert target.exists()
+        assert target.read_text(encoding="utf-8") == "hello world"
+
+    def test_cleanup_on_failure(self, tmp_path, monkeypatch):
+        target = tmp_path / "sub" / "fail.txt"
+        target.parent.mkdir(parents=True)
+
+        def mock_replace(src, dst):
+            raise OSError("Simulated replace failure")
+
+        import os
+
+        monkeypatch.setattr(os, "replace", mock_replace)
+
+        import pytest
+
+        with pytest.raises(OSError, match="Simulated replace failure"):
+            atomic_write_text(target, "content")
+
+        # Verify no temp files were leaked in target.parent
+        leftover = list(target.parent.glob("tmp*"))
+        assert len(leftover) == 0, f"Leaked temporary files: {leftover}"

@@ -99,7 +99,7 @@
 - **[omarchy-cpu-usage](https://github.com/egoist/omarchy-cpu-usage)** : CPU usage bar widget and iStat-inspired system panel for Omarchy
   - ⭐ **12** · 🍴 0 · Last updated: `2026-08-29` · `QML` · `MIT` · `dev.egoist.cpu-usage`
 - **[meteobar](https://github.com/mryll/meteobar)** : Weather forecasts from Open-Meteo for Waybar and the Omarchy shell. No API key. Rust, AUR.
-  - ⭐ **11** · 🍴 3 · Last updated: `2026-09-07` · `Rust` · `MIT` · `mryll.meteobar`
+  - ⭐ **11** · 🍴 4 · Last updated: `2026-09-07` · `Rust` · `MIT` · `mryll.meteobar`
 - **[prettyzap](https://github.com/prettyletto/prettyzap)** : Omarchy plugin.
   - ⭐ **10** · 🍴 5 · Last updated: `2026-09-04` · `QML` · `MIT` · `prettyletto.prettyzap`
 - **[omarchy-mpris](https://github.com/crmne/omarchy-mpris)** : Media controls for the Omarchy bar with album art, now-playing metadata, and playback buttons
@@ -204,6 +204,8 @@
   - ⭐ **4** · 🍴 1 · Last updated: `2026-09-08` · `QML` · `MIT` · `io.github.joeyvigil.taskbar`
 - **[so.den](https://github.com/SaifOmar/so.den)** : Windows-style overflow flyout for Omarchy — tuck away tray apps & bar plugins behind one chevron
   - ⭐ **4** · 🍴 1 · Last updated: `2026-09-04` · `QML` · `MIT` · `so.den`
+- **[auto-workspace](https://github.com/yesheytenzin/auto-workspace)** : Auto-launch apps on workspaces at boot for Omarchy — assign YouTube to WS1, Code to WS2, etc. Multiple apps per workspace, silent launch.
+  - ⭐ **4** · 🍴 1 · Last updated: `2026-09-03` · `QML` · `MIT` · `tenzin.auto-workspace`
 - **[omarchy-chromecast](https://github.com/HackXIt/omarchy-chromecast)** : Omarchy Quattro Chromecast bar plugin backed by Chromium Cast/CDP
   - ⭐ **4** · 🍴 1 · Last updated: `2026-08-30` · `JavaScript` · `MIT` · `hackxit.chromecast`
 - **[omarchy-apple-tv-remote](https://github.com/teevans/omarchy-apple-tv-remote)** : Keyboard-first Apple TV remote for the Omarchy Quattro bar
@@ -212,8 +214,6 @@
   - ⭐ **4** · 🍴 1 · Last updated: `2026-08-20` · `QML` · `MIT` · `my.cava`
 - **[omarchy-warp](https://github.com/tobi/omarchy-warp)** : Cloudflare WARP bar widget for Omarchy
   - ⭐ **4** · 🍴 1 · Last updated: `2026-08-15` · `QML` · `MIT` · `local.warp`
-- **[auto-workspace](https://github.com/yesheytenzin/auto-workspace)** : Auto-launch apps on workspaces at boot for Omarchy — assign YouTube to WS1, Code to WS2, etc. Multiple apps per workspace, silent launch.
-  - ⭐ **4** · 🍴 0 · Last updated: `2026-09-03` · `QML` · `MIT` · `tenzin.auto-workspace`
 - **[omarchy-norvpn-plugin](https://github.com/guiestrela/omarchy-norvpn-plugin)** : Omarchy plugin.
   - ⭐ **4** · 🍴 0 · Last updated: `2026-08-31` · `QML` · `MIT` · `io.github.guiestrela.nordvpn`
 - **[videocorner](https://github.com/brianspragge/videocorner)** : Omarchy Quattro plugin for instant youtube video search and keybind controls for a mini player around main working area.
@@ -1611,10 +1611,10 @@
   - ⭐ **184** · 🍴 48 · Last updated: `2026-09-07` · `JavaScript` · `MIT` · `omamail`
 - **[hass](https://github.com/konradk/hass)** : Home Assistant Quickshell plugin for Omarchy 4
   - ⭐ **29** · 🍴 12 · Last updated: `2026-09-03` · `QML` · `MIT` · `hass`
+- **[quickshell-screentime-plugin](https://github.com/ax1g/quickshell-screentime-plugin)** : Know where your time goes — live per-app screen time in your Omarchy bar with a donut breakdown, 13-week trend, yearly retro, and usage insights
+  - ⭐ **28** · 🍴 9 · Last updated: `2026-09-07` · `JavaScript` · `MIT` · `agx.screen-time`
 - **[omarchy-voxtype-enhance](https://github.com/iamcheyan/omarchy-voxtype-enhance)** : An Omarchy Voxtype enhancement plugin with automatic offline model downloads, multilingual voice-input settings, and terminal-aware universal paste.
   - ⭐ **28** · 🍴 3 · Last updated: `2026-09-05` · `Python` · `MIT` · `hancore.voxtype-enhance`
-- **[quickshell-screentime-plugin](https://github.com/ax1g/quickshell-screentime-plugin)** : Know where your time goes — live per-app screen time in your Omarchy bar with a donut breakdown, 13-week trend, yearly retro, and usage insights
-  - ⭐ **27** · 🍴 9 · Last updated: `2026-09-07` · `JavaScript` · `MIT` · `agx.screen-time`
 - **[omaconnect](https://github.com/jitendradara12/omaconnect)** : Omarchy plugin for kde-connect integration
   - ⭐ **26** · 🍴 6 · Last updated: `2026-08-30` · `QML` · `MIT` · `omaconnect`
 - **[omarchy-shell-plugins](https://github.com/bjarneo/omarchy-shell-plugins)** : Personal Omarchy shell plugins, including the Omni command palette.
@@ -1633,10 +1633,10 @@
   - ⭐ **17** · 🍴 5 · Last updated: `2026-08-24` · `Python` · `MIT` · `b.everything`
 - **[hypr-type-flow-C](https://github.com/Liran-shternberg/hypr-type-flow-C)** : A minimal C daemon that remembers each window's keyboard layout and restores it atomically on focus change. Made for Hyprland, tailor-made for Omarchy
   - ⭐ **17** · 🍴 1 · Last updated: `2026-08-18` · `C` · `MIT` · `hypr-type-flow`
+- **[sync-calendar-omarchy](https://github.com/promaaa/sync-calendar-omarchy)** : Google/Apple, etc. calendar plugin for Omarchy
+  - ⭐ **13** · 🍴 4 · Last updated: `2026-09-08` · `Python` · `MIT` · `promaa.clock`
 - **[qs-bitwarden-cli](https://github.com/Elevate08/qs-bitwarden-cli)** : Bitwarden on quickshell with keyboard navigation and a goal to capture every feature from the browser extension
   - ⭐ **13** · 🍴 4 · Last updated: `2026-09-06` · `JavaScript` · `MIT` · `io.github.elevate08.qs-bitwarden-cli`
-- **[sync-calendar-omarchy](https://github.com/promaaa/sync-calendar-omarchy)** : Google/Apple, etc. calendar plugin for Omarchy
-  - ⭐ **13** · 🍴 4 · Last updated: `2026-09-03` · `Python` · `MIT` · `promaa.clock`
 - **[omarchy-downloads](https://github.com/jankeesvw/omarchy-downloads)** : Recent downloads in the Omarchy bar, in a window you can drag files out of
   - ⭐ **13** · 🍴 3 · Last updated: `2026-09-07` · `QML` · `MIT` · `jankeesvw.downloads`
 - **[omarchy-dictionary](https://github.com/tristonarmstrong/omarchy-dictionary)** : Look up English word definitions from the Free Wiktionary API directly in the Omarchy bar.
@@ -1861,6 +1861,8 @@
   - ⭐ **2** · 🍴 0 · Last updated: `2026-09-07` · `Shell` · `MIT` · `max.scene`
 - **[omarchy-queue](https://github.com/dobrician/omarchy-queue)** : AI-assisted edge inbox for Omarchy Quattro
   - ⭐ **2** · 🍴 0 · Last updated: `2026-09-07` · `JavaScript` · `MIT` · `dc.q`
+- **[omarchy-cockpit](https://github.com/Danubii/omarchy-cockpit)** : Experimental Omarchy plugin to save, preview and restore Dwindle window layouts
+  - ⭐ **2** · 🍴 0 · Last updated: `2026-09-07` · `Python` · `MIT` · `zeq0r.cockpit`
 - **[sparks](https://github.com/ollywarren/sparks)** : Omarchy Plugin for capturing those spur of the moment ideas and thoughts to action later.
   - ⭐ **2** · 🍴 0 · Last updated: `2026-09-06` · `QML` · `MIT` · `ollywarren.sparks`
 - **[omarchy-google-tasks](https://github.com/CJKaufman/omarchy-google-tasks)** : Easy way to see, create & complete Google Tasks with a bar widget
@@ -1975,8 +1977,6 @@
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-07` · `QML` · `MIT` · `bibek.readest`
 - **[omarchy-teams](https://github.com/janrenz/omarchy-teams)** : Microsoft Teams chats and channels for the Omarchy shell: a bar icon and a window of its own.
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-07` · `QML` · `MIT` · `janrenz.omarchy.teams`
-- **[omarchy-cockpit](https://github.com/Danubii/omarchy-cockpit)** : Experimental Omarchy plugin to save, preview and restore Dwindle window layouts
-  - ⭐ **1** · 🍴 0 · Last updated: `2026-09-07` · `Python` · `MIT` · `zeq0r.cockpit`
 - **[omarchy-screencast-keys](https://github.com/leomoon-studios/omarchy-screencast-keys)** : Omarchy plugin.
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-06` · `Python` · `MIT` · `leomoon-studios.omarchy-screencast-keys`
 - **[omarchy-menu-plus](https://github.com/CarlOscarHMJ/omarchy-menu-plus)** : Omarchy's built-in menu plus live file search (.query) and a calculator (=expr)
@@ -3468,7 +3468,7 @@
 - **[omarchy-pods](https://github.com/thisisgm/omarchy-pods)** : AirPods in the Omarchy bar: per-pod and case battery, listening mode, adaptive noise level, conversation awareness, one-bud ANC and ear detection.
   - ⭐ **185** · 🍴 21 · Last updated: `2026-08-26` · `C++` · `MIT` · `io.github.thisisgm.omapods`
 - **[omarchy-hyprmoncfg](https://github.com/crmne/omarchy-hyprmoncfg)** : Omarchy monitor profiles with automatic switching on monitor hotplug
-  - ⭐ **81** · 🍴 9 · Last updated: `2026-09-06` · `QML` · `MIT` · `crmne.hyprmoncfg`
+  - ⭐ **82** · 🍴 9 · Last updated: `2026-09-06` · `QML` · `MIT` · `crmne.hyprmoncfg`
 - **[omarchy-screens](https://github.com/IM0001GT/omarchy-screens)** : Snap-to-edge monitor layout for Omarchy: HDR, VRR, refresh, and hardware-aware profiles in the bar.
   - ⭐ **20** · 🍴 6 · Last updated: `2026-08-25` · `Python` · `im0001gt.screens`
 - **[omavoice](https://github.com/gigasolo/omavoice)** : Virtual microphone for Omarchy: noise cancellation and echo cancel for Zoom, Meet, and podcasts
@@ -3619,6 +3619,8 @@
   - ⭐ **1** · 🍴 1 · Last updated: `2026-08-17` · `QML` · `MIT` · `mka.asusrgb`
 - **[omarchy-sofle-layer](https://github.com/alvarosaavedra/omarchy-sofle-layer)** : Omarchy plugin.
   - ⭐ **1** · 🍴 1 · Last updated: `2026-08-17` · `QML` · `MIT` · `alvarosaavedra.sofle-layer`
+- **[Charge-Cap](https://github.com/JustNak/Charge-Cap)** : Simple battery limit plugin via option as a slider from 60-100%
+  - ⭐ **1** · 🍴 0 · Last updated: `2026-09-08` · `QML` · `MIT` · `justnak.charge-cap`
 - **[omarchy-gpu](https://github.com/DanSmith888/omarchy-gpu)** : Omarchy plugin.
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-07` · `QML` · `MIT` · `dansmith888.gpu`
 - **[omarchy-synology-drive](https://github.com/DanSmith888/omarchy-synology-drive)** : Synology Drive Client status in the Omarchy bar: live transfers, log, pause/resume — without the Qt tray icon
@@ -3669,8 +3671,6 @@
   - ⭐ **1** · 🍴 0 · Last updated: `2026-08-28` · `Python` · `MIT` · `io.github.dupontbertrand.omajabra`
 - **[omarchy-plugin-ring-cam](https://github.com/bitshaker/omarchy-plugin-ring-cam)** : Native Omarchy bar plugin for Ring camera notifications, live views, and recorded events
   - ⭐ **1** · 🍴 0 · Last updated: `2026-08-27` · `JavaScript` · `MIT` · `bitshaker.ring-cameras`
-- **[Charge-Cap](https://github.com/JustNak/Charge-Cap)** : Simple battery limit plugin via option as a slider from 60-100%
-  - ⭐ **1** · 🍴 0 · Last updated: `2026-08-27` · `QML` · `MIT` · `justnak.charge-cap`
 - **[omarchy-battery-protection](https://github.com/andrewf403/omarchy-battery-protection)** : UPower battery charge-limit toggle for the Omarchy bar
   - ⭐ **1** · 🍴 0 · Last updated: `2026-08-27` · `Shell` · `MIT` · `andrewf.battery-protection`
 - **[omarchy-plugin-ups](https://github.com/KRING-Ventures/omarchy-plugin-ups)** : Omarchy shell bar widget for any UPS served by NUT (Network UPS Tools). No dependencies - speaks the NUT protocol over bash /dev/tcp.
@@ -3923,12 +3923,12 @@
 - **[SHIBUMI](https://github.com/HANCORE-linux/Shibumi-Shell)** : A native bar and modular plugin suite for Omarchy Quattro, with layouts, controls, widgets, panels, and a guided user-scoped installation.
   - ⭐ **140** · 🍴 17 · Last updated: `2026-08-24` · `QML` · `hancore.shibumi`
 - **[omarchy-notification-center](https://github.com/jankeesvw/omarchy-notification-center)** : Every notification you were sent, kept and readable again: a notification center for the Omarchy bar
-  - ⭐ **45** · 🍴 13 · Last updated: `2026-09-04` · `QML` · `MIT` · `jankeesvw.notification-center`
+  - ⭐ **45** · 🍴 14 · Last updated: `2026-09-04` · `QML` · `MIT` · `jankeesvw.notification-center`
 - **[omarchy-dock](https://github.com/rosakodu/omarchy-dock)** : Plugin Dock for Omarchy
   - ⭐ **32** · 🍴 8 · Last updated: `2026-09-07` · `QML` · `MIT` · `rosakodu.dock`
-- **[omarchy-shell-plugins](https://github.com/bjarneo/omarchy-shell-plugins)** : Personal Omarchy shell plugins, including the Omni command palette.
+- **[quickapps-hud](https://github.com/bjarneo/omarchy-shell-plugins)** : QuickApps HUD launcher for Omarchy.
   - ⭐ **26** · 🍴 2 · Last updated: `2026-08-16` · `QML` · `MIT` · `quickapps-hud`
-- **[omarchy-shell-plugins](https://github.com/bjarneo/omarchy-shell-plugins)** : Personal Omarchy shell plugins, including the Omni command palette.
+- **[cliamp](https://github.com/bjarneo/omarchy-shell-plugins)** : CLIamp media player for Omarchy.
   - ⭐ **26** · 🍴 2 · Last updated: `2026-08-16` · `QML` · `MIT` · `cliamp`
 - **[Lacuna](https://github.com/OldJobobo/lacuna-shell)** : A complete visual shell for Omarchy with a custom bar, attached utility sidebar, system controls, expressive widgets, and optional desktop ambience.
   - ⭐ **25** · 🍴 0 · Last updated: `2026-08-20` · `QML` · `MIT` · `lacuna.shell-suite`
@@ -4006,6 +4006,8 @@
   - ⭐ **4** · 🍴 0 · Last updated: `2026-08-16` · `QML` · `MIT` · `io.github.nathanrgagnon.omawhoop`
 - **[omarchy-app-launcher](https://github.com/Tyrsolution/omarchy-app-launcher)** : One overlay for Omarchy — launch apps and coding agents, browse the system menu as folders, and flip the switches you reach for most.
   - ⭐ **3** · 🍴 2 · Last updated: `2026-09-04` · `QML` · `MIT` · `tyrsolution.app-launcher`
+- **[omarchy-xmb-menu](https://github.com/surfacedP/omarchy-xmb-menu)** : A full-screen, PS3-inspired XMB interface for the Omarchy menu
+  - ⭐ **3** · 🍴 1 · Last updated: `2026-09-07` · `QML` · `MIT` · `io.github.surfacedp.xmb-menu`
 - **[burninc0de.dock](https://github.com/burninc0de/burninc0de.dock)** : A simple dock that respects your space.
   - ⭐ **3** · 🍴 1 · Last updated: `2026-08-27` · `QML` · `MIT` · `burninc0de.dock`
 - **[herald-notification](https://github.com/jesseburlamaque/herald-notification)** : A clean notification center for Omarchy with themed icons, focus actions, and a touch of Herald flair.
@@ -4020,8 +4022,6 @@
   - ⭐ **2** · 🍴 2 · Last updated: `2026-09-05` · `QML` · `MIT` · `omarchy-philips-hue`
 - **[falser-window-preview](https://github.com/falser101/falser-window-preview)** : KDE Overview-style window preview overlay for Omarchy
   - ⭐ **2** · 🍴 1 · Last updated: `2026-09-07` · `QML` · `MIT` · `io.github.falser101.window-preview`
-- **[omarchy-xmb-menu](https://github.com/surfacedP/omarchy-xmb-menu)** : A full-screen, PS3-inspired XMB interface for the Omarchy menu
-  - ⭐ **2** · 🍴 1 · Last updated: `2026-09-07` · `QML` · `MIT` · `io.github.surfacedp.xmb-menu`
 - **[omarchy-slicetab](https://github.com/m4rone/omarchy-slicetab)** : Alt-Tab for Omarchy with live window previews, limited to the workspace you are on
   - ⭐ **2** · 🍴 1 · Last updated: `2026-08-25` · `QML` · `m4rone.slicetab`
 - **[omarchy-pokey](https://github.com/pixeye33/omarchy-pokey)** : Pokey — a giant hand + arm that takes over your cursor during screenshares. Omarchy plugin.
@@ -4471,6 +4471,8 @@
   - ⭐ **1** · 🍴 1 · Last updated: `2026-08-18` · `Python` · `MIT` · `slcode777.omaconv`
 - **[omarchy-codex-notifications](https://github.com/brianblakely/omarchy-codex-notifications)** : Show clickable notifications in response to events in Codex. An Omarchy plugin.
   - ⭐ **1** · 🍴 1 · Last updated: `2026-08-11` · `Shell` · `MIT` · `b.codex-notifications`
+- **[omarchy-gitlab](https://github.com/syntaxboybe/omarchy-gitlab)** : Omarchy plugin.
+  - ⭐ **1** · 🍴 0 · Last updated: `2026-09-08` · `QML` · `MIT` · `syntaxboybe.gitlab`
 - **[omarchy-ai-usage](https://github.com/Cees-Kettenis/omarchy-ai-usage)** : Omarchy bar widget for AI usage and rate limits, starting with Codex
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-08` · `Python` · `MIT` · `ai-usage`
 - **[omarchy-repo-watcher](https://github.com/whelanh/omarchy-repo-watcher)** : Omarchy plugin.
@@ -4547,8 +4549,6 @@
   - ⭐ **1** · 🍴 0 · Last updated: `2026-08-18` · `QML` · `MIT` · `io.github.kristijan-k.salesforce-orgs`
 - **[omarchy-linear](https://github.com/gpdenny/omarchy-linear)** : Linear inbox Quickshell plugin for Omarchy Quattro
   - ⭐ **1** · 🍴 0 · Last updated: `2026-08-17` · `QML` · `MIT` · `gpdenny.linear`
-- **[omarchy-gitlab](https://github.com/syntaxboybe/omarchy-gitlab)** : Omarchy plugin.
-  - ⭐ **1** · 🍴 0 · Last updated: `2026-08-17` · `QML` · `MIT` · `syntaxboybe.gitlab`
 - **[antigravity-usage](https://github.com/jesseburlamaque/antigravity-usage)** : Google Antigravity usage stats, prompt telemetry, and active session monitor widget for Omarchy
   - ⭐ **0** · 🍴 3 · Last updated: `2026-09-07` · `QML` · `MIT` · `jesseburlamaque.antigravity-usage`
 - **[deepspend-omarchy-plugin](https://github.com/Shirak-Semonian/deepspend-omarchy-plugin)** : Live DeepSeek API balance & cost monitor for the Omarchy shell bar: current balance and API availability at a glance, quiet configurable low-balance alerts — straight from DeepSeek's own API.
@@ -5267,8 +5267,7 @@
 - **Source of truth**: [`plugins.json`](plugins.json) — one entry per plugin (ID, repo, category, tags + live stats).
 - **Upstream**: [`omacom/omarchy-plugin-marketplace/registry.json`](https://raw.githubusercontent.com/omacom/omarchy-plugin-marketplace/refs/heads/main/registry.json) — re-sync with `uv run python scripts/sync_registry.py`.
 - **Enrichment**: `uv run python src/update_stats.py` refreshes stars/forks/last-updated and regenerates this list. Runs weekly via GitHub Actions.
-- **Quality filter**: archived and deleted/unreachable repos are hidden from the lists but kept in `plugins.json`. Optional cutoffs: `--min-stars N`, `--stale-days N`.
-- **Contributing**: see [CONTRIBUTING.md](CONTRIBUTING.md), or open an issue with the plugin template — maintainers can merge it with `/add`.
+- **Contributing**: see [CONTRIBUTING.md](CONTRIBUTING.md) — plugins are synced from the upstream registry; submit new plugins upstream.
 
 ## License
 

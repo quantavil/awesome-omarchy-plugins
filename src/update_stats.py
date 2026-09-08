@@ -1,13 +1,8 @@
 #!/usr/bin/env python3
-"""Awesome Omarchy Plugins - GitHub Stats Updater.
+"""Awesome Omarchy Plugins - Catalog Generator and Stats Updater.
 
-Fetches live stars, forks, last activity, and license info per repository,
-then regenerates the categorized README.md list.
-
-Dataset: plugins.json (derived from the omarchy-plugin-marketplace
-registry.json, enriched with live GitHub metadata).
-
-Supports async concurrency, category grouping, and atomic file writes.
+Reads rich plugin data (plugins.json), optionally refreshes live stats
+(stars, forks, last updated) from GitHub, and updates README.md and BY_UPDATED.md.
 """
 
 from __future__ import annotations
@@ -22,7 +17,6 @@ from typing import Any, Callable, Dict, List, Optional
 
 import httpx
 from rich.console import Console
-from rich.table import Table
 
 # Ensure src is in python path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -39,16 +33,178 @@ from utils import (  # noqa: E402
     is_excluded,
     load_plugins,
     normalize_plugin_entry,
-    parse_repo_url,
     save_plugins_atomic,
 )
 
-console = Console()
+console = Console(stderr=True)
 
 START_MARKER = "<!-- PLUGINS_LIST_START -->"
 END_MARKER = "<!-- PLUGINS_LIST_END -->"
 COUNT_MARKER_REGEX = r"<!-- TOTAL_PLUGINS_COUNT -->.*?<!-- /TOTAL_PLUGINS_COUNT -->"
 UPDATED_MARKER_REGEX = r"<!-- LAST_UPDATED -->.*?<!-- /LAST_UPDATED -->"
+
+REPO_TELEMETRY_KEYS = {
+    "stars",
+    "forks",
+    "last_updated",
+    "updated_at",
+    "license",
+    "language",
+    "archived",
+    "dead",
+    "open_issues",
+    "default_branch",
+}
+
+
+class RateLimitCircuitBreaker:
+    """Thread-safe / task-safe rate-limit trip detector to avoid slamming GitHub API."""
+
+    def __init__(self) -> None:
+        self.tripped = False
+        self.reset_timestamp = 0
+        self.reason = ""
+
+    def trip(self, reset_ts: int, reason: str = "Rate limit reached") -> None:
+        self.tripped = True
+        self.reset_timestamp = reset_ts
+        self.reason = reason
+
+
+circuit_breaker = RateLimitCircuitBreaker()
+
+
+def fetch_catalog_stats_graphql(
+    unique_repos: Dict[str, Dict[str, Any]],
+    token: str,
+    batch_size: int = 50,
+) -> Optional[Dict[str, Dict[str, Any]]]:
+    """Fetch repository metadata using GitHub GraphQL API in batches of 50.
+
+    Querying 50 repositories in a single GraphQL call costs only 1 rate limit point,
+    allowing 2,600 repositories to be fetched in ~52 requests (~2-3 seconds total).
+    """
+    headers = get_github_headers(token)
+    keys = list(unique_repos.keys())
+    repo_stats: Dict[str, Dict[str, Any]] = {}
+
+    console.print(
+        f"[bold cyan]Fetching metadata via GraphQL batching "
+        f"({len(keys)} unique repos in batches of {batch_size})...[/bold cyan]"
+    )
+
+    with httpx.Client(timeout=30.0) as client:
+        for i in range(0, len(keys), batch_size):
+            chunk = keys[i : i + batch_size]
+            query_lines = ["query BatchStats {"]
+            for idx, k in enumerate(chunk):
+                info = unique_repos[k]
+                o = info["owner"]
+                r = info["repo"]
+                query_lines.append(f"""
+                  r{idx}: repository(owner: "{o}", name: "{r}") {{
+                    stargazerCount
+                    forkCount
+                    pushedAt
+                    isArchived
+                    primaryLanguage {{ name }}
+                    licenseInfo {{ spdxId }}
+                    defaultBranchRef {{ name }}
+                    openIssues: issues(states: OPEN) {{ totalCount }}
+                    description
+                  }}
+                """)
+            query_lines.append("}")
+            query_str = "\n".join(query_lines)
+
+            try:
+                resp = client.post(
+                    "https://api.github.com/graphql",
+                    json={"query": query_str},
+                    headers=headers,
+                )
+                if resp.status_code == 200:
+                    res_json = resp.json()
+                    data = res_json.get("data") or {}
+                    errors = res_json.get("errors") or []
+
+                    error_map: Dict[str, str] = {}
+                    for err in errors:
+                        err_path = err.get("path")
+                        if err_path and isinstance(err_path, list):
+                            alias = err_path[0]
+                            err_type = err.get("type", "")
+                            error_map[alias] = err_type
+
+                    for idx, k in enumerate(chunk):
+                        alias = f"r{idx}"
+                        entry_data = data.get(alias)
+                        cached = unique_repos[k]["cached"]
+                        stats = dict(cached)
+
+                        if entry_data:
+                            stats["stars"] = entry_data.get("stargazerCount", 0)
+                            stats["forks"] = entry_data.get("forkCount", 0)
+                            stats["archived"] = entry_data.get("isArchived", False)
+                            stats["dead"] = False
+
+                            lang = entry_data.get("primaryLanguage")
+                            stats["language"] = lang.get("name") if lang else ""
+
+                            issues = entry_data.get("openIssues")
+                            stats["open_issues"] = issues.get("totalCount", 0) if issues else 0
+
+                            lic = entry_data.get("licenseInfo")
+                            if lic and lic.get("spdxId") and lic["spdxId"] != "NOASSERTION":
+                                stats["license"] = lic["spdxId"]
+
+                            branch = entry_data.get("defaultBranchRef")
+                            if branch and branch.get("name"):
+                                stats["default_branch"] = branch["name"]
+
+                            pushed = entry_data.get("pushedAt")
+                            if pushed:
+                                stats["last_updated"] = pushed.split("T")[0]
+                                stats["updated_at"] = pushed.split("T")[0]
+
+                            if entry_data.get("description"):
+                                stats["repo_description"] = entry_data["description"].strip()
+                        elif alias in error_map:
+                            if error_map[alias] == "NOT_FOUND":
+                                stats["dead"] = True
+                                stats["last_updated"] = "N/A"
+                                console.print(
+                                    f"[yellow]Repo {k} is NOT_FOUND in GraphQL. "
+                                    "Marked as dead.[/yellow]"
+                                )
+                            else:
+                                console.print(
+                                    f"[yellow]GraphQL error on {k}: {error_map[alias]}. "
+                                    "Cached stats kept.[/yellow]"
+                                )
+                        repo_stats[k] = stats
+
+                    console.print(
+                        f"  [green]Batch {i // batch_size + 1}/"
+                        f"{(len(keys) + batch_size - 1) // batch_size} complete "
+                        f"({min(i + batch_size, len(keys))}/{len(keys)} repos)[/green]"
+                    )
+                elif resp.status_code in (403, 429):
+                    console.print(
+                        f"[bold red]GraphQL returned HTTP {resp.status_code}. "
+                        "Aborting batching and keeping cached stats.[/bold red]"
+                    )
+                    return repo_stats
+                else:
+                    console.print(
+                        f"[red]GraphQL HTTP {resp.status_code}. Falling back to REST.[/red]"
+                    )
+                    return None
+            except Exception as e:
+                console.print(f"[red]GraphQL exception: {e}. Falling back to REST.[/red]")
+                return None
+
+    return repo_stats
 
 
 async def fetch_repo_stats_async(
@@ -57,55 +213,64 @@ async def fetch_repo_stats_async(
     repo: str,
     headers: Dict[str, str],
     sem: asyncio.Semaphore,
-    cached_stats: Optional[Dict[str, Any]] = None,
+    cached_stats: Dict[str, Any],
 ) -> Dict[str, Any]:
-    """Fetch repository metadata asynchronously, falling back to cached stats."""
-    stats: Dict[str, Any] = {
-        "stars": cached_stats.get("stars", 0) if cached_stats else 0,
-        "forks": cached_stats.get("forks", 0) if cached_stats else 0,
-        "last_updated": cached_stats.get("last_updated", "N/A") if cached_stats else "N/A",
-        "updated_at": cached_stats.get("updated_at", "N/A") if cached_stats else "N/A",
-        "license": cached_stats.get("license", "Unknown") if cached_stats else "Unknown",
-        "language": cached_stats.get("language", "") if cached_stats else "",
-        "default_branch": cached_stats.get("default_branch", "main") if cached_stats else "main",
-        "archived": cached_stats.get("archived", False) if cached_stats else False,
-        "open_issues": cached_stats.get("open_issues", 0) if cached_stats else 0,
-    }
+    """Fetch repository metadata via GitHub REST API with concurrency limits and circuit breaker."""
+    stats = dict(cached_stats)
+    repo_url = f"https://api.github.com/repos/{owner}/{repo}"
+
+    if circuit_breaker.tripped:
+        return stats
 
     async with sem:
+        if circuit_breaker.tripped:
+            return stats
         try:
-            repo_url = f"https://api.github.com/repos/{owner}/{repo}"
-            resp = await client.get(
-                repo_url, headers=headers, timeout=12.0, follow_redirects=True
-            )
+            resp = await client.get(repo_url, headers=headers, timeout=12.0, follow_redirects=True)
             if resp.status_code == 200:
                 data = resp.json()
-                stats["stars"] = data.get("stargazers_count", stats["stars"])
-                stats["forks"] = data.get("forks_count", stats["forks"])
-                stats["archived"] = data.get("archived", stats["archived"])
-                stats["language"] = data.get("language") or stats["language"]
-                stats["open_issues"] = data.get("open_issues_count", stats["open_issues"])
-                if data.get("license") and data["license"].get("spdx_id"):
-                    spdx = data["license"]["spdx_id"]
+                stats["stars"] = data.get("stargazers_count", 0)
+                stats["forks"] = data.get("forks_count", 0)
+                stats["archived"] = data.get("archived", False)
+                stats["dead"] = False
+                stats["language"] = data.get("language") or ""
+                stats["open_issues"] = data.get("open_issues_count", 0)
+
+                license_info = data.get("license")
+                if license_info and license_info.get("spdx_id"):
+                    spdx = license_info["spdx_id"]
                     if spdx != "NOASSERTION":
                         stats["license"] = spdx
-                stats["default_branch"] = data.get("default_branch", "main")
 
+                stats["default_branch"] = data.get("default_branch", "main")
                 pushed_at = data.get("pushed_at")
                 if pushed_at:
                     stats["last_updated"] = pushed_at.split("T")[0]
                     stats["updated_at"] = pushed_at.split("T")[0]
 
-                if cached_stats:
-                    if not cached_stats.get("description") and data.get("description"):
-                        stats["description"] = data["description"].strip()
-                    cached_name = cached_stats.get("name")
-                    if (not cached_name or cached_name == repo) and data.get("name"):
-                        stats["name"] = data["name"].strip()
-            elif resp.status_code == 403:
+                if data.get("description"):
+                    stats["repo_description"] = data["description"].strip()
+            elif resp.status_code in (404, 410):
+                stats["dead"] = True
+                stats["last_updated"] = "N/A"
                 console.print(
-                    f"[yellow]Rate limit for {owner}/{repo}. Using cached stats.[/yellow]"
+                    f"[yellow]Repo {owner}/{repo} returned HTTP {resp.status_code} "
+                    "(Not Found). Marked as dead.[/yellow]"
                 )
+            elif resp.status_code in (403, 429):
+                remaining = resp.headers.get("x-ratelimit-remaining")
+                reset_ts = int(resp.headers.get("x-ratelimit-reset", 0))
+                if remaining == "0" or resp.status_code == 429:
+                    circuit_breaker.trip(reset_ts)
+                    console.print(
+                        f"[bold red]Rate limit exhausted. Tripping circuit breaker until "
+                        f"{reset_ts}. Cached stats kept.[/bold red]"
+                    )
+                else:
+                    console.print(
+                        f"[yellow]Rate limit / abuse detection for {owner}/{repo}. "
+                        "Using cached stats.[/yellow]"
+                    )
             else:
                 console.print(
                     f"[yellow]Failed {owner}/{repo} (HTTP {resp.status_code}). "
@@ -181,9 +346,7 @@ def generate_markdown_list(plugins: List[Dict[str, Any]], grouped: bool = True) 
     return "\n".join(content_sections)
 
 
-def update_readme(
-    markdown_list: str, total_count: int, path: Path = README_PATH
-) -> bool:
+def update_readme(markdown_list: str, total_count: int, path: Path = README_PATH) -> bool:
     """Update a catalog markdown file with generated content between markers atomically."""
     if not path.exists():
         console.print(f"[red]Error: {path} not found![/red]")
@@ -224,96 +387,13 @@ def update_readme(
     return True
 
 
-def add_plugin(
-    url: str,
-    plugin_id: Optional[str] = None,
-    name: Optional[str] = None,
-    desc: Optional[str] = None,
-    category: Optional[str] = None,
-    tags: Optional[str] = None,
-) -> None:
-    """Add or update a plugin repository in plugins.json."""
-    owner, repo, _host = parse_repo_url(url)
-    if not owner or not repo:
-        console.print(f"[red]Error: Invalid repository URL or format: '{url}'[/red]")
-        return
-
-    plugins = load_plugins()
-    for p in plugins:
-        if (
-            p["owner"].lower() == owner.lower()
-            and p["repo"].lower() == repo.lower()
-            and (not plugin_id or p.get("plugin_id", "").lower() == plugin_id.lower())
-        ):
-            console.print(
-                f"[yellow]Plugin {owner}/{repo} already exists in plugins.json. "
-                "Updating details...[/yellow]"
-            )
-            if plugin_id:
-                p["plugin_id"] = plugin_id
-            if name:
-                p["name"] = name
-            if desc:
-                p["description"] = desc
-            if category:
-                p["category"] = category
-            if tags:
-                p["tags"] = [t.strip() for t in tags.split(",") if t.strip()]
-            save_plugins_atomic([normalize_plugin_entry(item) for item in plugins])
-            console.print(f"[green]Successfully updated {owner}/{repo}![/green]")
-            return
-
-    new_data: Dict[str, Any] = {
-        "plugin_id": plugin_id or repo,
-        "owner": owner,
-        "repo": repo,
-        "name": name or repo,
-        "description": desc or "",
-        "category": category or "",
-        "tags": [t.strip() for t in tags.split(",") if t.strip()] if tags else [],
-        "repo_url": f"https://github.com/{owner}/{repo}",
-        "type": "plugin-source",
-    }
-    plugins.append(normalize_plugin_entry(new_data))
-    save_plugins_atomic(plugins)
-    console.print(
-        f"[green]Added {owner}/{repo} to plugins.json ({len(plugins)} total plugins)![/green]"
-    )
-
-
-def remove_plugin(url_or_id: str) -> bool:
-    """Remove a plugin from plugins.json by repository URL, slug, or plugin ID."""
-    owner, repo, _host = parse_repo_url(url_or_id)
-    plugins = load_plugins()
-    initial_len = len(plugins)
-
-    def _match(p: Dict[str, Any]) -> bool:
-        if owner and repo:
-            if p["owner"].lower() == owner.lower() and p["repo"].lower() == repo.lower():
-                return True
-        return p.get("plugin_id", "").lower() == url_or_id.strip().lower()
-
-    filtered = [p for p in plugins if not _match(p)]
-
-    if len(filtered) == initial_len:
-        console.print(f"[yellow]Plugin '{url_or_id}' not found in plugins.json.[/yellow]")
-        return False
-
-    save_plugins_atomic([normalize_plugin_entry(item) for item in filtered])
-    console.print(
-        f"[green]Removed '{url_or_id}' from plugins.json "
-        f"({len(filtered)} total plugins)![/green]"
-    )
-    return True
-
-
 def get_sort_key(sort_mode: str) -> tuple[Callable[[Dict[str, Any]], Any], bool]:
     """Return sort key function and reverse boolean."""
     if sort_mode == "stars":
         return (
             lambda p: (
-                p.get("stars", 0),
-                p.get("forks", 0),
+                p.get("stars") or 0,
+                p.get("forks") or 0,
                 p.get("last_updated")
                 if p.get("last_updated") not in (None, "N/A", "")
                 else "0000-00-00",
@@ -321,167 +401,150 @@ def get_sort_key(sort_mode: str) -> tuple[Callable[[Dict[str, Any]], Any], bool]
             True,
         )
     elif sort_mode == "name":
-        return lambda p: p.get("name", p["repo"]).lower(), False
+        return lambda p: str(p.get("name") or p.get("repo", "")).lower(), False
     elif sort_mode == "category":
-        return lambda p: (p.get("category", ""), p.get("stars", 0)), True
+        return lambda p: (str(p.get("category") or ""), p.get("stars") or 0), True
     # Default: "updated"
     return (
         lambda p: (
             p.get("last_updated")
             if p.get("last_updated") not in (None, "N/A", "")
             else "0000-00-00",
-            p.get("stars", 0),
+            p.get("stars") or 0,
         ),
         True,
     )
 
 
-async def main_async(args: argparse.Namespace) -> None:
-    """Asynchronous entry point for stats updater."""
-    if args.add:
-        add_plugin(
-            args.add,
-            plugin_id=args.plugin_id,
-            name=args.name,
-            desc=args.desc,
-            category=args.category,
-            tags=args.tags,
-        )
-    elif args.remove:
-        if not remove_plugin(args.remove):
-            console.print(f"[red]Could not remove '{args.remove}'.[/red]")
-            return
+def regenerate_catalogs(
+    plugins: List[Dict[str, Any]],
+    sort_mode: str = "stars",
+    flat: bool = False,
+    min_stars: int = 0,
+    stale_days: int = 0,
+    dry_run: bool = False,
+) -> None:
+    """Regenerate README.md and BY_UPDATED.md from existing normalized plugins."""
+    normalized = [normalize_plugin_entry(p) for p in plugins]
+    save_plugins_atomic(normalized)
 
+    sort_key, reverse_order = get_sort_key(sort_mode)
+    normalized.sort(key=sort_key, reverse=reverse_order)
+
+    listed = [p for p in normalized if not is_excluded(p, min_stars, stale_days)]
+    excluded = [p for p in normalized if is_excluded(p, min_stars, stale_days)]
+    if excluded:
+        console.print(
+            f"[yellow]Excluded {len(excluded)} entries from generated lists "
+            f"(archived/dead/stale/low-star).[/yellow]"
+        )
+
+    markdown_list = generate_markdown_list(listed, grouped=not flat)
+    if dry_run:
+        print(markdown_list)
+        return
+
+    update_readme(markdown_list, len(listed), path=README_PATH)
+    console.print(f"[bold green]✓ Updated README.md with {len(listed)} plugins![/bold green]")
+
+    updated_key, updated_reverse = get_sort_key("updated")
+    by_updated = sorted(listed, key=updated_key, reverse=updated_reverse)
+    by_updated_markdown = generate_markdown_list(by_updated, grouped=not flat)
+    update_readme(by_updated_markdown, len(by_updated), path=BY_UPDATED_PATH)
+    console.print(
+        f"[bold green]✓ Updated BY_UPDATED.md with {len(by_updated)} plugins![/bold green]"
+    )
+
+
+async def main_async(args: argparse.Namespace) -> None:
+    """Entry point: read rich data, optionally fetch stats, and update markdown catalogs."""
     plugins = load_plugins()
     if not plugins:
         console.print("[red]No plugins found in plugins.json.[/red]")
         sys.exit(1)
 
-    # Fetch live stats once per unique repository (several plugin IDs can
-    # share a single repo, e.g. multi-plugin sources and suites).
-    unique_repos: Dict[str, Dict[str, Any]] = {}
-    for plugin in plugins:
-        key = f"{plugin['owner'].lower()}/{plugin['repo'].lower()}"
-        unique_repos.setdefault(
-            key,
-            {
-                "owner": plugin["owner"],
-                "repo": plugin["repo"],
-                "cached": plugin,
-            },
-        )
-
-    console.print(
-        f"[bold cyan]Fetching live stats for {len(plugins)} plugins "
-        f"({len(unique_repos)} unique repos) asynchronously...[/bold cyan]"
-    )
-
     token = get_github_token(args.token)
-    headers = get_github_headers(token)
-    sem = asyncio.Semaphore(10)
 
-    async with httpx.AsyncClient() as client:
-        keys = list(unique_repos.keys())
-        tasks = [
-            fetch_repo_stats_async(
-                client=client,
-                owner=unique_repos[k]["owner"],
-                repo=unique_repos[k]["repo"],
-                headers=headers,
-                sem=sem,
-                cached_stats=unique_repos[k]["cached"],
-            )
-            for k in keys
-        ]
-        results = await asyncio.gather(*tasks)
-        repo_stats = dict(zip(keys, results))
-
+    if not args.render_only:
+        # Group by unique repo
+        unique_repos: Dict[str, Dict[str, Any]] = {}
         for plugin in plugins:
             key = f"{plugin['owner'].lower()}/{plugin['repo'].lower()}"
-            plugin.update(repo_stats[key])
+            unique_repos.setdefault(
+                key,
+                {
+                    "owner": plugin["owner"],
+                    "repo": plugin["repo"],
+                    "cached": plugin,
+                },
+            )
 
-    # Persist updated stats atomically
-    normalized = [normalize_plugin_entry(p) for p in plugins]
-    save_plugins_atomic(normalized)
-
-    # Apply sorting globally and within category groups
-    sort_key, reverse_order = get_sort_key(args.sort)
-    normalized.sort(key=sort_key, reverse=reverse_order)
-
-    # Quality filter: archived/dead repos are always hidden from generated
-    # lists (kept in plugins.json); star/staleness cutoffs are opt-in.
-    listed = [p for p in normalized if not is_excluded(p, args.min_stars, args.stale_days)]
-    excluded = [p for p in normalized if is_excluded(p, args.min_stars, args.stale_days)]
-    if excluded:
         console.print(
-            f"[yellow]Excluded {len(excluded)} entries from generated lists "
-            f"(archived/dead/stale/low-star):[/yellow]"
-        )
-        for p in excluded[:20]:
-            console.print(f"  - {p.get('plugin_id')} ({p.get('owner')}/{p.get('repo')})")
-        if len(excluded) > 20:
-            console.print(f"  ... and {len(excluded) - 20} more")
-
-    # Display preview table in console
-    table = Table(title="Awesome Omarchy Plugins - Live Stats")
-    table.add_column("#", justify="right", style="dim")
-    table.add_column("Plugin", style="bold white")
-    table.add_column("Category", style="cyan")
-    table.add_column("Stars", justify="right", style="yellow")
-    table.add_column("Forks", justify="right", style="yellow")
-    table.add_column("Last Updated", justify="center", style="green")
-    table.add_column("License", style="dim")
-
-    for i, p in enumerate(listed, 1):
-        table.add_row(
-            str(i),
-            p.get("name", p["repo"]),
-            p.get("category", "Other"),
-            format_count(p.get("stars", 0)),
-            format_count(p.get("forks", 0)),
-            p.get("last_updated", "N/A"),
-            p.get("license", "Unknown"),
+            f"[bold cyan]Updating stats for {len(plugins)} plugins "
+            f"({len(unique_repos)} unique repos)...[/bold cyan]"
         )
 
-    console.print(table)
+        repo_stats: Optional[Dict[str, Dict[str, Any]]] = None
 
-    # Generate Markdown (grouped mode unless --flat is explicitly passed)
-    markdown_list = generate_markdown_list(listed, grouped=not args.flat)
+        # Try GraphQL batching first if token is available (50 repos per query, ~52 queries)
+        if token:
+            repo_stats = fetch_catalog_stats_graphql(unique_repos, token)
 
-    if args.dry_run:
-        console.print("\n[bold]Generated Markdown Output:[/bold]\n")
-        print(markdown_list)
-        return
+        # Fall back to asynchronous REST if GraphQL failed or no token was provided
+        if repo_stats is None:
+            console.print(
+                "[cyan]Running async REST updater with rate-limit circuit breaker...[/cyan]"
+            )
+            headers = get_github_headers(token)
+            sem = asyncio.Semaphore(10)
+            async with httpx.AsyncClient() as client:
+                keys = list(unique_repos.keys())
+                tasks = [
+                    fetch_repo_stats_async(
+                        client=client,
+                        owner=unique_repos[k]["owner"],
+                        repo=unique_repos[k]["repo"],
+                        headers=headers,
+                        sem=sem,
+                        cached_stats=unique_repos[k]["cached"],
+                    )
+                    for k in keys
+                ]
+                results = await asyncio.gather(*tasks)
+                repo_stats = dict(zip(keys, results))
 
-    if update_readme(markdown_list, len(listed)):
-        console.print(
-            f"[bold green]✓ Successfully updated README.md with "
-            f"{len(listed)} plugins![/bold green]"
-        )
-    else:
-        console.print(
-            "[yellow]Tip: Ensure README.md exists with markers "
-            "<!-- PLUGINS_LIST_START --> and <!-- PLUGINS_LIST_END -->[/yellow]"
-        )
+        # Merge repository telemetry without overwriting plugin-specific name/desc in monorepos
+        for plugin in plugins:
+            key = f"{plugin['owner'].lower()}/{plugin['repo'].lower()}"
+            stats = repo_stats.get(key)
+            if not stats:
+                continue
+            for field in REPO_TELEMETRY_KEYS:
+                if field in stats:
+                    plugin[field] = stats[field]
+            if not plugin.get("description") and stats.get("repo_description"):
+                plugin["description"] = stats["repo_description"]
 
-    # Second view: same catalog, each category sorted by most recently updated.
-    updated_key, updated_reverse = get_sort_key("updated")
-    by_updated = sorted(listed, key=updated_key, reverse=updated_reverse)
-    by_updated_markdown = generate_markdown_list(by_updated, grouped=not args.flat)
-    if update_readme(by_updated_markdown, len(by_updated), path=BY_UPDATED_PATH):
-        console.print(
-            f"[bold green]✓ Successfully updated BY_UPDATED.md with "
-            f"{len(by_updated)} plugins![/bold green]"
-        )
-    else:
-        console.print(
-            "[yellow]Tip: Ensure BY_UPDATED.md exists with markers "
-            "<!-- PLUGINS_LIST_START --> and <!-- PLUGINS_LIST_END -->[/yellow]"
-        )
+    # Persist and regenerate markdown
+    regenerate_catalogs(
+        plugins,
+        sort_mode=args.sort,
+        flat=args.flat,
+        min_stars=args.min_stars,
+        stale_days=args.stale_days,
+        dry_run=args.dry_run,
+    )
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Awesome Omarchy Plugins - Stats Updater")
+    parser = argparse.ArgumentParser(
+        description="Awesome Omarchy Plugins - Catalog Generator & Stats Updater"
+    )
+    parser.add_argument(
+        "--render-only",
+        action="store_true",
+        help="Regenerate README.md and BY_UPDATED.md from plugins.json without network requests",
+    )
     parser.add_argument(
         "--sort",
         choices=["stars", "updated", "name", "category"],
@@ -505,21 +568,6 @@ def main() -> None:
         default=0,
         help="Hide plugins not pushed within this many days (default: 0, disabled)",
     )
-    parser.add_argument(
-        "--add",
-        type=str,
-        help="Add a new plugin by GitHub URL or owner/repo (e.g., https://github.com/owner/repo)",
-    )
-    parser.add_argument(
-        "--remove",
-        type=str,
-        help="Remove a plugin by repository URL, owner/repo, or plugin ID",
-    )
-    parser.add_argument("--plugin-id", type=str, help="Plugin ID (used with --add)")
-    parser.add_argument("--name", type=str, help="Plugin display name (used with --add)")
-    parser.add_argument("--desc", type=str, help="Plugin description (used with --add)")
-    parser.add_argument("--category", type=str, help="Category (used with --add)")
-    parser.add_argument("--tags", type=str, help="Comma-separated tags (used with --add)")
     parser.add_argument(
         "--token",
         type=str,

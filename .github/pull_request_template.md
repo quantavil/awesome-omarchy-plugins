@@ -29,6 +29,6 @@ Please check the option that best describes your PR:
 
 - [ ] Repository is open-source under a recognized license.
 - [ ] Plugin is an Omarchy shell plugin and is functional.
-- [ ] `plugins.json` and `README.md` are in sync (`uv run python src/update_stats.py`).
+- [ ] `plugins.json` and `README.md` are in sync (`uv run python src/update_stats.py --render-only`).
 - [ ] Ran automated tests and they pass: `uv run pytest`.
 - [ ] Ran linter and it passes: `uv run ruff check .`.

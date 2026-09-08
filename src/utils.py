@@ -102,7 +102,8 @@ def parse_repo_url(url: str) -> tuple[Optional[str], Optional[str], Optional[str
 
     Supports:
     - https://github.com/owner/repo
-    - git@github.com:owner/repo.git
+    - git@github.com:owner/repo.git or ssh://git@github.com/owner/repo.git
+    - github.com/owner/repo (defaults host to github.com)
     - owner/repo (defaults host to github.com)
 
     Returns:
@@ -113,29 +114,29 @@ def parse_repo_url(url: str) -> tuple[Optional[str], Optional[str], Optional[str
 
     clean = url.strip()
 
-    # SSH pattern: git@<host>:<owner>/<repo>.git
-    ssh_match = re.match(r"^git@([^:]+):([^/\s]+)/([^/\s#]+?)(?:\.git)?/?$", clean)
+    # SSH pattern: git@<host>:<owner>/<repo>.git or ssh://git@<host>/<owner>/<repo>.git
+    ssh_match = re.match(r"^(?:ssh://)?git@([^:/]+)[:/]([^/\s]+)/([^/\s#]+?)(?:\.git)?/?$", clean)
     if ssh_match:
         host = ssh_match.group(1).lower()
         owner = ssh_match.group(2)
         repo = ssh_match.group(3).removesuffix(".git")
         return owner, repo, host
 
-    # HTTP/HTTPS URLs
-    if clean.startswith("http://") or clean.startswith("https://"):
+    # Normalize protocol-less URLs like github.com/owner/repo or gitlab.com/owner/repo
+    if re.match(r"^(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}/", clean):
+        clean = "https://" + clean
+
+    # HTTP/HTTPS/GIT URLs
+    if clean.startswith(("http://", "https://", "git://")):
         parsed = urlparse(clean)
         netloc = parsed.netloc.lower()
         if netloc.startswith("www."):
             netloc = netloc[4:]
         raw_parts = [p for p in parsed.path.strip("/").split("/") if p]
-        parts = []
-        for p in raw_parts:
-            if p in ("-", "tree", "blob", "src", "browse", "repository", "archive"):
-                break
-            parts.append(p)
-        if len(parts) >= 2:
-            owner = parts[0]
-            repo = parts[1].removesuffix(".git")
+        # Only parse owner and repo from first two path components
+        if len(raw_parts) >= 2:
+            owner = raw_parts[0]
+            repo = raw_parts[1].removesuffix(".git")
             return owner, repo, netloc
         return None, None, None
 
@@ -181,28 +182,37 @@ def get_github_headers(token: Optional[str] = None) -> Dict[str, str]:
 
 
 def atomic_write_text(file_path: Path, content: str, encoding: str = "utf-8") -> None:
-    """Atomically write text content to file using temp file, ensuring 0o644 mode."""
+    """Atomically write text content to file, ensuring 0o644 mode and cleanup on error."""
     file_path = Path(file_path)
     parent = file_path.parent
     parent.mkdir(parents=True, exist_ok=True)
 
-    with tempfile.NamedTemporaryFile(
-        mode="w",
-        dir=parent,
-        delete=False,
-        encoding=encoding,
-    ) as temp_file:
-        temp_file.write(content)
-        temp_file.flush()
-        os.fsync(temp_file.fileno())
-        temp_path = Path(temp_file.name)
-
+    temp_path: Optional[Path] = None
     try:
-        os.chmod(temp_path, 0o644)
-    except OSError:
-        pass
+        with tempfile.NamedTemporaryFile(
+            mode="w",
+            dir=parent,
+            delete=False,
+            encoding=encoding,
+        ) as temp_file:
+            temp_path = Path(temp_file.name)
+            temp_file.write(content)
+            temp_file.flush()
+            os.fsync(temp_file.fileno())
 
-    os.replace(temp_path, file_path)
+        try:
+            os.chmod(temp_path, 0o644)
+        except OSError:
+            pass
+
+        os.replace(temp_path, file_path)
+        temp_path = None  # Replaced successfully; disarm cleanup
+    finally:
+        if temp_path is not None:
+            try:
+                temp_path.unlink(missing_ok=True)
+            except OSError:
+                pass
 
 
 def atomic_write_json(file_path: Path, data: Any, indent: int = 2) -> None:
@@ -219,9 +229,7 @@ def load_plugins(file_path: Path = PLUGINS_JSON_PATH) -> List[Dict[str, Any]]:
         return json.load(f)
 
 
-def save_plugins_atomic(
-    plugins: List[Dict[str, Any]], file_path: Path = PLUGINS_JSON_PATH
-) -> None:
+def save_plugins_atomic(plugins: List[Dict[str, Any]], file_path: Path = PLUGINS_JSON_PATH) -> None:
     """Save plugin dataset atomically."""
     atomic_write_json(file_path, plugins)
 
@@ -274,15 +282,14 @@ def normalize_plugin_entry(raw: Dict[str, Any]) -> Dict[str, Any]:
         "license": str(raw.get("license") or "Unknown"),
         "language": str(raw.get("language") or ""),
         "archived": bool(raw.get("archived", False)),
+        "dead": bool(raw.get("dead", False)),
         "open_issues": _int(raw.get("open_issues", 0)),
         "default_branch": str(raw.get("default_branch") or "main"),
     }
     return entry
 
 
-def plugin_age_days(
-    plugin: Dict[str, Any], today: Optional[datetime.date] = None
-) -> Optional[int]:
+def plugin_age_days(plugin: Dict[str, Any], today: Optional[datetime.date] = None) -> Optional[int]:
     """Days since the plugin repo was last pushed, or None if unknown."""
     raw_date = (plugin.get("last_updated") or "").strip()
     if not raw_date or raw_date == "N/A":
@@ -303,13 +310,13 @@ def is_excluded(
 ) -> bool:
     """Decide whether a plugin is hidden from generated lists (kept in JSON).
 
-    Always excluded: archived repos and dead repos that could never be
-    fetched (deleted/renamed/private — `last_updated` stays `N/A`).
+    Always excluded: archived repos and confirmed dead repos (HTTP 404/410
+    or deleted/renamed/private — `last_updated` stays `N/A`).
     Opt-in: `min_stars` drops low-star entries, `stale_days` (> 0) drops
     entries not pushed within that window. Stars are off by default because
     they punish brand-new plugins; staleness is off by default (0 = disabled).
     """
-    if plugin.get("archived"):
+    if plugin.get("archived") or plugin.get("dead"):
         return True
     if (plugin.get("last_updated") or "N/A") == "N/A":
         return True

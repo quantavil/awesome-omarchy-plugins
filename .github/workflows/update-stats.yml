@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: update-plugin-stats
+  group: catalog-write
   cancel-in-progress: false
 
 permissions:
@@ -49,6 +49,6 @@ jobs:
             echo "No stats changes detected."
           else
             git commit -m "chore: auto-update plugin stats & stars [skip ci]"
-            git pull --rebase origin main || true
+            git pull --rebase origin main
             git push
           fi
