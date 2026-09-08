@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge-flat2.svg" alt="Awesome" /></a>
-  <!-- TOTAL_PLUGINS_COUNT --><a href="#plugins-list"><img src="https://img.shields.io/badge/Plugins-2601-a78bfa.svg?style=flat-square" alt="Tracked Plugins" /></a><!-- /TOTAL_PLUGINS_COUNT -->
+  <!-- TOTAL_PLUGINS_COUNT --><a href="#plugins-list"><img src="https://img.shields.io/badge/Plugins-2598-a78bfa.svg?style=flat-square" alt="Tracked Plugins" /></a><!-- /TOTAL_PLUGINS_COUNT -->
   <!-- LAST_UPDATED --><a href="#plugins-list"><img src="https://img.shields.io/badge/Updated-2026--09--08-blueviolet.svg?style=flat-square" alt="Last Updated" /></a><!-- /LAST_UPDATED -->
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome" /></a>
 </p>
@@ -24,9 +24,9 @@
 <!-- PLUGINS_LIST_START -->
 ### Categories
 
-- [Widgets](#widgets) (784)
+- [Widgets](#widgets) (782)
 - [Productivity](#productivity) (534)
-- [System](#system) (394)
+- [System](#system) (393)
 - [Hardware](#hardware) (226)
 - [Desktop](#desktop) (205)
 - [Developer Tools](#developer-tools) (196)
@@ -1602,10 +1602,6 @@
   - ⭐ **0** · 🍴 0 · Last updated: `2026-08-12` · `QML` · `MIT` · `markbusai.git-pulse`
 - **[pick.screenshot](https://github.com/nightdevil00/pick.screenshot)** : Omarchy plugin.
   - ⭐ **0** · 🍴 0 · Last updated: `2026-07-30` · `QML` · `MIT` · `pick.screenshot`
-- **[grokbar-omarchy](https://github.com/rlimberger/grokbar-omarchy)** : Omarchy plugin.
-  - ⭐ **0** · 🍴 0 · Last updated: `N/A` · `QML` · `rlimberger.grokbar-omarchy`
-- **[omarchy-ytmusic](https://github.com/rlimberger/omarchy-ytmusic)** : Omarchy plugin.
-  - ⭐ **0** · 🍴 0 · Last updated: `N/A` · `QML` · `quickshell.ytmusic`
 
 ### Productivity
 
@@ -3466,8 +3462,6 @@
   - ⭐ **0** · 🍴 0 · Last updated: `2026-08-14` · `JavaScript` · `MIT` · `io.github.mattflower.ddc-input-select`
 - **[omasot](https://github.com/kamal-v8/omasot)** : Screen time tracker plugin for the Omarchy shell bar
   - ⭐ **0** · 🍴 0 · Last updated: `2026-08-12` · `QML` · `MIT` · `omasot`
-- **[omarchy-vpn](https://github.com/Paulie420/omarchy-vpn)** : Omarchy plugin.
-  - ⭐ **0** · 🍴 0 · Last updated: `N/A` · `QML` · `paulie420.vpn`
 
 ### Hardware
 
@@ -5273,6 +5267,7 @@
 - **Source of truth**: [`plugins.json`](plugins.json) — one entry per plugin (ID, repo, category, tags + live stats).
 - **Upstream**: [`omacom/omarchy-plugin-marketplace/registry.json`](https://raw.githubusercontent.com/omacom/omarchy-plugin-marketplace/refs/heads/main/registry.json) — re-sync with `uv run python scripts/sync_registry.py`.
 - **Enrichment**: `uv run python src/update_stats.py` refreshes stars/forks/last-updated and regenerates this list. Runs weekly via GitHub Actions.
+- **Quality filter**: archived and deleted/unreachable repos are hidden from the lists but kept in `plugins.json`. Optional cutoffs: `--min-stars N`, `--stale-days N`.
 - **Contributing**: see [CONTRIBUTING.md](CONTRIBUTING.md), or open an issue with the plugin template — maintainers can merge it with `/add`.
 
 ## License

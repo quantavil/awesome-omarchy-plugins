@@ -8,6 +8,7 @@ Adapted from awesome-android-games (same workflow, plugin-oriented schema).
 
 from __future__ import annotations
 
+import datetime
 import json
 import os
 import re
@@ -277,3 +278,48 @@ def normalize_plugin_entry(raw: Dict[str, Any]) -> Dict[str, Any]:
         "default_branch": str(raw.get("default_branch") or "main"),
     }
     return entry
+
+
+def plugin_age_days(
+    plugin: Dict[str, Any], today: Optional[datetime.date] = None
+) -> Optional[int]:
+    """Days since the plugin repo was last pushed, or None if unknown."""
+    raw_date = (plugin.get("last_updated") or "").strip()
+    if not raw_date or raw_date == "N/A":
+        return None
+    try:
+        pushed = datetime.date.fromisoformat(raw_date[:10])
+    except ValueError:
+        return None
+    today = today or datetime.date.today()
+    return (today - pushed).days
+
+
+def is_excluded(
+    plugin: Dict[str, Any],
+    min_stars: int = 0,
+    stale_days: int = 0,
+    today: Optional[datetime.date] = None,
+) -> bool:
+    """Decide whether a plugin is hidden from generated lists (kept in JSON).
+
+    Always excluded: archived repos and dead repos that could never be
+    fetched (deleted/renamed/private — `last_updated` stays `N/A`).
+    Opt-in: `min_stars` drops low-star entries, `stale_days` (> 0) drops
+    entries not pushed within that window. Stars are off by default because
+    they punish brand-new plugins; staleness is off by default (0 = disabled).
+    """
+    if plugin.get("archived"):
+        return True
+    if (plugin.get("last_updated") or "N/A") == "N/A":
+        return True
+    try:
+        if int(plugin.get("stars", 0)) < min_stars:
+            return True
+    except (ValueError, TypeError):
+        pass
+    if stale_days and stale_days > 0:
+        age = plugin_age_days(plugin, today=today)
+        if age is not None and age > stale_days:
+            return True
+    return False

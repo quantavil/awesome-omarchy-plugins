@@ -6,6 +6,7 @@ from utils import (
     format_count,
     format_stars,
     github_slug,
+    is_excluded,
     normalize_plugin_entry,
     parse_repo_url,
 )
@@ -104,3 +105,25 @@ class TestSortKeys:
         ]
         ordered = sorted(rows, key=key, reverse=reverse)
         assert [r["stars"] for r in ordered] == [50, 5]
+
+
+class TestExclusions:
+    def test_healthy_plugin_listed(self):
+        assert not is_excluded({"stars": 0, "last_updated": "2026-09-01", "archived": False})
+
+    def test_archived_always_excluded(self):
+        assert is_excluded({"stars": 500, "last_updated": "2026-09-01", "archived": True})
+
+    def test_dead_repo_always_excluded(self):
+        assert is_excluded({"stars": 10, "last_updated": "N/A", "archived": False})
+
+    def test_min_stars_opt_in(self):
+        plugin = {"stars": 3, "last_updated": "2026-09-01", "archived": False}
+        assert not is_excluded(plugin)
+        assert is_excluded(plugin, min_stars=5)
+
+    def test_stale_days_opt_in(self):
+        plugin = {"stars": 100, "last_updated": "2025-01-01", "archived": False}
+        assert not is_excluded(plugin)
+        assert is_excluded(plugin, stale_days=30)
+        assert not is_excluded(plugin, stale_days=9999)

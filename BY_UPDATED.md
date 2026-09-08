@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge-flat2.svg" alt="Awesome" /></a>
-  <!-- TOTAL_PLUGINS_COUNT --><a href="#plugins-list"><img src="https://img.shields.io/badge/Plugins-2601-a78bfa.svg?style=flat-square" alt="Tracked Plugins" /></a><!-- /TOTAL_PLUGINS_COUNT -->
+  <!-- TOTAL_PLUGINS_COUNT --><a href="#plugins-list"><img src="https://img.shields.io/badge/Plugins-2598-a78bfa.svg?style=flat-square" alt="Tracked Plugins" /></a><!-- /TOTAL_PLUGINS_COUNT -->
   <!-- LAST_UPDATED --><a href="#plugins-list"><img src="https://img.shields.io/badge/Updated-2026--09--08-blueviolet.svg?style=flat-square" alt="Last Updated" /></a><!-- /LAST_UPDATED -->
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome" /></a>
 </p>
@@ -23,9 +23,9 @@
 <!-- PLUGINS_LIST_START -->
 ### Categories
 
-- [Widgets](#widgets) (784)
+- [Widgets](#widgets) (782)
 - [Productivity](#productivity) (534)
-- [System](#system) (394)
+- [System](#system) (393)
 - [Hardware](#hardware) (226)
 - [Desktop](#desktop) (205)
 - [Developer Tools](#developer-tools) (196)
@@ -1601,10 +1601,6 @@
   - ⭐ **0** · 🍴 0 · Last updated: `2026-07-30` · `QML` · `MIT` · `pick.screenshot`
 - **[fan-monitor](https://github.com/elynch303/fan-monitor)** : this is a fan monitor plugin for omarchy 4 with quick shell
   - ⭐ **0** · 🍴 2 · Last updated: `2026-07-29` · `QML` · `MIT` · `io.github.elynch303.fan-monitor`
-- **[grokbar-omarchy](https://github.com/rlimberger/grokbar-omarchy)** : Omarchy plugin.
-  - ⭐ **0** · 🍴 0 · Last updated: `N/A` · `QML` · `rlimberger.grokbar-omarchy`
-- **[omarchy-ytmusic](https://github.com/rlimberger/omarchy-ytmusic)** : Omarchy plugin.
-  - ⭐ **0** · 🍴 0 · Last updated: `N/A` · `QML` · `quickshell.ytmusic`
 
 ### Productivity
 
@@ -3465,8 +3461,6 @@
   - ⭐ **2** · 🍴 0 · Last updated: `2026-08-11` · `QML` · `MIT` · `ky.nzbget-queue`
 - **[omarchy-wireguard](https://github.com/glafeara/omarchy-wireguard)** : Omawire — an unofficial Omarchy bar widget for WireGuard tunnels: connect, switch, import, edit and QR-export from the bar
   - ⭐ **13** · 🍴 3 · Last updated: `2026-08-02` · `QML` · `MIT` · `glafeara.wireguard`
-- **[omarchy-vpn](https://github.com/Paulie420/omarchy-vpn)** : Omarchy plugin.
-  - ⭐ **0** · 🍴 0 · Last updated: `N/A` · `QML` · `paulie420.vpn`
 
 ### Hardware
 

@@ -9,7 +9,13 @@ from utils import (
     PLUGINS_JSON_PATH,
     README_PATH,
     github_slug,
+    is_excluded,
 )
+
+
+def listed_plugins(plugins):
+    """Entries visible in generated lists (archived/dead repos are JSON-only)."""
+    return [p for p in plugins if not is_excluded(p)]
 
 
 class TestDatasetIntegrity:
@@ -95,17 +101,18 @@ class TestReadmeSynchronization:
         )
         assert match is not None, "TOTAL_PLUGINS_COUNT badge marker not found in README.md"
         badge_count = int(match.group(1))
-        assert badge_count == len(plugins), (
-            f"README count badge ({badge_count}) does not match plugins.json total ({len(plugins)})"
+        expected = len(listed_plugins(plugins))
+        assert badge_count == expected, (
+            f"README count badge ({badge_count}) does not match listed plugins ({expected})"
         )
 
-    def test_all_plugin_repos_in_readme(self):
+    def test_all_plugins_in_readme(self):
         with open(PLUGINS_JSON_PATH, "r", encoding="utf-8") as f:
             plugins = json.load(f)
 
         content = README_PATH.read_text(encoding="utf-8").lower()
         seen_repos = set()
-        for p in plugins:
+        for p in listed_plugins(plugins):
             repo_url = p.get("repo_url", "").lower()
             if repo_url in seen_repos:
                 continue
@@ -144,8 +151,9 @@ class TestSecondSortView:
         )
         assert match is not None, "TOTAL_PLUGINS_COUNT badge marker not found in BY_UPDATED.md"
         badge_count = int(match.group(1))
-        assert badge_count == len(plugins), (
-            f"BY_UPDATED count badge ({badge_count}) does not match plugins.json ({len(plugins)})"
+        expected = len(listed_plugins(plugins))
+        assert badge_count == expected, (
+            f"BY_UPDATED count badge ({badge_count}) does not match listed ({expected})"
         )
 
     def test_views_cross_link(self):
@@ -160,7 +168,7 @@ class TestSecondSortView:
 
         content = BY_UPDATED_PATH.read_text(encoding="utf-8").lower()
         seen_repos = set()
-        for p in plugins:
+        for p in listed_plugins(plugins):
             repo_url = p.get("repo_url", "").lower()
             if repo_url in seen_repos:
                 continue

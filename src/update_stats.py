@@ -36,6 +36,7 @@ from utils import (  # noqa: E402
     get_github_headers,
     get_github_token,
     github_slug,
+    is_excluded,
     load_plugins,
     normalize_plugin_entry,
     parse_repo_url,
@@ -407,6 +408,20 @@ async def main_async(args: argparse.Namespace) -> None:
     sort_key, reverse_order = get_sort_key(args.sort)
     normalized.sort(key=sort_key, reverse=reverse_order)
 
+    # Quality filter: archived/dead repos are always hidden from generated
+    # lists (kept in plugins.json); star/staleness cutoffs are opt-in.
+    listed = [p for p in normalized if not is_excluded(p, args.min_stars, args.stale_days)]
+    excluded = [p for p in normalized if is_excluded(p, args.min_stars, args.stale_days)]
+    if excluded:
+        console.print(
+            f"[yellow]Excluded {len(excluded)} entries from generated lists "
+            f"(archived/dead/stale/low-star):[/yellow]"
+        )
+        for p in excluded[:20]:
+            console.print(f"  - {p.get('plugin_id')} ({p.get('owner')}/{p.get('repo')})")
+        if len(excluded) > 20:
+            console.print(f"  ... and {len(excluded) - 20} more")
+
     # Display preview table in console
     table = Table(title="Awesome Omarchy Plugins - Live Stats")
     table.add_column("#", justify="right", style="dim")
@@ -417,7 +432,7 @@ async def main_async(args: argparse.Namespace) -> None:
     table.add_column("Last Updated", justify="center", style="green")
     table.add_column("License", style="dim")
 
-    for i, p in enumerate(normalized, 1):
+    for i, p in enumerate(listed, 1):
         table.add_row(
             str(i),
             p.get("name", p["repo"]),
@@ -431,17 +446,17 @@ async def main_async(args: argparse.Namespace) -> None:
     console.print(table)
 
     # Generate Markdown (grouped mode unless --flat is explicitly passed)
-    markdown_list = generate_markdown_list(normalized, grouped=not args.flat)
+    markdown_list = generate_markdown_list(listed, grouped=not args.flat)
 
     if args.dry_run:
         console.print("\n[bold]Generated Markdown Output:[/bold]\n")
         print(markdown_list)
         return
 
-    if update_readme(markdown_list, len(normalized)):
+    if update_readme(markdown_list, len(listed)):
         console.print(
             f"[bold green]✓ Successfully updated README.md with "
-            f"{len(normalized)} plugins![/bold green]"
+            f"{len(listed)} plugins![/bold green]"
         )
     else:
         console.print(
@@ -451,7 +466,7 @@ async def main_async(args: argparse.Namespace) -> None:
 
     # Second view: same catalog, each category sorted by most recently updated.
     updated_key, updated_reverse = get_sort_key("updated")
-    by_updated = sorted(normalized, key=updated_key, reverse=updated_reverse)
+    by_updated = sorted(listed, key=updated_key, reverse=updated_reverse)
     by_updated_markdown = generate_markdown_list(by_updated, grouped=not args.flat)
     if update_readme(by_updated_markdown, len(by_updated), path=BY_UPDATED_PATH):
         console.print(
@@ -477,6 +492,18 @@ def main() -> None:
         "--flat",
         action="store_true",
         help="Generate a single flat list instead of categorizing",
+    )
+    parser.add_argument(
+        "--min-stars",
+        type=int,
+        default=0,
+        help="Hide plugins below this star count from generated lists (default: 0, off)",
+    )
+    parser.add_argument(
+        "--stale-days",
+        type=int,
+        default=0,
+        help="Hide plugins not pushed within this many days (default: 0, disabled)",
     )
     parser.add_argument(
         "--add",
