@@ -288,24 +288,19 @@ def generate_plugin_markdown_item(plugin: Dict[str, Any]) -> str:
     name = plugin.get("name", plugin["repo"])
     url = plugin.get("repo_url") or f"https://github.com/{plugin['owner']}/{plugin['repo']}"
     desc = plugin.get("description", "").strip() or "Omarchy plugin."
-    plugin_id = plugin.get("plugin_id", "")
     stars_formatted = format_count(plugin.get("stars", 0))
     forks_formatted = format_count(plugin.get("forks", 0))
     last_updated = plugin.get("last_updated", "N/A")
-    language = plugin.get("language") or "QML"
-    license_str = plugin.get("license", "")
     archived_badge = " *(Archived)*" if plugin.get("archived") else ""
+
+    install_cmd = f"omarchy plugin add {url} --enable"
 
     meta_parts = [
         f"⭐ **{stars_formatted}**",
         f"🍴 {forks_formatted}",
         f"Last updated: `{last_updated}`",
-        f"`{language}`",
+        f"`{install_cmd}`",
     ]
-    if license_str and license_str not in ("Unknown", "NOASSERTION"):
-        meta_parts.append(f"`{license_str}`")
-    if plugin_id:
-        meta_parts.append(f"`{plugin_id}`")
 
     meta_line = " · ".join(meta_parts)
     return f"- **[{name}]({url})**{archived_badge} : {desc}\n  - {meta_line}"
