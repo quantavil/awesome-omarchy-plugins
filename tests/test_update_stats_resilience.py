@@ -267,11 +267,13 @@ class TestTopAuthorsLeaderboard:
         result = generate_top_authors_list(plugins, limit=2)
         assert "### 🏆 Top Plugin Authors" in result
 
+        assert "| Rank | Contributor | Total Stars | Plugins |" in result
+        assert "| :---: | :--- | :---: | :---: |" in result
         lines = result.strip().split("\n")
-        # Alice has 130 stars across 2 plugins -> Rank 1
-        assert "1. **[@alice](https://github.com/alice)** — ⭐ 130 (2 plugins)" in lines[2]
-        # Bob has 100 stars across 1 plugin -> Rank 2
-        assert "2. **[@bob](https://github.com/bob)** — ⭐ 100 (1 plugin)" in lines[3]
+        # Alice has 130 stars across 2 plugins -> Rank 1 (Gold medal)
+        assert "| 🥇 | [@alice](https://github.com/alice) | ⭐ 130 | 2 |" in lines[4]
+        # Bob has 100 stars across 1 plugin -> Rank 2 (Silver medal)
+        assert "| 🥈 | [@bob](https://github.com/bob) | ⭐ 100 | 1 |" in lines[5]
         # Carol (20 stars) excluded by limit=2
         assert "@carol" not in result
         # Unknown owner ignored

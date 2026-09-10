@@ -37,16 +37,18 @@
 
 ### 🏆 Top Plugin Authors
 
-1. **[@LetsFG](https://github.com/LetsFG)** — ⭐ 2.0k (1 plugin)
-2. **[@akitaonrails](https://github.com/akitaonrails)** — ⭐ 460 (1 plugin)
-3. **[@jankeesvw](https://github.com/jankeesvw)** — ⭐ 375 (15 plugins)
-4. **[@huacnlee](https://github.com/huacnlee)** — ⭐ 341 (3 plugins)
-5. **[@stappmus](https://github.com/stappmus)** — ⭐ 236 (6 plugins)
-6. **[@thisisgm](https://github.com/thisisgm)** — ⭐ 205 (5 plugins)
-7. **[@HANCORE-linux](https://github.com/HANCORE-linux)** — ⭐ 159 (2 plugins)
-8. **[@SirJul1337](https://github.com/SirJul1337)** — ⭐ 144 (1 plugin)
-9. **[@crmne](https://github.com/crmne)** — ⭐ 128 (6 plugins)
-10. **[@brianblakely](https://github.com/brianblakely)** — ⭐ 112 (12 plugins)
+| Rank | Contributor | Total Stars | Plugins |
+| :---: | :--- | :---: | :---: |
+| 🥇 | [@LetsFG](https://github.com/LetsFG) | ⭐ 2.0k | 1 |
+| 🥈 | [@akitaonrails](https://github.com/akitaonrails) | ⭐ 460 | 1 |
+| 🥉 | [@jankeesvw](https://github.com/jankeesvw) | ⭐ 375 | 15 |
+| 4 | [@huacnlee](https://github.com/huacnlee) | ⭐ 341 | 3 |
+| 5 | [@stappmus](https://github.com/stappmus) | ⭐ 236 | 6 |
+| 6 | [@thisisgm](https://github.com/thisisgm) | ⭐ 205 | 5 |
+| 7 | [@HANCORE-linux](https://github.com/HANCORE-linux) | ⭐ 159 | 2 |
+| 8 | [@SirJul1337](https://github.com/SirJul1337) | ⭐ 144 | 1 |
+| 9 | [@crmne](https://github.com/crmne) | ⭐ 128 | 6 |
+| 10 | [@brianblakely](https://github.com/brianblakely) | ⭐ 112 | 12 |
 
 
 ---

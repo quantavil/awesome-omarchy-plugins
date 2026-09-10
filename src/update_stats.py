@@ -372,7 +372,7 @@ def generate_plugin_markdown_item(plugin: Dict[str, Any]) -> str:
 
 
 def generate_top_authors_list(plugins: List[Dict[str, Any]], limit: int = 10) -> str:
-    """Generate simple numbered list of top plugin authors by cumulative stars."""
+    """Generate markdown table of top plugin authors by cumulative stars."""
     author_stats: Dict[str, Dict[str, int]] = {}
     for p in plugins:
         owner = (p.get("owner") or "").strip()
@@ -390,14 +390,18 @@ def generate_top_authors_list(plugins: List[Dict[str, Any]], limit: int = 10) ->
         reverse=True,
     )[:limit]
 
-    lines = ["### 🏆 Top Plugin Authors\n"]
+    medals = {1: "🥇", 2: "🥈", 3: "🥉"}
+    lines = [
+        "### 🏆 Top Plugin Authors\n",
+        "| Rank | Contributor | Total Stars | Plugins |",
+        "| :---: | :--- | :---: | :---: |",
+    ]
     for rank, (owner, stats) in enumerate(top_authors, 1):
+        rank_badge = medals.get(rank, str(rank))
         stars_str = format_count(stats["stars"])
-        plugin_word = "plugin" if stats["plugins"] == 1 else "plugins"
         profile_url = f"https://github.com/{owner}"
         lines.append(
-            f"{rank}. **[@{owner}]({profile_url})** — ⭐ {stars_str} "
-            f"({stats['plugins']} {plugin_word})"
+            f"| {rank_badge} | [@{owner}]({profile_url}) | ⭐ {stars_str} | {stats['plugins']} |"
         )
 
     return "\n".join(lines)
