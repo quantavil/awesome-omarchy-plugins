@@ -12,6 +12,7 @@ import asyncio
 import datetime
 import re
 import sys
+import time
 from pathlib import Path
 from typing import Any, Callable, Dict, List, Optional
 
@@ -75,6 +76,117 @@ class RateLimitCircuitBreaker:
 circuit_breaker = RateLimitCircuitBreaker()
 
 
+def _fetch_chunk(
+    client: httpx.Client,
+    chunk: List[str],
+    unique_repos: Dict[str, Dict[str, Any]],
+    headers: Dict[str, str],
+) -> Dict[str, Dict[str, Any]]:
+    """Fetch metadata for a single batch of repositories via GitHub GraphQL."""
+    query_lines = ["query BatchStats {"]
+    for idx, k in enumerate(chunk):
+        info = unique_repos[k]
+        o = info["owner"]
+        r = info["repo"]
+        query_lines.append(f"""
+          r{idx}: repository(owner: "{o}", name: "{r}") {{
+            stargazerCount
+            forkCount
+            pushedAt
+            isArchived
+            primaryLanguage {{ name }}
+            licenseInfo {{ spdxId }}
+            defaultBranchRef {{ name }}
+            openIssues: issues(states: OPEN) {{ totalCount }}
+            description
+          }}
+        """)
+    query_lines.append("}")
+    query_str = "\n".join(query_lines)
+
+    resp = client.post(
+        "https://api.github.com/graphql",
+        json={"query": query_str},
+        headers=headers,
+    )
+
+    if resp.status_code in (403, 429):
+        raise httpx.HTTPStatusError(
+            f"GraphQL rate limit/forbidden (HTTP {resp.status_code})",
+            request=resp.request,
+            response=resp,
+        )
+
+    if resp.status_code != 200:
+        raise httpx.HTTPStatusError(
+            f"GraphQL HTTP {resp.status_code}",
+            request=resp.request,
+            response=resp,
+        )
+
+    res_json = resp.json()
+    data = res_json.get("data") or {}
+    errors = res_json.get("errors") or []
+
+    error_map: Dict[str, str] = {}
+    for err in errors:
+        err_path = err.get("path")
+        if err_path and isinstance(err_path, list):
+            alias = err_path[0]
+            err_type = err.get("type", "")
+            error_map[alias] = err_type
+
+    chunk_stats: Dict[str, Dict[str, Any]] = {}
+    for idx, k in enumerate(chunk):
+        alias = f"r{idx}"
+        entry_data = data.get(alias)
+        cached = unique_repos[k]["cached"]
+        stats = dict(cached)
+
+        if entry_data:
+            stats["stars"] = entry_data.get("stargazerCount", 0)
+            stats["forks"] = entry_data.get("forkCount", 0)
+            stats["archived"] = entry_data.get("isArchived", False)
+            stats["dead"] = False
+
+            lang = entry_data.get("primaryLanguage")
+            stats["language"] = lang.get("name") if lang else ""
+
+            issues = entry_data.get("openIssues")
+            stats["open_issues"] = issues.get("totalCount", 0) if issues else 0
+
+            lic = entry_data.get("licenseInfo")
+            if lic and lic.get("spdxId") and lic["spdxId"] != "NOASSERTION":
+                stats["license"] = lic["spdxId"]
+
+            branch = entry_data.get("defaultBranchRef")
+            if branch and branch.get("name"):
+                stats["default_branch"] = branch["name"]
+
+            pushed = entry_data.get("pushedAt")
+            if pushed:
+                stats["last_updated"] = pushed.split("T")[0]
+                stats["updated_at"] = pushed.split("T")[0]
+
+            if entry_data.get("description"):
+                stats["repo_description"] = entry_data["description"].strip()
+        elif alias in error_map:
+            if error_map[alias] == "NOT_FOUND":
+                stats["dead"] = True
+                stats["last_updated"] = "N/A"
+                console.print(
+                    f"[yellow]Repo {k} is NOT_FOUND in GraphQL. Marked as abandoned.[/yellow]"
+                )
+            else:
+                console.print(
+                    f"[yellow]GraphQL error on {k}: {error_map[alias]}. "
+                    "Cached stats kept.[/yellow]"
+                )
+        chunk_stats[k] = stats
+
+    return chunk_stats
+
+
 def fetch_catalog_stats_graphql(
     unique_repos: Dict[str, Dict[str, Any]],
     token: str,
@@ -88,6 +200,8 @@ def fetch_catalog_stats_graphql(
     headers = get_github_headers(token)
     keys = list(unique_repos.keys())
     repo_stats: Dict[str, Dict[str, Any]] = {}
+    successful_batches = 0
+    total_batches = (len(keys) + batch_size - 1) // batch_size if keys else 0
 
     console.print(
         f"[bold cyan]Fetching metadata via GraphQL batching "
@@ -97,113 +211,61 @@ def fetch_catalog_stats_graphql(
     with httpx.Client(timeout=30.0) as client:
         for i in range(0, len(keys), batch_size):
             chunk = keys[i : i + batch_size]
-            query_lines = ["query BatchStats {"]
-            for idx, k in enumerate(chunk):
-                info = unique_repos[k]
-                o = info["owner"]
-                r = info["repo"]
-                query_lines.append(f"""
-                  r{idx}: repository(owner: "{o}", name: "{r}") {{
-                    stargazerCount
-                    forkCount
-                    pushedAt
-                    isArchived
-                    primaryLanguage {{ name }}
-                    licenseInfo {{ spdxId }}
-                    defaultBranchRef {{ name }}
-                    openIssues: issues(states: OPEN) {{ totalCount }}
-                    description
-                  }}
-                """)
-            query_lines.append("}")
-            query_str = "\n".join(query_lines)
+            batch_num = i // batch_size + 1
+            chunk_stats: Optional[Dict[str, Dict[str, Any]]] = None
 
-            try:
-                resp = client.post(
-                    "https://api.github.com/graphql",
-                    json={"query": query_str},
-                    headers=headers,
+            for attempt in (1, 2):
+                try:
+                    chunk_stats = _fetch_chunk(client, chunk, unique_repos, headers)
+                    break
+                except httpx.HTTPStatusError as e:
+                    if e.response.status_code in (403, 429):
+                        console.print(
+                            f"[bold red]GraphQL returned HTTP {e.response.status_code}. "
+                            "Aborting batching and keeping cached stats.[/bold red]"
+                        )
+                        for remaining_k in keys[i:]:
+                            repo_stats[remaining_k] = dict(unique_repos[remaining_k]["cached"])
+                        return repo_stats if successful_batches > 0 else None
+                    if attempt == 1:
+                        console.print(
+                            f"[yellow]Batch {batch_num} attempt 1 failed ({e}). "
+                            "Retrying in 2s...[/yellow]"
+                        )
+                        time.sleep(2.0)
+                    else:
+                        console.print(
+                            f"[red]Batch {batch_num} failed on attempt 2 ({e}).[/red]"
+                        )
+                except Exception as e:
+                    if attempt == 1:
+                        console.print(
+                            f"[yellow]Batch {batch_num} attempt 1 failed ({e}). "
+                            "Retrying in 2s...[/yellow]"
+                        )
+                        time.sleep(2.0)
+                    else:
+                        console.print(
+                            f"[red]Batch {batch_num} failed on attempt 2 ({e}).[/red]"
+                        )
+
+            if chunk_stats is not None:
+                repo_stats.update(chunk_stats)
+                successful_batches += 1
+                console.print(
+                    f"  [green]Batch {batch_num}/{total_batches} complete "
+                    f"({min(i + batch_size, len(keys))}/{len(keys)} repos)[/green]"
                 )
-                if resp.status_code == 200:
-                    res_json = resp.json()
-                    data = res_json.get("data") or {}
-                    errors = res_json.get("errors") or []
+            else:
+                console.print(
+                    f"[yellow]Keeping cached stats for batch {batch_num}. Continuing...[/yellow]"
+                )
+                for k in chunk:
+                    repo_stats[k] = dict(unique_repos[k]["cached"])
 
-                    error_map: Dict[str, str] = {}
-                    for err in errors:
-                        err_path = err.get("path")
-                        if err_path and isinstance(err_path, list):
-                            alias = err_path[0]
-                            err_type = err.get("type", "")
-                            error_map[alias] = err_type
-
-                    for idx, k in enumerate(chunk):
-                        alias = f"r{idx}"
-                        entry_data = data.get(alias)
-                        cached = unique_repos[k]["cached"]
-                        stats = dict(cached)
-
-                        if entry_data:
-                            stats["stars"] = entry_data.get("stargazerCount", 0)
-                            stats["forks"] = entry_data.get("forkCount", 0)
-                            stats["archived"] = entry_data.get("isArchived", False)
-                            stats["dead"] = False
-
-                            lang = entry_data.get("primaryLanguage")
-                            stats["language"] = lang.get("name") if lang else ""
-
-                            issues = entry_data.get("openIssues")
-                            stats["open_issues"] = issues.get("totalCount", 0) if issues else 0
-
-                            lic = entry_data.get("licenseInfo")
-                            if lic and lic.get("spdxId") and lic["spdxId"] != "NOASSERTION":
-                                stats["license"] = lic["spdxId"]
-
-                            branch = entry_data.get("defaultBranchRef")
-                            if branch and branch.get("name"):
-                                stats["default_branch"] = branch["name"]
-
-                            pushed = entry_data.get("pushedAt")
-                            if pushed:
-                                stats["last_updated"] = pushed.split("T")[0]
-                                stats["updated_at"] = pushed.split("T")[0]
-
-                            if entry_data.get("description"):
-                                stats["repo_description"] = entry_data["description"].strip()
-                        elif alias in error_map:
-                            if error_map[alias] == "NOT_FOUND":
-                                stats["dead"] = True
-                                stats["last_updated"] = "N/A"
-                                console.print(
-                                    f"[yellow]Repo {k} is NOT_FOUND in GraphQL. "
-                                    "Marked as dead.[/yellow]"
-                                )
-                            else:
-                                console.print(
-                                    f"[yellow]GraphQL error on {k}: {error_map[alias]}. "
-                                    "Cached stats kept.[/yellow]"
-                                )
-                        repo_stats[k] = stats
-
-                    console.print(
-                        f"  [green]Batch {i // batch_size + 1}/"
-                        f"{(len(keys) + batch_size - 1) // batch_size} complete "
-                        f"({min(i + batch_size, len(keys))}/{len(keys)} repos)[/green]"
-                    )
-                elif resp.status_code in (403, 429):
-                    console.print(
-                        f"[bold red]GraphQL returned HTTP {resp.status_code}. "
-                        "Aborting batching and keeping cached stats.[/bold red]"
-                    )
-                    return repo_stats
-                else:
-                    console.print(
-                        f"[red]GraphQL HTTP {resp.status_code}. Falling back to REST.[/red]"
-                    )
-                    return None
-            except Exception as e:
-                console.print(f"[red]GraphQL exception: {e}. Falling back to REST.[/red]")
-                return None
+    if total_batches > 0 and successful_batches == 0:
+        console.print("[red]All GraphQL batches failed. Falling back to REST.[/red]")
+        return None
 
     return repo_stats
 
@@ -256,7 +318,7 @@ async def fetch_repo_stats_async(
                 stats["last_updated"] = "N/A"
                 console.print(
                     f"[yellow]Repo {owner}/{repo} returned HTTP {resp.status_code} "
-                    "(Not Found). Marked as dead.[/yellow]"
+                    "(Not Found). Marked as abandoned.[/yellow]"
                 )
             elif resp.status_code in (403, 429):
                 remaining = resp.headers.get("x-ratelimit-remaining")
@@ -293,7 +355,10 @@ def generate_plugin_markdown_item(plugin: Dict[str, Any]) -> str:
     last_updated = plugin.get("last_updated", "N/A")
     archived_badge = " *(Archived)*" if plugin.get("archived") else ""
 
-    install_cmd = f"omarchy plugin add {url} --enable"
+    owner = plugin.get("owner", "").strip()
+    repo = plugin.get("repo", "").strip()
+    slug = f"{owner}/{repo}" if owner and repo else url
+    install_cmd = f"omarchy plugin add {slug} --enable"
 
     meta_parts = [
         f"⭐ **{stars_formatted}**",
@@ -306,10 +371,65 @@ def generate_plugin_markdown_item(plugin: Dict[str, Any]) -> str:
     return f"- **[{name}]({url})**{archived_badge} : {desc}\n  - {meta_line}"
 
 
-def generate_markdown_list(plugins: List[Dict[str, Any]], grouped: bool = True) -> str:
-    """Generate Markdown representation of the plugin list, grouped by category."""
+def generate_top_authors_list(plugins: List[Dict[str, Any]], limit: int = 10) -> str:
+    """Generate simple numbered list of top plugin authors by cumulative stars."""
+    author_stats: Dict[str, Dict[str, int]] = {}
+    for p in plugins:
+        owner = (p.get("owner") or "").strip()
+        if not owner or owner == "?":
+            continue
+        stars = int(p.get("stars", 0) or 0)
+        if owner not in author_stats:
+            author_stats[owner] = {"stars": 0, "plugins": 0}
+        author_stats[owner]["stars"] += stars
+        author_stats[owner]["plugins"] += 1
+
+    top_authors = sorted(
+        author_stats.items(),
+        key=lambda x: (x[1]["stars"], x[1]["plugins"]),
+        reverse=True,
+    )[:limit]
+
+    lines = ["### 🏆 Top Plugin Authors\n"]
+    for rank, (owner, stats) in enumerate(top_authors, 1):
+        stars_str = format_count(stats["stars"])
+        plugin_word = "plugin" if stats["plugins"] == 1 else "plugins"
+        profile_url = f"https://github.com/{owner}"
+        lines.append(
+            f"{rank}. **[@{owner}]({profile_url})** — ⭐ {stars_str} "
+            f"({stats['plugins']} {plugin_word})"
+        )
+
+    return "\n".join(lines)
+
+
+def generate_markdown_list(
+    plugins: List[Dict[str, Any]],
+    grouped: bool = True,
+    include_top_authors: bool = True,
+) -> str:
+    """Generate Markdown representation of the plugin list, grouped by category.
+
+    Plugins with 3+ stars are showcased directly under each category.
+    New and emerging plugins (0-2 stars) are neatly accessible in an in-category
+    collapsible details block, keeping browsing focused while preserving discoverability.
+    """
     if not grouped:
-        return "\n".join(generate_plugin_markdown_item(p) for p in plugins)
+        top_plugins = [p for p in plugins if int(p.get("stars", 0) or 0) >= 3]
+        new_plugins = [p for p in plugins if int(p.get("stars", 0) or 0) < 3]
+        items = [generate_plugin_markdown_item(p) for p in top_plugins]
+        if new_plugins:
+            new_rendered = "\n".join(generate_plugin_markdown_item(p) for p in new_plugins)
+            summary_title = (
+                f"🐣 New & Emerging Plugins ({len(new_plugins)} plugins · 0–2 ⭐)"
+            )
+            items.append(
+                f"\n<details>\n"
+                f"<summary><b>{summary_title}</b></summary>\n\n"
+                f"{new_rendered}\n\n"
+                f"</details>"
+            )
+        return "\n".join(items)
 
     toc_lines = ["### Categories\n"]
     category_map: Dict[str, List[Dict[str, Any]]] = {c: [] for c in PLUGIN_CATEGORIES}
@@ -329,15 +449,42 @@ def generate_markdown_list(plugins: List[Dict[str, Any]], grouped: bool = True) 
 
     for category in active_categories:
         slug = github_slug(category)
-        count = len(category_map[category])
-        toc_lines.append(f"- [{category}](#{slug}) ({count})")
+        cat_plugins = category_map[category]
+        top_count = sum(1 for p in cat_plugins if int(p.get("stars", 0) or 0) >= 3)
+        new_count = len(cat_plugins) - top_count
+        if top_count > 0 and new_count > 0:
+            toc_lines.append(f"- [{category}](#{slug}) ({top_count} top · {new_count} new)")
+        else:
+            toc_lines.append(f"- [{category}](#{slug}) ({len(cat_plugins)})")
 
     content_sections = ["\n".join(toc_lines), "\n---"]
 
+    if include_top_authors:
+        content_sections.append(f"\n{generate_top_authors_list(plugins, limit=10)}\n")
+        content_sections.append("\n---")
+
     for category in active_categories:
         content_sections.append(f"\n### {category}\n")
-        for p in category_map[category]:
-            content_sections.append(generate_plugin_markdown_item(p))
+        cat_plugins = category_map[category]
+        top_plugins = [p for p in cat_plugins if int(p.get("stars", 0) or 0) >= 3]
+        new_plugins = [p for p in cat_plugins if int(p.get("stars", 0) or 0) < 3]
+
+        if top_plugins:
+            for p in top_plugins:
+                content_sections.append(generate_plugin_markdown_item(p))
+
+        if new_plugins:
+            new_rendered = "\n".join(generate_plugin_markdown_item(p) for p in new_plugins)
+            open_attr = " open" if not top_plugins else ""
+            summary_title = (
+                f"🐣 New & Emerging {category} ({len(new_plugins)} plugins · 0–2 ⭐)"
+            )
+            content_sections.append(
+                f"\n<details{open_attr}>\n"
+                f"<summary><b>{summary_title}</b></summary>\n\n"
+                f"{new_rendered}\n\n"
+                f"</details>"
+            )
 
     return "\n".join(content_sections)
 
@@ -432,7 +579,7 @@ def regenerate_catalogs(
     if excluded:
         console.print(
             f"[yellow]Excluded {len(excluded)} entries from generated lists "
-            f"(archived/dead/stale/low-star).[/yellow]"
+            f"(archived/abandoned/stale/low-star).[/yellow]"
         )
 
     markdown_list = generate_markdown_list(listed, grouped=not flat)
@@ -445,7 +592,9 @@ def regenerate_catalogs(
 
     updated_key, updated_reverse = get_sort_key("updated")
     by_updated = sorted(listed, key=updated_key, reverse=updated_reverse)
-    by_updated_markdown = generate_markdown_list(by_updated, grouped=not flat)
+    by_updated_markdown = generate_markdown_list(
+        by_updated, grouped=not flat, include_top_authors=False
+    )
     update_readme(by_updated_markdown, len(by_updated), path=BY_UPDATED_PATH)
     console.print(
         f"[bold green]✓ Updated BY_UPDATED.md with {len(by_updated)} plugins![/bold green]"
@@ -462,7 +611,7 @@ async def main_async(args: argparse.Namespace) -> None:
     token = get_github_token(args.token)
 
     if not args.render_only:
-        # Group by unique repo (skipping permanently dead/abandoned repos to save API quota)
+        # Group by unique repo (skipping abandoned/inactive repos to save API quota)
         unique_repos: Dict[str, Dict[str, Any]] = {}
         for plugin in plugins:
             if is_dead(plugin):
@@ -523,7 +672,7 @@ async def main_async(args: argparse.Namespace) -> None:
             if not plugin.get("description") and stats.get("repo_description"):
                 plugin["description"] = stats["repo_description"]
 
-        # Re-evaluate dead status after merging live stats
+        # Re-evaluate abandonment status after merging live stats
         for plugin in plugins:
             if is_dead(plugin):
                 plugin["dead"] = True

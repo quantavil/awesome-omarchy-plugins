@@ -135,24 +135,30 @@ class TestIsDead:
         assert is_dead({"last_updated": None, "stars": 10})
 
     def test_abandoned_under_three_stars(self):
-        # >180 days old and 0, 1, or 2 stars -> DEAD
+        # >150 days old and 0, 1, or 2 stars -> DEAD
         import datetime
         fixed_today = datetime.date(2026, 9, 8)
-        assert is_dead({"stars": 0, "last_updated": "2025-01-01"}, today=fixed_today)
-        assert is_dead({"stars": 1, "last_updated": "2025-01-01"}, today=fixed_today)
-        assert is_dead({"stars": 2, "last_updated": "2025-01-01"}, today=fixed_today)
+        assert is_dead({"stars": 0, "last_updated": "2026-04-10"}, today=fixed_today)
+        assert is_dead({"stars": 1, "last_updated": "2026-04-10"}, today=fixed_today)
+        assert is_dead({"stars": 2, "last_updated": "2026-04-10"}, today=fixed_today)
+
+    def test_abandoned_boundary_under_one_fifty_days(self):
+        # 149 days old and 0 stars -> NOT dead (still within 150-day window)
+        import datetime
+        fixed_today = datetime.date(2026, 9, 8)
+        assert not is_dead({"stars": 0, "last_updated": "2026-04-12"}, today=fixed_today)
 
     def test_abandoned_survives_with_three_or_more_stars(self):
         import datetime
         fixed_today = datetime.date(2026, 9, 8)
-        # >180 days old but has >= 3 stars -> NOT dead
+        # >150 days old but has >= 3 stars -> NOT dead
         assert not is_dead({"stars": 3, "last_updated": "2025-01-01"}, today=fixed_today)
         assert not is_dead({"stars": 10, "last_updated": "2025-01-01"}, today=fixed_today)
 
     def test_fresh_repo_survives_with_zero_stars(self):
         import datetime
         fixed_today = datetime.date(2026, 9, 8)
-        # Recent activity (<180 days) even with 0 stars -> NOT dead
+        # Recent activity (<150 days) even with 0 stars -> NOT dead
         assert not is_dead({"stars": 0, "last_updated": "2026-09-01"}, today=fixed_today)
 
 

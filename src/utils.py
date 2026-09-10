@@ -303,12 +303,12 @@ def plugin_age_days(plugin: Dict[str, Any], today: Optional[datetime.date] = Non
 
 
 def is_dead(plugin: Dict[str, Any], today: Optional[datetime.date] = None) -> bool:
-    """Decide whether a plugin repository is considered dead.
+    """Decide whether a plugin repository is considered abandoned (not updated in a long time).
 
-    A repository is declared dead if:
-    1. Explicitly dead or unreachable (HTTP 404/410, private, or last_updated is N/A)
+    A repository is declared abandoned if:
+    1. Explicitly abandoned or unreachable (HTTP 404/410, private, or last_updated is N/A)
     2. Maintainer archived it on GitHub (archived is True)
-    3. Compound abandonment: untouched in >6 months (180 days) AND has <3 stars (0, 1, or 2 stars)
+    3. Compound abandonment: untouched in >5 months (150 days) AND has <3 stars (0, 1, or 2 stars)
     """
     if plugin.get("dead"):
         return True
@@ -317,13 +317,17 @@ def is_dead(plugin: Dict[str, Any], today: Optional[datetime.date] = None) -> bo
     if (plugin.get("last_updated") or "N/A") == "N/A":
         return True
 
-    # Compound abandonment: untouched in >180 days and fewer than 3 stars
+    # Compound abandonment: untouched in >150 days and fewer than 3 stars
     age = plugin_age_days(plugin, today=today)
     stars = int(plugin.get("stars", 0) or 0)
-    if age is not None and age > 180 and stars < 3:
+    if age is not None and age > 150 and stars < 3:
         return True
 
     return False
+
+
+# Semantic alias: abandoned means untouched/inactive for a prolonged period
+is_abandoned = is_dead
 
 
 def is_excluded(
@@ -334,7 +338,7 @@ def is_excluded(
 ) -> bool:
     """Decide whether a plugin is hidden from generated lists (kept in JSON).
 
-    Always excluded: dead repos (404/archived/abandoned >180 days with <3 stars).
+    Always excluded: abandoned repos (404/archived/abandoned >150 days with <3 stars).
     Opt-in: additional custom min_stars or stale_days cutoffs.
     """
     if is_dead(plugin, today=today):
