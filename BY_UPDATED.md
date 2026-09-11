@@ -5,7 +5,7 @@
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge-flat2.svg" alt="Awesome" /></a>
   <!-- TOTAL_PLUGINS_COUNT --><a href="#plugins-list"><img src="https://img.shields.io/badge/Plugins-2596-a78bfa.svg?style=flat-square" alt="Tracked Plugins" /></a><!-- /TOTAL_PLUGINS_COUNT -->
-  <!-- LAST_UPDATED --><a href="#plugins-list"><img src="https://img.shields.io/badge/Updated-2026--09--10-blueviolet.svg?style=flat-square" alt="Last Updated" /></a><!-- /LAST_UPDATED -->
+  <!-- LAST_UPDATED --><a href="#plugins-list"><img src="https://img.shields.io/badge/Updated-2026--09--11-blueviolet.svg?style=flat-square" alt="Last Updated" /></a><!-- /LAST_UPDATED -->
 </p>
 
 <p align="center">
@@ -22,13 +22,13 @@
 <!-- PLUGINS_LIST_START -->
 ### Categories
 
-- [Widgets](#widgets) (139 top · 643 new)
-- [Productivity](#productivity) (114 top · 419 new)
-- [System](#system) (73 top · 320 new)
-- [Hardware](#hardware) (36 top · 190 new)
+- [Widgets](#widgets) (142 top · 640 new)
+- [Productivity](#productivity) (116 top · 417 new)
+- [System](#system) (76 top · 317 new)
+- [Hardware](#hardware) (37 top · 189 new)
 - [Desktop](#desktop) (51 top · 154 new)
-- [Developer Tools](#developer-tools) (38 top · 158 new)
-- [Appearance](#appearance) (46 top · 146 new)
+- [Developer Tools](#developer-tools) (39 top · 157 new)
+- [Appearance](#appearance) (47 top · 145 new)
 - [Other](#other) (9 top · 58 new)
 - [Kids](#kids) (2)
 
@@ -37,35 +37,47 @@
 ### Widgets
 
 - **[ai-usagebar](https://github.com/akitaonrails/ai-usagebar)** : Rust-based waybar widget to monitor status of Claude, GPT, GLM, OpenRouter plans/credits - inspired by claudebar/codexbar
-  - ⭐ **460** · 🍴 92 · Last updated: `2026-09-10` · `omarchy plugin add akitaonrails/ai-usagebar --enable`
+  - ⭐ **474** · 🍴 96 · Last updated: `2026-09-11` · `omarchy plugin add akitaonrails/ai-usagebar --enable`
+- **[omarchy-mihoro](https://github.com/huacnlee/omarchy-mihoro)** : Omarchy plugin to display Mihoro status.
+  - ⭐ **119** · 🍴 4 · Last updated: `2026-09-11` · `omarchy plugin add huacnlee/omarchy-mihoro --enable`
+- **[agent-orchestr](https://github.com/meviusisback/agent-orchestr)** : Live monitor and workspace orchestrator for AI coding agents (Herdr, OMP, Hermes, Claude, Codex) in the Omarchy bar
+  - ⭐ **14** · 🍴 3 · Last updated: `2026-09-11` · `omarchy plugin add meviusisback/agent-orchestr --enable`
+- **[omarchy-agent-bar](https://github.com/othavi0/omarchy-agent-bar)** : AI quota in your Omarchy bar. Claude, Codex, Amp, Grok and Antigravity chips with usage windows and reset countdowns.
+  - ⭐ **9** · 🍴 2 · Last updated: `2026-09-11` · `omarchy plugin add othavi0/omarchy-agent-bar --enable`
+- **[omaherdr](https://github.com/njpatel/omaherdr)** : herdr in the Omarchy bar
+  - ⭐ **7** · 🍴 1 · Last updated: `2026-09-11` · `omarchy plugin add njpatel/omaherdr --enable`
+- **[omarchy-cliamped-plugin](https://github.com/majesticio/omarchy-cliamped-plugin)** : Theme-aware CLIAMP control center and spectrum widget for Omarchy
+  - ⭐ **4** · 🍴 1 · Last updated: `2026-09-11` · `omarchy plugin add majesticio/omarchy-cliamped-plugin --enable`
+- **[jellyfin-nowplaying](https://github.com/Kyrunner/jellyfin-nowplaying)** : Omarchy 4 bar widget: who is watching Jellyfin, and whether the server is transcoding for them. Read-only.
+  - ⭐ **4** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add Kyrunner/jellyfin-nowplaying --enable`
+- **[omarchy-privacy-devices](https://github.com/bolens/omarchy-privacy-devices)** : Configurable Omarchy Shell privacy indicators and controls for microphones, audio output, cameras, location, screen sharing, screenshots, and recording
+  - ⭐ **3** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add bolens/omarchy-privacy-devices --enable`
+- **[omajelly](https://github.com/Hopelezz/omajelly)** : Jellyfin activity lists, fullscreen library browsing, and mpv playback for Omarchy.
+  - ⭐ **3** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add Hopelezz/omajelly --enable`
 - **[omarchy-radio-atlas](https://github.com/AksharP5/omarchy-radio-atlas)** : Explore live radio on a rotatable globe from the Omarchy bar.
-  - ⭐ **58** · 🍴 11 · Last updated: `2026-09-10` · `omarchy plugin add AksharP5/omarchy-radio-atlas --enable`
+  - ⭐ **62** · 🍴 13 · Last updated: `2026-09-10` · `omarchy plugin add AksharP5/omarchy-radio-atlas --enable`
 - **[syncshell](https://github.com/omarchy-QOL/syncshell)** : See sync health, open folders, control the service, and manage Syncthing from the Omarchy bar.
   - ⭐ **28** · 🍴 3 · Last updated: `2026-09-10` · `omarchy plugin add omarchy-QOL/syncshell --enable`
 - **[omarchy-nearby](https://github.com/jfg96/omarchy-nearby)** : A native Omarchy/Quickshell widget for discovering nearby devices and sharing files over LocalSend.
   - ⭐ **17** · 🍴 1 · Last updated: `2026-09-10` · `omarchy plugin add jfg96/omarchy-nearby --enable`
 - **[omarchy-timezones-plugin](https://github.com/sspaeti/omarchy-timezones-plugin)** : Showing timezones in Omarchy bar like world time buddy does (hover and click).
   - ⭐ **16** · 🍴 6 · Last updated: `2026-09-10` · `omarchy plugin add sspaeti/omarchy-timezones-plugin --enable`
+- **[omarchy-mpris](https://github.com/crmne/omarchy-mpris)** : Media controls for the Omarchy bar with album art, now-playing metadata, and playback buttons
+  - ⭐ **12** · 🍴 3 · Last updated: `2026-09-10` · `omarchy plugin add crmne/omarchy-mpris --enable`
 - **[omarchy-weather-radar](https://github.com/eduardodallecort/omarchy-weather-radar)** : Live weather radar in the Omarchy bar, with a two-hour loop and optional storm alerts. No account, no API key.
   - ⭐ **11** · 🍴 4 · Last updated: `2026-09-10` · `omarchy plugin add eduardodallecort/omarchy-weather-radar --enable`
-- **[omarchy-mpris](https://github.com/crmne/omarchy-mpris)** : Media controls for the Omarchy bar with album art, now-playing metadata, and playback buttons
-  - ⭐ **11** · 🍴 3 · Last updated: `2026-09-10` · `omarchy plugin add crmne/omarchy-mpris --enable`
 - **[omarchy-dropdown-terminal](https://github.com/tuthan/omarchy-dropdown-terminal)** : Omarchy dropdown style terminal
   - ⭐ **10** · 🍴 2 · Last updated: `2026-09-10` · `omarchy plugin add tuthan/omarchy-dropdown-terminal --enable`
-- **[omarchy-agent-bar](https://github.com/othavi0/omarchy-agent-bar)** : AI quota in your Omarchy bar. Claude, Codex, Amp, Grok and Antigravity chips with usage windows and reset countdowns.
-  - ⭐ **9** · 🍴 2 · Last updated: `2026-09-10` · `omarchy plugin add othavi0/omarchy-agent-bar --enable`
 - **[omarchy-clockwork](https://github.com/pjgeutjens/omarchy-clockwork)** : Stopwatch, countdown, alarm, intervals, and Pomodoro timer for the Omarchy bar
   - ⭐ **8** · 🍴 3 · Last updated: `2026-09-10` · `omarchy plugin add pjgeutjens/omarchy-clockwork --enable`
 - **[so.den](https://github.com/SaifOmar/so.den)** : Windows-style overflow flyout for Omarchy — tuck away tray apps & bar plugins behind one chevron
   - ⭐ **4** · 🍴 2 · Last updated: `2026-09-10` · `omarchy plugin add SaifOmar/so.den --enable`
-- **[jellyfin-nowplaying](https://github.com/Kyrunner/jellyfin-nowplaying)** : Omarchy 4 bar widget: who is watching Jellyfin, and whether the server is transcoding for them. Read-only.
-  - ⭐ **4** · 🍴 0 · Last updated: `2026-09-10` · `omarchy plugin add Kyrunner/jellyfin-nowplaying --enable`
+- **[nook](https://github.com/Katsari/nook)** : A bar drawer for Omarchy, for when too many plugins have cluttered your bar
+  - ⭐ **3** · 🍴 3 · Last updated: `2026-09-10` · `omarchy plugin add Katsari/nook --enable`
 - **[mus.quran](https://github.com/SaifOmar/mus.quran)** : Omarchy plugin.
   - ⭐ **3** · 🍴 0 · Last updated: `2026-09-10` · `omarchy plugin add SaifOmar/mus.quran --enable`
 - **[miguel.cyberghost](https://github.com/27mfp/miguel.cyberghost)** : CyberGhost VPN bar widget and popup panel for Omarchy shell (Quickshell) — native WireGuard, country switching, server modes
   - ⭐ **3** · 🍴 0 · Last updated: `2026-09-10` · `omarchy plugin add 27mfp/miguel.cyberghost --enable`
-- **[agent-orchestr](https://github.com/meviusisback/agent-orchestr)** : Live monitor and workspace orchestrator for AI coding agents (Herdr, OMP, Hermes, Claude, Codex) in the Omarchy bar
-  - ⭐ **13** · 🍴 2 · Last updated: `2026-09-09` · `omarchy plugin add meviusisback/agent-orchestr --enable`
 - **[omarchy-taskbar](https://github.com/joeyvigil/omarchy-taskbar)** : Pinned app launcher for the Omarchy bar: click to launch or focus, with running-state indicators. Pin and unpin from the bar itself.
   - ⭐ **5** · 🍴 3 · Last updated: `2026-09-09` · `omarchy plugin add joeyvigil/omarchy-taskbar --enable`
 - **[omarchy-plugin-containers](https://github.com/Leyanora/omarchy-plugin-containers)** : Manage and group plugins to unclog your widget bar
@@ -74,28 +86,24 @@
   - ⭐ **3** · 🍴 1 · Last updated: `2026-09-09` · `omarchy plugin add JeffCortez23/omarchy-projector-cast --enable`
 - **[omarchy-wavebar](https://github.com/ErikBurdett/omarchy-wavebar)** : WaveBar: waveform media controller for the Omarchy bar
   - ⭐ **3** · 🍴 1 · Last updated: `2026-09-09` · `omarchy plugin add ErikBurdett/omarchy-wavebar --enable`
-- **[omarchy-privacy-devices](https://github.com/bolens/omarchy-privacy-devices)** : Configurable Omarchy Shell privacy indicators and controls for microphones, audio output, cameras, location, screen sharing, screenshots, and recording
-  - ⭐ **3** · 🍴 0 · Last updated: `2026-09-09` · `omarchy plugin add bolens/omarchy-privacy-devices --enable`
 - **[Omarchy-Spotify](https://github.com/stappmus/Omarchy-Spotify)** : Spotify in Quickshell—not Chromium. About 60 MB of RAM vs ~950 MB for the desktop client, with Omarchy themes, a built-in mini player, keyboard shortcuts, and Omasing lyrics.
-  - ⭐ **193** · 🍴 31 · Last updated: `2026-09-08` · `omarchy plugin add stappmus/Omarchy-Spotify --enable`
+  - ⭐ **195** · 🍴 32 · Last updated: `2026-09-08` · `omarchy plugin add stappmus/Omarchy-Spotify --enable`
 - **[omarchy-calendar](https://github.com/tmn73/omarchy-calendar)** : A clock for your Omarchy bar that knows what is next. Google Calendar, or any source you like.
-  - ⭐ **31** · 🍴 10 · Last updated: `2026-09-08` · `omarchy plugin add tmn73/omarchy-calendar --enable`
+  - ⭐ **31** · 🍴 11 · Last updated: `2026-09-08` · `omarchy plugin add tmn73/omarchy-calendar --enable`
 - **[blow-off-some-steam](https://github.com/ejuro/blow-off-some-steam)** : Omarchy plugin.
-  - ⭐ **15** · 🍴 1 · Last updated: `2026-09-08` · `omarchy plugin add ejuro/blow-off-some-steam --enable`
+  - ⭐ **15** · 🍴 2 · Last updated: `2026-09-08` · `omarchy plugin add ejuro/blow-off-some-steam --enable`
 - **[omasweeper](https://github.com/jankeesvw/omasweeper)** : Minesweeper as an Omarchy shell plugin, drawn like a TUI
   - ⭐ **10** · 🍴 0 · Last updated: `2026-09-08` · `omarchy plugin add jankeesvw/omasweeper --enable`
-- **[omaherdr](https://github.com/njpatel/omaherdr)** : herdr in the Omarchy bar
-  - ⭐ **7** · 🍴 1 · Last updated: `2026-09-08` · `omarchy plugin add njpatel/omaherdr --enable`
-- **[omarchy-mihoro](https://github.com/huacnlee/omarchy-mihoro)** : Omarchy plugin to display Mihoro status.
-  - ⭐ **118** · 🍴 4 · Last updated: `2026-09-07` · `omarchy plugin add huacnlee/omarchy-mihoro --enable`
+- **[omarchy-markets](https://github.com/CostaFot/omarchy-markets)** : Stocks, crypto and currencies in the Omarchy bar — a port of the Markets extension for Command Palette
+  - ⭐ **3** · 🍴 0 · Last updated: `2026-09-08` · `omarchy plugin add CostaFot/omarchy-markets --enable`
 - **[claudebar](https://github.com/mryll/claudebar)** : Claude Code usage limits for Waybar and the Omarchy shell. Session, weekly, per-model, and extra-usage costs. Bash, AUR.
   - ⭐ **54** · 🍴 6 · Last updated: `2026-09-07` · `omarchy plugin add mryll/claudebar --enable`
 - **[omarchy-vpn](https://github.com/jkoestinger/omarchy-vpn)** : VPN status and switching in the Omarchy bar, across whichever VPN tools are installed.
-  - ⭐ **31** · 🍴 9 · Last updated: `2026-09-07` · `omarchy plugin add jkoestinger/omarchy-vpn --enable`
+  - ⭐ **31** · 🍴 8 · Last updated: `2026-09-07` · `omarchy plugin add jkoestinger/omarchy-vpn --enable`
 - **[codexbar](https://github.com/mryll/codexbar)** : OpenAI Codex CLI usage limits for Waybar and the Omarchy shell. Session, weekly, code review, and credits. Bash, AUR.
   - ⭐ **14** · 🍴 3 · Last updated: `2026-09-07` · `omarchy plugin add mryll/codexbar --enable`
 - **[meteobar](https://github.com/mryll/meteobar)** : Weather forecasts from Open-Meteo for Waybar and the Omarchy shell. No API key. Rust, AUR.
-  - ⭐ **11** · 🍴 5 · Last updated: `2026-09-07` · `omarchy plugin add mryll/meteobar --enable`
+  - ⭐ **12** · 🍴 5 · Last updated: `2026-09-07` · `omarchy plugin add mryll/meteobar --enable`
 - **[live-f1](https://github.com/marconn01/live-f1)** : Omarchy plugin.
   - ⭐ **4** · 🍴 0 · Last updated: `2026-09-07` · `omarchy plugin add marconn01/live-f1 --enable`
 - **[intemporel](https://github.com/pomartel/intemporel)** : Intemporel — An Omarchy 4 QuickShell Calendar Plugin
@@ -103,7 +111,7 @@
 - **[omarchy-unifi-protect](https://github.com/jankeesvw/omarchy-unifi-protect)** : Omarchy bar widget: watch your UniFi Protect cameras from the bar
   - ⭐ **17** · 🍴 6 · Last updated: `2026-09-06` · `omarchy plugin add jankeesvw/omarchy-unifi-protect --enable`
 - **[Omarchy-drawer](https://github.com/alyayman921/Omarchy-drawer)** : Omarchy plugin.
-  - ⭐ **8** · 🍴 1 · Last updated: `2026-09-06` · `omarchy plugin add alyayman921/Omarchy-drawer --enable`
+  - ⭐ **8** · 🍴 2 · Last updated: `2026-09-06` · `omarchy plugin add alyayman921/Omarchy-drawer --enable`
 - **[omarchy-active-window](https://github.com/crmne/omarchy-active-window)** : Omarchy Quattro active-window bar widget with real app icons and saturation controls
   - ⭐ **6** · 🍴 1 · Last updated: `2026-09-06` · `omarchy plugin add crmne/omarchy-active-window --enable`
 - **[omarchy-lyrics](https://github.com/crmne/omarchy-lyrics)** : Lyrics for whatever is playing on the Omarchy bar, highlighted in time with the song
@@ -112,8 +120,6 @@
   - ⭐ **5** · 🍴 2 · Last updated: `2026-09-06` · `omarchy plugin add SaifOmar/WorkspaceIcons --enable`
 - **[oma-swiss](https://github.com/glasschan/oma-swiss)** : One bar icon, five Hyprland tools: Super⇄Alt swap, aspect ratio, looks, gaming, quick captures. Four UI languages.
   - ⭐ **4** · 🍴 0 · Last updated: `2026-09-06` · `omarchy plugin add glasschan/oma-swiss --enable`
-- **[omajelly](https://github.com/Hopelezz/omajelly)** : Jellyfin activity lists, fullscreen library browsing, and mpv playback for Omarchy.
-  - ⭐ **3** · 🍴 0 · Last updated: `2026-09-06` · `omarchy plugin add Hopelezz/omajelly --enable`
 - **[jalali-calendar](https://github.com/mahziyarng98/jalali-calendar)** : Jalali (Solar Hijri) date in the Omarchy bar, with a Finglish month calendar and Iranian holidays
   - ⭐ **3** · 🍴 0 · Last updated: `2026-09-06` · `omarchy plugin add mahziyarng98/jalali-calendar --enable`
 - **[omarchy-gravity](https://github.com/mahziyarng98/omarchy-gravity)** : An orbital app launcher for the Omarchy shell: up to six apps on one turning ring, ranked by how often you actually launch them
@@ -121,7 +127,7 @@
 - **[omaproton-vpn](https://github.com/grichard99/omaproton-vpn)** : OmaProton VPN: Proton VPN, built for Omarchy. No terminal, one click to connect, wears every theme.
   - ⭐ **53** · 🍴 4 · Last updated: `2026-09-05` · `omarchy plugin add grichard99/omaproton-vpn --enable`
 - **[omarchy-decent-workspaces](https://github.com/TheTrueFerret/omarchy-decent-workspaces)** : Omarchy Quattro bar widget: only the workspaces in use, on the monitor they belong to, with app icons beside the workspace number
-  - ⭐ **22** · 🍴 4 · Last updated: `2026-09-05` · `omarchy plugin add TheTrueFerret/omarchy-decent-workspaces --enable`
+  - ⭐ **23** · 🍴 4 · Last updated: `2026-09-05` · `omarchy plugin add TheTrueFerret/omarchy-decent-workspaces --enable`
 - **[omarchy-jellyfin-music-plugin](https://github.com/andreas-bylund/omarchy-jellyfin-music-plugin)** : Play music from your Jellyfin server straight from the Omarchy bar. Now playing, transport, search and browsing, streamed through mpv so MPRIS and the media keys just work.
   - ⭐ **14** · 🍴 5 · Last updated: `2026-09-05` · `omarchy plugin add andreas-bylund/omarchy-jellyfin-music-plugin --enable`
 - **[omarchy-world-clock](https://github.com/olivoil/omarchy-world-clock)** : Omarchy plugin.
@@ -142,8 +148,6 @@
   - ⭐ **9** · 🍴 2 · Last updated: `2026-09-03` · `omarchy plugin add omarchy-QOL/omarchy-keyboard-layout --enable`
 - **[auto-workspace](https://github.com/yesheytenzin/auto-workspace)** : Auto-launch apps on workspaces at boot for Omarchy — assign YouTube to WS1, Code to WS2, etc. Multiple apps per workspace, silent launch.
   - ⭐ **4** · 🍴 1 · Last updated: `2026-09-03` · `omarchy plugin add yesheytenzin/auto-workspace --enable`
-- **[omarchy-cliamped-plugin](https://github.com/majesticio/omarchy-cliamped-plugin)** : Theme-aware CLIAMP control center and spectrum widget for Omarchy
-  - ⭐ **4** · 🍴 1 · Last updated: `2026-09-03` · `omarchy plugin add majesticio/omarchy-cliamped-plugin --enable`
 - **[omarchy-afterglow](https://github.com/JoshZ7/omarchy-afterglow)** : Theme-aware Cava media visualiser and controls for the Omarchy bar
   - ⭐ **4** · 🍴 0 · Last updated: `2026-09-03` · `omarchy plugin add JoshZ7/omarchy-afterglow --enable`
 - **[omarchy-elgato-keylight](https://github.com/nille/omarchy-elgato-keylight)** : Elgato Key Light control panel for the Omarchy 4 bar — power, brightness, and color temperature for one light or many, as a group or individually
@@ -151,13 +155,13 @@
 - **[otoru](https://github.com/ussego/otoru)** : Downloads media on demand via yt-dlp, right from your Omarchy bar.
   - ⭐ **9** · 🍴 2 · Last updated: `2026-09-02` · `omarchy plugin add ussego/otoru --enable`
 - **[omarchy-pets](https://github.com/ZacharyZhang-NY/omarchy-pets)** : Animated Codex Pets desktop companion for the Omarchy bar
-  - ⭐ **5** · 🍴 0 · Last updated: `2026-09-02` · `omarchy plugin add ZacharyZhang-NY/omarchy-pets --enable`
+  - ⭐ **5** · 🍴 1 · Last updated: `2026-09-02` · `omarchy plugin add ZacharyZhang-NY/omarchy-pets --enable`
 - **[celestune-bar](https://github.com/FlipZ3ro/celestune-bar)** : Unified Omarchy bar widget with weather, calendar, and MPRIS media controls
   - ⭐ **3** · 🍴 3 · Last updated: `2026-09-02` · `omarchy plugin add FlipZ3ro/celestune-bar --enable`
 - **[omarchy-localsend](https://github.com/jccl1706/omarchy-localsend)** : LocalSend bar-widget plugin for the Omarchy shell
   - ⭐ **3** · 🍴 0 · Last updated: `2026-09-02` · `omarchy plugin add jccl1706/omarchy-localsend --enable`
 - **[tickerbar](https://github.com/mryll/tickerbar)** : Market prices for Waybar and the Omarchy shell. Crypto, stocks, indices, forex, and BYMA. No API key. Rust, AUR.
-  - ⭐ **7** · 🍴 0 · Last updated: `2026-09-01` · `omarchy plugin add mryll/tickerbar --enable`
+  - ⭐ **8** · 🍴 0 · Last updated: `2026-09-01` · `omarchy plugin add mryll/tickerbar --enable`
 - **[weather](https://github.com/guiestrela/weather)** : Omarchy plugin.
   - ⭐ **6** · 🍴 2 · Last updated: `2026-09-01` · `omarchy plugin add guiestrela/weather --enable`
 - **[omarchy-quattro-prayer-times](https://github.com/husamemadH/omarchy-quattro-prayer-times)** : Omarchy plugin.
@@ -191,9 +195,11 @@
 - **[omarchy-cpu-usage](https://github.com/egoist/omarchy-cpu-usage)** : CPU usage bar widget and iStat-inspired system panel for Omarchy
   - ⭐ **12** · 🍴 1 · Last updated: `2026-08-29` · `omarchy plugin add egoist/omarchy-cpu-usage --enable`
 - **[omarchy-network-throughput](https://github.com/egoist/omarchy-network-throughput)** : Compact Omarchy network throughput bar widget with a per-process activity panel
-  - ⭐ **8** · 🍴 0 · Last updated: `2026-08-29` · `omarchy plugin add egoist/omarchy-network-throughput --enable`
+  - ⭐ **8** · 🍴 1 · Last updated: `2026-08-29` · `omarchy plugin add egoist/omarchy-network-throughput --enable`
 - **[videocorner](https://github.com/brianspragge/videocorner)** : Omarchy Quattro plugin for instant youtube video search and keybind controls for a mini player around main working area.
   - ⭐ **4** · 🍴 0 · Last updated: `2026-08-29` · `omarchy plugin add brianspragge/videocorner --enable`
+- **[headway](https://github.com/ssandys/headway)** : An Omarchy Quickshell bar widget for showing next-train countdowns for saved NYC subway stations, with MTA service alerts for the routes you ride. Pure QML/JS — no interpreter, no API key.
+  - ⭐ **3** · 🍴 1 · Last updated: `2026-08-29` · `omarchy plugin add ssandys/headway --enable`
 - **[micromachee](https://github.com/Pixygon/micromachee)** : A tiny 8-bit fantasy console that lives in your bar. 128x128, 8 colours, one Lua file per game.
   - ⭐ **3** · 🍴 0 · Last updated: `2026-08-29` · `omarchy plugin add Pixygon/micromachee --enable`
 - **[omarchy-rocketlauncher](https://github.com/kenhara/omarchy-rocketlauncher)** : Launch Desk — Falcon & Starship launch desk for Omarchy (unofficial). Flip-digit stats, countdown, mission detail, Watch.
@@ -203,9 +209,9 @@
 - **[omarchy-per-monitor-workspaces](https://github.com/mmsbrggr/omarchy-per-monitor-workspaces)** : Independent workspaces per monitor for Omarchy: SUPER+N always means this screen's Nth workspace
   - ⭐ **11** · 🍴 0 · Last updated: `2026-08-27` · `omarchy plugin add mmsbrggr/omarchy-per-monitor-workspaces --enable`
 - **[omarchy-protoncalendar](https://github.com/itsmoorgrove/omarchy-protoncalendar)** : Proton Calendar in the Omarchy bar: month, week, and upcoming views, with a quick add that hands off to the web app.
-  - ⭐ **7** · 🍴 3 · Last updated: `2026-08-26` · `omarchy plugin add itsmoorgrove/omarchy-protoncalendar --enable`
+  - ⭐ **7** · 🍴 4 · Last updated: `2026-08-26` · `omarchy plugin add itsmoorgrove/omarchy-protoncalendar --enable`
 - **[omarchy-cliampui](https://github.com/thisisgm/omarchy-cliampui)** : cliamp in the Omarchy bar: now playing with album art, transport, in-panel Navidrome browsing, output routing, and whether the audio reaching the DAC is bit-perfect.
-  - ⭐ **6** · 🍴 2 · Last updated: `2026-08-26` · `omarchy plugin add thisisgm/omarchy-cliampui --enable`
+  - ⭐ **6** · 🍴 3 · Last updated: `2026-08-26` · `omarchy plugin add thisisgm/omarchy-cliampui --enable`
 - **[omarchy-switcharoo](https://github.com/gabrielvincent/omarchy-switcharoo)** : A native Omarchy window switcher with MRU ordering and Vim-style grid navigation
   - ⭐ **3** · 🍴 1 · Last updated: `2026-08-26` · `omarchy plugin add gabrielvincent/omarchy-switcharoo --enable`
 - **[omarchy-goatcounter-plugin](https://github.com/sspaeti/omarchy-goatcounter-plugin)** : Beautiful Website statistic for Goatcounter for Omarchy
@@ -226,24 +232,24 @@
   - ⭐ **19** · 🍴 6 · Last updated: `2026-08-24` · `omarchy plugin add srineshr1/omarchy-whatsapp --enable`
 - **[omarchy-scripture-scroller](https://github.com/theNetworkChuck/omarchy-scripture-scroller)** : An offline Omarchy bar ticker with 100 encouraging Berean Standard Bible passages
   - ⭐ **7** · 🍴 2 · Last updated: `2026-08-24` · `omarchy plugin add theNetworkChuck/omarchy-scripture-scroller --enable`
-- **[omarchy-localsend](https://github.com/cryptobredda/omarchy-localsend)** : Native LocalSend integration for Omarchy Shell
-  - ⭐ **5** · 🍴 2 · Last updated: `2026-08-24` · `omarchy plugin add cryptobredda/omarchy-localsend --enable`
 - **[omarchy-workspace-apps](https://github.com/elixirblend/omarchy-workspace-apps)** : Compact Omarchy workspace widget showing active application icons
   - ⭐ **5** · 🍴 0 · Last updated: `2026-08-24` · `omarchy plugin add elixirblend/omarchy-workspace-apps --enable`
 - **[omarchy-linecast](https://github.com/ashuttl/omarchy-linecast)** : Omarchy bar-widget plugin for linecast — weather, sun, moon, and tide panels
   - ⭐ **5** · 🍴 0 · Last updated: `2026-08-24` · `omarchy plugin add ashuttl/omarchy-linecast --enable`
+- **[omarchy-localsend](https://github.com/cryptobredda/omarchy-localsend)** : Native LocalSend integration for Omarchy Shell
+  - ⭐ **4** · 🍴 3 · Last updated: `2026-08-24` · `omarchy plugin add cryptobredda/omarchy-localsend --enable`
 - **[omarchy-proton-vpn](https://github.com/bramvera/omarchy-proton-vpn)** : Unofficial Omarchy bar widget for the official Proton VPN Linux CLI
   - ⭐ **3** · 🍴 1 · Last updated: `2026-08-24` · `omarchy plugin add bramvera/omarchy-proton-vpn --enable`
 - **[big-cheese](https://github.com/OldJobobo/big-cheese)** : Shake your cursor to reveal one crisp, enlarged pointer in Omarchy.
   - ⭐ **3** · 🍴 0 · Last updated: `2026-08-24` · `omarchy plugin add OldJobobo/big-cheese --enable`
 - **[omarchy-discord](https://github.com/thisisgm/omarchy-discord)** : Discord in the Omarchy bar: attention badge, call state, volume, window focus, and memory footprint.
-  - ⭐ **5** · 🍴 1 · Last updated: `2026-08-23` · `omarchy plugin add thisisgm/omarchy-discord --enable`
+  - ⭐ **4** · 🍴 1 · Last updated: `2026-08-23` · `omarchy plugin add thisisgm/omarchy-discord --enable`
 - **[omarchy-routstr](https://github.com/babdbtc/omarchy-routstr)** : Omarchy plugin for buying Routstr AI inference privately. Pay per request with Lightning or Cashu. No account, no KYC.
   - ⭐ **4** · 🍴 0 · Last updated: `2026-08-23` · `omarchy plugin add babdbtc/omarchy-routstr --enable`
+- **[omarchy-podcasts](https://github.com/Bottelet/omarchy-podcasts)** : A podcast client for the Omarchy bar: episode inbox with quick triage, queue playback via mpv with voice boost and per-show speed, chapters, and OPML import/export.
+  - ⭐ **3** · 🍴 2 · Last updated: `2026-08-23` · `omarchy plugin add Bottelet/omarchy-podcasts --enable`
 - **[feishin-omarchy-plugin](https://github.com/nag3sy/feishin-omarchy-plugin)** : Omarchy bar-widget: now-playing, transport controls, volume, and library search for Feishin
   - ⭐ **3** · 🍴 1 · Last updated: `2026-08-23` · `omarchy plugin add nag3sy/feishin-omarchy-plugin --enable`
-- **[omarchy-podcasts](https://github.com/Bottelet/omarchy-podcasts)** : A podcast client for the Omarchy bar: episode inbox with quick triage, queue playback via mpv with voice boost and per-show speed, chapters, and OPML import/export.
-  - ⭐ **3** · 🍴 1 · Last updated: `2026-08-23` · `omarchy plugin add Bottelet/omarchy-podcasts --enable`
 - **[omaquake](https://github.com/rsoutar/omaquake)** : Seismic monitor plugin for Omarchy
   - ⭐ **5** · 🍴 1 · Last updated: `2026-08-22` · `omarchy plugin add rsoutar/omaquake --enable`
 - **[omarchy-apple-tv-remote](https://github.com/teevans/omarchy-apple-tv-remote)** : Keyboard-first Apple TV remote for the Omarchy Quattro bar
@@ -257,7 +263,7 @@
 - **[OmaPets](https://github.com/yesmeck/OmaPets)** : Animated AI coding pets, alive in your Omarchy bar.
   - ⭐ **6** · 🍴 1 · Last updated: `2026-08-21` · `omarchy plugin add yesmeck/OmaPets --enable`
 - **[omarchy-weather](https://github.com/calebhat/omarchy-weather)** : Omarchy weather pill: today's hourly, five-day forecast, live radar, and peek search. Replaces omarchy.weather.
-  - ⭐ **5** · 🍴 4 · Last updated: `2026-08-21` · `omarchy plugin add calebhat/omarchy-weather --enable`
+  - ⭐ **5** · 🍴 5 · Last updated: `2026-08-21` · `omarchy plugin add calebhat/omarchy-weather --enable`
 - **[omarchy-longbridge](https://github.com/longbridge/omarchy-longbridge)** : Longbridge plugin for Omarchy
   - ⭐ **5** · 🍴 0 · Last updated: `2026-08-21` · `omarchy plugin add longbridge/omarchy-longbridge --enable`
 - **[omawatch](https://github.com/brm-src/omawatch)** : Pick a film for tonight from a mood quiz or your Letterboxd watchlist. Omarchy plugin powered by mood-watch.app.
@@ -273,7 +279,7 @@
 - **[omarchy-yt-downloader](https://github.com/dlpwaters/omarchy-yt-downloader)** : Omarchy bar plugin for compatible video, MP3 audio, and language-selectable transcript downloads
   - ⭐ **3** · 🍴 0 · Last updated: `2026-08-20` · `omarchy plugin add dlpwaters/omarchy-yt-downloader --enable`
 - **[omarchy-tailscale](https://github.com/OberdanSoldi/omarchy-tailscale)** : Omarchy plugin.
-  - ⭐ **4** · 🍴 3 · Last updated: `2026-08-19` · `omarchy plugin add OberdanSoldi/omarchy-tailscale --enable`
+  - ⭐ **5** · 🍴 3 · Last updated: `2026-08-19` · `omarchy plugin add OberdanSoldi/omarchy-tailscale --enable`
 - **[omarchy-now-playing](https://github.com/bjarneo/omarchy-now-playing)** : Omarchy plugin.
   - ⭐ **7** · 🍴 0 · Last updated: `2026-08-18` · `omarchy plugin add bjarneo/omarchy-now-playing --enable`
 - **[omarchy-stocks](https://github.com/5d0tal1gat0r/omarchy-stocks)** : Stock ticker tape with charts and currency switch for the Omarchy Quattro bar (Yahoo Finance, no API key)
@@ -283,7 +289,7 @@
 - **[Quattrolitaire](https://github.com/28allday/Quattrolitaire)** : Klondike solitaire as a native Omarchy shell plugin — panel + bar widget, with a bundled art-deco car deck.
   - ⭐ **25** · 🍴 0 · Last updated: `2026-08-17` · `omarchy plugin add 28allday/Quattrolitaire --enable`
 - **[omash](https://github.com/ourongxing/omash)** : Clash TUI for Omarchy Quattro. Forked from clash-verge-rev, but TUI only.
-  - ⭐ **23** · 🍴 2 · Last updated: `2026-08-17` · `omarchy plugin add ourongxing/omash --enable`
+  - ⭐ **24** · 🍴 2 · Last updated: `2026-08-17` · `omarchy plugin add ourongxing/omash --enable`
 - **[cam-stream](https://github.com/tomdavenport/cam-stream)** : Stream or record Omarchy Quattro with a movable, low-latency camera window—no OBS scene required.
   - ⭐ **9** · 🍴 0 · Last updated: `2026-08-17` · `omarchy plugin add tomdavenport/cam-stream --enable`
 - **[omaphone](https://github.com/tomdavenport/omaphone)** : A private walkie-talkie in your Omarchy 4 bar — push-to-talk voice, encrypted chat, and small group rooms over Tor.
@@ -295,7 +301,7 @@
 - **[cliamp-oma-plugin](https://github.com/bscott/cliamp-oma-plugin)** : Omarchy bar widget for the CLIAMP terminal music player — now-playing display and playback controls
   - ⭐ **4** · 🍴 0 · Last updated: `2026-08-16` · `omarchy plugin add bscott/cliamp-oma-plugin --enable`
 - **[omarchy-bongocat](https://github.com/HANCORE-linux/omarchy-bongocat)** : Type with BongoCat
-  - ⭐ **14** · 🍴 1 · Last updated: `2026-08-15` · `omarchy plugin add HANCORE-linux/omarchy-bongocat --enable`
+  - ⭐ **15** · 🍴 2 · Last updated: `2026-08-15` · `omarchy plugin add HANCORE-linux/omarchy-bongocat --enable`
 - **[omarchy-netbird](https://github.com/vstoms/omarchy-netbird)** : NetBird status and peer controls for the Omarchy bar
   - ⭐ **6** · 🍴 1 · Last updated: `2026-08-15` · `omarchy plugin add vstoms/omarchy-netbird --enable`
 - **[omarchy-bible-verse-plugin](https://github.com/SteveHNH/omarchy-bible-verse-plugin)** : Omarchy (Quattro shell) bar-widget plugin showing a daily Bible verse from bible-api.com
@@ -316,38 +322,74 @@
   - ⭐ **3** · 🍴 1 · Last updated: `2026-08-01` · `omarchy plugin add djjeane/omarchy-docker-plugin --enable`
 
 <details>
-<summary><b>🐣 New & Emerging Widgets (643 plugins · 0–2 ⭐)</b></summary>
+<summary><b>🐣 New & Emerging Widgets (640 plugins · 0–2 ⭐)</b></summary>
 
+- **[omarchy-apple-music](https://github.com/ianswope/omarchy-apple-music)** : Apple Music as a standalone player on Omarchy: its own window, its own MPRIS player, now playing and transport in the bar.
+  - ⭐ **2** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add ianswope/omarchy-apple-music --enable`
+- **[omarchy-market](https://github.com/DPRC137/omarchy-market)** : A native financial market ticker and compact terminal plugin for Omarchy Quattro. Track crypto (Binance, Coinbase, Hyperliquid) and US stocks (Yahoo Finance) with live charts and dynamic watchlists.
+  - ⭐ **2** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add DPRC137/omarchy-market --enable`
+- **[omakvn](https://github.com/yarikov/omakvn)** : Native Omarchy 4 bar plugin for kvn-tui
+  - ⭐ **2** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add yarikov/omakvn --enable`
+- **[glow-studio](https://github.com/perfektnacht/glow-studio)** : A glowing Lite-Brite peg board for Omarchy — draw with lights, export 2K/4K/6K wallpapers
+  - ⭐ **1** · 🍴 1 · Last updated: `2026-09-11` · `omarchy plugin add perfektnacht/glow-studio --enable`
+- **[omarchy-vibez](https://github.com/JeffCortez23/omarchy-vibez)** : 🎵 Apple Music MPRIS status bar widget for Omarchy Linux with live album art & playback controls
+  - ⭐ **1** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add JeffCortez23/omarchy-vibez --enable`
+- **[ChordPumper-Promarchy](https://github.com/stoogs/ChordPumper-Promarchy)** : Keyboard-driven chord, harmony, and MIDI sketchpad for the Omarchy shell
+  - ⭐ **1** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add stoogs/ChordPumper-Promarchy --enable`
+- **[liftoff](https://github.com/KSxx/liftoff)** : An Omarchy bar plugin: live countdown to the next rocket launch, the next 5 upcoming missions, and a stylized world map of their launch sites.
+  - ⭐ **1** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add KSxx/liftoff --enable`
+- **[omathlete](https://github.com/chrisroundhill/omathlete)** : A keyboard-first sports scores and schedules widget for Omarchy Quattro
+  - ⭐ **0** · 🍴 1 · Last updated: `2026-09-11` · `omarchy plugin add chrisroundhill/omathlete --enable`
+- **[omarchy-seerr-requests](https://github.com/Kyrunner/omarchy-seerr-requests)** : Seerr approval queue in the Omarchy bar: notifies on new requests, approves or declines in place.
+  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add Kyrunner/omarchy-seerr-requests --enable`
+- **[omarchy-system-bridge](https://github.com/timmo001/omarchy-system-bridge)** : Generated Omarchy plugin for System Bridge
+  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add timmo001/omarchy-system-bridge --enable`
+- **[omarchy-relaunch](https://github.com/farmall856/omarchy-relaunch)** : Restore your app-to-workspace layout after a reboot. Omarchy bar widget, no daemon.
+  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add farmall856/omarchy-relaunch --enable`
+- **[omarchy-bible-search](https://github.com/dl-alexandre/omarchy-bible-search)** : Offline Bible search widget for Omarchy
+  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add dl-alexandre/omarchy-bible-search --enable`
+- **[omarchy-airq](https://github.com/sgruendel/omarchy-airq)** : Omarchy Quickshell plugin for local air-Q air quality monitors
+  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add sgruendel/omarchy-airq --enable`
+- **[omarchy-cw-practice](https://github.com/crueber/omarchy-cw-practice)** : CW (Morse code) receiving practice plugin for the Omarchy shell — PARIS-timed sidetone, delayed character reveal, live settings
+  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add crueber/omarchy-cw-practice --enable`
+- **[Feader-RSS](https://github.com/KitsuneSemCalda/Feader-RSS)** : A Omarchy plugin to read RSS offline
+  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add KitsuneSemCalda/Feader-RSS --enable`
+- **[Omarchy-Omakase](https://github.com/ronald2wing/Omarchy-Omakase)** : Omarchy plugin.
+  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add ronald2wing/Omarchy-Omakase --enable`
+- **[omarchy-plex](https://github.com/ianswope/omarchy-plex)** : Plex streams in the Omarchy bar: who is watching what, whether the server is transcoding for them, and whether that transcode is keeping up.
+  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add ianswope/omarchy-plex --enable`
+- **[omarchy-bouncing-ball](https://github.com/eddygarcas/omarchy-bouncing-ball)** : A customizable ball that bounces around your screen, Amiga Boing Ball style, for Omarchy.
+  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add eddygarcas/omarchy-bouncing-ball --enable`
+- **[omarchy-gotify](https://github.com/yey3men2/omarchy-gotify)** : Omarchy plugin.
+  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add yey3men2/omarchy-gotify --enable`
+- **[omarchy-courier](https://github.com/Thelost77/omarchy-courier)** : News from the Omagods — a quiet Omarchy News inbox and reader.
+  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add Thelost77/omarchy-courier --enable`
+- **[perfo](https://github.com/VitorHolandaI/perfo)** : Omarchy plugin.
+  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add VitorHolandaI/perfo --enable`
+- **[omarchy-ai-usage-bar](https://github.com/gladimdim/omarchy-ai-usage-bar)** : AI Usage Bar — an old-school ASCII progress bar widget for the Omarchy dock that tracks usage, quotas and rate limits for Claude Code, Grok, Codex, Antigravity and other AI providers
+  - ⭐ **2** · 🍴 3 · Last updated: `2026-09-10` · `omarchy plugin add gladimdim/omarchy-ai-usage-bar --enable`
 - **[omarchy-gospel-of-the-day](https://github.com/tuxmontero/omarchy-gospel-of-the-day)** : Daily readings, Gospel and papal reflection from Evangelio del Día
   - ⭐ **2** · 🍴 1 · Last updated: `2026-09-10` · `omarchy plugin add tuxmontero/omarchy-gospel-of-the-day --enable`
-- **[nook](https://github.com/Katsari/nook)** : A bar drawer for Omarchy, for when too many plugins have cluttered your bar
-  - ⭐ **2** · 🍴 1 · Last updated: `2026-09-10` · `omarchy plugin add Katsari/nook --enable`
 - **[dizziee.opencode-model-usage](https://github.com/JJDizz1L/dizziee.opencode-model-usage)** : Intended for use on Omarchy 4 (QUATTRO) with QuickShell Bar.
   - ⭐ **2** · 🍴 0 · Last updated: `2026-09-10` · `omarchy plugin add JJDizz1L/dizziee.opencode-model-usage --enable`
-- **[omarchy-market](https://github.com/DPRC137/omarchy-market)** : A native financial market ticker and compact terminal plugin for Omarchy Quattro. Track crypto (Binance, Coinbase, Hyperliquid) and US stocks (Yahoo Finance) with live charts and dynamic watchlists.
-  - ⭐ **2** · 🍴 0 · Last updated: `2026-09-10` · `omarchy plugin add DPRC137/omarchy-market --enable`
 - **[omarchy-clock-zones-calendar](https://github.com/angel-ventura/omarchy-clock-zones-calendar)** : Omarchy clock bar widget: a time-zone converter and optional read-only Google/Apple calendar sync in the calendar popup. Based on omarchy.clock and sync-calendar-omarchy (MIT).
   - ⭐ **2** · 🍴 0 · Last updated: `2026-09-10` · `omarchy plugin add angel-ventura/omarchy-clock-zones-calendar --enable`
 - **[omarchy-plugin-shelfish](https://github.com/PatrickFanella/omarchy-plugin-shelfish)** : Collapsible Omarchy bar widget groups, localized in ten languages
   - ⭐ **1** · 🍴 1 · Last updated: `2026-09-10` · `omarchy plugin add PatrickFanella/omarchy-plugin-shelfish --enable`
-- **[glow-studio](https://github.com/perfektnacht/glow-studio)** : A glowing Lite-Brite peg board for Omarchy — draw with lights, export 2K/4K/6K wallpapers
-  - ⭐ **1** · 🍴 1 · Last updated: `2026-09-10` · `omarchy plugin add perfektnacht/glow-studio --enable`
 - **[dizziee.cline-model-usage](https://github.com/JJDizz1L/dizziee.cline-model-usage)** : Intended for use on Omarchy 4 (QUATTRO) with QuickShell Bar.
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-10` · `omarchy plugin add JJDizz1L/dizziee.cline-model-usage --enable`
 - **[omanetwatch](https://github.com/keithnyc/omanetwatch)** : An Omarchy shell plugin for monitoring HTTP and TCP endpoints
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-10` · `omarchy plugin add keithnyc/omanetwatch --enable`
 - **[omarchy-youtube-music](https://github.com/itsdotdev/omarchy-youtube-music)** : Compact, keyboard-first YouTube music player for Omarchy
   - ⭐ **0** · 🍴 2 · Last updated: `2026-09-10` · `omarchy plugin add itsdotdev/omarchy-youtube-music --enable`
+- **[omarchy-plugin-omacoin](https://github.com/crueber/omarchy-plugin-omacoin)** : OmaCoin — CoinGecko crypto tracker bar widget for the Omarchy shell
+  - ⭐ **0** · 🍴 1 · Last updated: `2026-09-10` · `omarchy plugin add crueber/omarchy-plugin-omacoin --enable`
 - **[dizziee.power-profiles](https://github.com/JJDizz1L/dizziee.power-profiles)** : Intended for use on Omarchy 4 (QUATTRO) with QuickShell Bar.
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-10` · `omarchy plugin add JJDizz1L/dizziee.power-profiles --enable`
-- **[omarchy-seerr-requests](https://github.com/Kyrunner/omarchy-seerr-requests)** : Seerr approval queue in the Omarchy bar: notifies on new requests, approves or declines in place.
-  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-10` · `omarchy plugin add Kyrunner/omarchy-seerr-requests --enable`
 - **[hwmon](https://github.com/GennaroRiccio/hwmon)** : Hardware Monitor Omarchy Plugin Live CPU / MEM / NET sparkline monitor
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-10` · `omarchy plugin add GennaroRiccio/hwmon --enable`
 - **[omarchy-deezer](https://github.com/mar1/omarchy-deezer)** : Deezer in the Omarchy bar: MPRIS playback controls plus playlists, favorites, and search from the Deezer catalog.
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-10` · `omarchy plugin add mar1/omarchy-deezer --enable`
-- **[Omarchy-Omakase](https://github.com/ronald2wing/Omarchy-Omakase)** : Omarchy plugin.
-  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-10` · `omarchy plugin add ronald2wing/Omarchy-Omakase --enable`
 - **[omarchy-nfl](https://github.com/Mario-Mohar/omarchy-nfl)** : NFL bar widget for the Omarchy shell — schedule, live score, results and standings for any of the 32 teams
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-10` · `omarchy plugin add Mario-Mohar/omarchy-nfl --enable`
 - **[oma-sleeper](https://github.com/nugget210/oma-sleeper)** : Theme-aware Sleeper fantasy football matchup widget for Omarchy
@@ -372,28 +414,22 @@
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-09` · `omarchy plugin add salemsayed/omatender --enable`
 - **[omarchy-luna](https://github.com/salmun-nister/omarchy-luna)** : Lunar companion for the Omarchy bar: live moon phase pill with a stylized popup
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-09` · `omarchy plugin add salmun-nister/omarchy-luna --enable`
-- **[ChordPumper-Promarchy](https://github.com/stoogs/ChordPumper-Promarchy)** : Keyboard-driven chord, harmony, and MIDI sketchpad for the Omarchy shell
-  - ⭐ **1** · 🍴 0 · Last updated: `2026-09-09` · `omarchy plugin add stoogs/ChordPumper-Promarchy --enable`
 - **[estimation-gym-omarchy](https://github.com/SidathPeiris/estimation-gym-omarchy)** : Daily Fermi-estimation puzzle Omarchy shell plugin
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-09` · `omarchy plugin add SidathPeiris/estimation-gym-omarchy --enable`
 - **[omarchy-listening-post-entry](https://github.com/jeremylongshore/omarchy-listening-post-entry)** : Listening Post turns 29 curated AI-vendor feeds into a four-lane radar for model releases, price changes, status incidents, and engineering posts. It clusters same-week launches and can rank providers you use. Fixed HTTPS feeds poll every 15 minutes; no account, token, telemetry, or custom sources.
   - ⭐ **0** · 🍴 1 · Last updated: `2026-09-09` · `omarchy plugin add jeremylongshore/omarchy-listening-post-entry --enable`
 - **[omarchy-world-radio](https://github.com/Macs9319/omarchy-world-radio)** : Omarchy shell plugin: browse & play live internet radio by country, mood, and decade — inspired by radiooooo.com
   - ⭐ **0** · 🍴 1 · Last updated: `2026-09-09` · `omarchy plugin add Macs9319/omarchy-world-radio --enable`
-- **[omathlete](https://github.com/chrisroundhill/omathlete)** : A keyboard-first sports scores and schedules widget for Omarchy Quattro
-  - ⭐ **0** · 🍴 1 · Last updated: `2026-09-09` · `omarchy plugin add chrisroundhill/omathlete --enable`
+- **[omarchy-prayer-times](https://github.com/idr4n/omarchy-prayer-times)** : Configurable prayer times, countdowns, and daily schedule for the Omarchy bar.
+  - ⭐ **0** · 🍴 1 · Last updated: `2026-09-09` · `omarchy plugin add idr4n/omarchy-prayer-times --enable`
 - **[omarchy-pit-wall-entry](https://github.com/jeremylongshore/omarchy-pit-wall-entry)** : Pit Wall turns your Omarchy bar into a Formula 1 race-weekend command post: countdowns before sessions, then leader, gaps, flags, safety-car state, live order, local-time schedule, and championship standings. It reads keyless public APIs and polls rapidly only while a session is running.
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-09` · `omarchy plugin add jeremylongshore/omarchy-pit-wall-entry --enable`
-- **[omarchy-bible-search](https://github.com/dl-alexandre/omarchy-bible-search)** : Offline Bible search widget for Omarchy
-  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-09` · `omarchy plugin add dl-alexandre/omarchy-bible-search --enable`
 - **[omarchy-capture-conveyor-entry](https://github.com/jeremylongshore/omarchy-capture-conveyor-entry)** : Capture Conveyor turns Omarchy screenshots into a keyboard-first inbox: see the newest 24, capture or OCR a region, copy paths, and reveal files. Its bounded local scanner never reads pixels, uploads data, or watches the clipboard.
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-09` · `omarchy plugin add jeremylongshore/omarchy-capture-conveyor-entry --enable`
 - **[omarchy-workspace-storyboard-entry](https://github.com/jeremylongshore/omarchy-workspace-storyboard-entry)** : Workspace Storyboard turns live Hyprland workspaces into a local re-entry map: see window counts and active titles, jump with mouse or keyboard, and review the newest eight context changes. It keeps a private 40-event history and makes no network requests.
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-09` · `omarchy plugin add jeremylongshore/omarchy-workspace-storyboard-entry --enable`
 - **[omarchy-creators](https://github.com/renews/omarchy-creators)** : Omarchy shell plugin: chime, desktop notification and picture-in-picture for new YouTube uploads and Twitch channels going live, for the channels you pick.
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-09` · `omarchy plugin add renews/omarchy-creators --enable`
-- **[omarchy-prayer-times](https://github.com/idr4n/omarchy-prayer-times)** : Configurable prayer times, countdowns, and daily schedule for the Omarchy bar.
-  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-09` · `omarchy plugin add idr4n/omarchy-prayer-times --enable`
 - **[omarchy-plugin-fmi-weather](https://github.com/rejhaa/omarchy-plugin-fmi-weather)** : Omarchy weather plugin with current conditions from FMI HARMONIE, MET Norway fallback, and radar-corrected nowcast
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-09` · `omarchy plugin add rejhaa/omarchy-plugin-fmi-weather --enable`
 - **[omarchy-command-pulse](https://github.com/Giuliano-sn/omarchy-command-pulse)** : Omarchy status bar plugin: runs a shell command on a schedule and shows its live, ANSI-colored output in the bar.
@@ -412,8 +448,6 @@
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-09` · `omarchy plugin add bjcatar/garden --enable`
 - **[kuki](https://github.com/cossssmin/kuki)** : Omarchy Quattro quickshell plugin: interactive Copernicus CAMS atmosphere forecast maps.
   - ⭐ **2** · 🍴 0 · Last updated: `2026-09-08` · `omarchy plugin add cossssmin/kuki --enable`
-- **[omarchy-markets](https://github.com/CostaFot/omarchy-markets)** : Stocks, crypto and currencies in the Omarchy bar — a port of the Markets extension for Command Palette
-  - ⭐ **2** · 🍴 0 · Last updated: `2026-09-08` · `omarchy plugin add CostaFot/omarchy-markets --enable`
 - **[omarchy-cliamp-control](https://github.com/omarchy-QOL/omarchy-cliamp-control)** : Omarchy Quattro control and geometry plugin for the CLIamp quake window.
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-08` · `omarchy plugin add omarchy-QOL/omarchy-cliamp-control --enable`
 - **[omarchy-unifi-protect](https://github.com/luxore/omarchy-unifi-protect)** : A read-only UniFi Protect camera viewer for the Omarchy bar.
@@ -422,8 +456,6 @@
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-08` · `omarchy plugin add Sovcat0608/sovchat-omarchy-plugin --enable`
 - **[omarchy-population-pyramid](https://github.com/bjarkimg/omarchy-population-pyramid)** : Omarchy plugin.
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-08` · `omarchy plugin add bjarkimg/omarchy-population-pyramid --enable`
-- **[perfo](https://github.com/VitorHolandaI/perfo)** : Omarchy plugin.
-  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-08` · `omarchy plugin add VitorHolandaI/perfo --enable`
 - **[omarchy-runpod-monitor](https://github.com/glitzypanic/omarchy-runpod-monitor)** : Read-only RunPod balance, Pod status, storage and ready services in the Omarchy bar.
   - ⭐ **2** · 🍴 0 · Last updated: `2026-09-07` · `omarchy plugin add glitzypanic/omarchy-runpod-monitor --enable`
 - **[omarchy-glide-workspaces](https://github.com/iryzhkov/omarchy-glide-workspaces)** : Animated workspace pill for the Omarchy bar: gliding active indicator, morphing occupancy dots, Material 3 expressive motion
@@ -446,8 +478,6 @@
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-07` · `omarchy plugin add 17xHW/omarchy-wti-oil-price --enable`
 - **[omarchy-news-rss](https://github.com/kkoontz/omarchy-news-rss)** : Dedicated Omarchy bar panel for official Omarchy / Omacom news.
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-07` · `omarchy plugin add kkoontz/omarchy-news-rss --enable`
-- **[omarchy-courier](https://github.com/Thelost77/omarchy-courier)** : News from the Omagods — a quiet Omarchy News inbox and reader.
-  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-07` · `omarchy plugin add Thelost77/omarchy-courier --enable`
 - **[omarchy-pingscope](https://github.com/sierrab1989/omarchy-pingscope)** : Omarchy plugin.
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-07` · `omarchy plugin add sierrab1989/omarchy-pingscope --enable`
 - **[omarchy-spot-price](https://github.com/vitally/omarchy-spot-price)** : Omarchy bar widget for the current day-ahead electricity price.
@@ -456,8 +486,6 @@
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-07` · `omarchy plugin add skuthus/omarchy-workspace-pillswap --enable`
 - **[omarchy-coffee-tracker](https://github.com/PhilippBellia/omarchy-coffee-tracker)** : Caffeine tracker for the Omarchy bar: derives every cup from how it is actually brewed, with half-life decay, energy drinks, and a seven-day view. English and German.
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-07` · `omarchy plugin add PhilippBellia/omarchy-coffee-tracker --enable`
-- **[omarchy-ai-usage-bar](https://github.com/gladimdim/omarchy-ai-usage-bar)** : AI Usage Bar — an old-school ASCII progress bar widget for the Omarchy dock that tracks usage, quotas and rate limits for Claude Code, Grok, Codex, Antigravity and other AI providers
-  - ⭐ **2** · 🍴 1 · Last updated: `2026-09-06` · `omarchy plugin add gladimdim/omarchy-ai-usage-bar --enable`
 - **[ProtonPassPlugin](https://github.com/cempack/ProtonPassPlugin)** : Omarchy bar widget for searching and copying Proton Pass logins
   - ⭐ **2** · 🍴 0 · Last updated: `2026-09-06` · `omarchy plugin add cempack/ProtonPassPlugin --enable`
 - **[omarchy-ultimate-guitar](https://github.com/crmne/omarchy-ultimate-guitar)** : Shows the Ultimate Guitar tab for whatever is playing on the Omarchy bar, with auto-scroll, a version switcher, and text sizing
@@ -518,8 +546,6 @@
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-05` · `omarchy plugin add wolften/omarchy-youtube-music --enable`
 - **[omarchy-atv-remote](https://github.com/andershfranzen/omarchy-atv-remote)** : Fast keyboard-driven Apple TV remote for the Omarchy bar
   - ⭐ **0** · 🍴 1 · Last updated: `2026-09-05` · `omarchy plugin add andershfranzen/omarchy-atv-remote --enable`
-- **[Feader-RSS](https://github.com/KitsuneSemCalda/Feader-RSS)** : A Omarchy plugin to read RSS offline
-  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-05` · `omarchy plugin add KitsuneSemCalda/Feader-RSS --enable`
 - **[omascore](https://github.com/SlowburnAZ/omascore)** : Omarchy OmaScore plugin — NFL/NBA/MLB/NHL + college/soccer scores, detail, insights
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-05` · `omarchy plugin add SlowburnAZ/omascore --enable`
 - **[omarchy-neonbubble](https://github.com/Snackwrap/omarchy-neonbubble)** : A neon bubble shooter in the Omarchy bar with a daily board: the same puzzle for everyone, every day.
@@ -556,8 +582,6 @@
   - ⭐ **2** · 🍴 3 · Last updated: `2026-09-04` · `omarchy plugin add JoeJoeflyn/omargram --enable`
 - **[omarchy-vitals](https://github.com/thehamsti/omarchy-vitals)** : Omarchy bar widget for CPU, GPU, memory, disk, and temperatures
   - ⭐ **2** · 🍴 1 · Last updated: `2026-09-04` · `omarchy plugin add thehamsti/omarchy-vitals --enable`
-- **[omakvn](https://github.com/yarikov/omakvn)** : Native Omarchy 4 bar plugin for kvn-tui
-  - ⭐ **2** · 🍴 0 · Last updated: `2026-09-04` · `omarchy plugin add yarikov/omakvn --enable`
 - **[omarchy-waveform](https://github.com/JMThomas00/omarchy-waveform)** : SteelSeries Sonar-inspired per-app audio mixer for Omarchy — channels, per-app routing, 12-band EQ, ChannelMix
   - ⭐ **2** · 🍴 0 · Last updated: `2026-09-04` · `omarchy plugin add JMThomas00/omarchy-waveform --enable`
 - **[omarchy-bongocat](https://github.com/Samon97/omarchy-bongocat)** : A tiny Bongo Cat that drums in your Omarchy bar while you type. Adaptation of the pixl-garden Bongo Cat VS Code extension.
@@ -578,8 +602,6 @@
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-04` · `omarchy plugin add tcballard/omarchy-markets --enable`
 - **[omarchy-widget-system-monitor](https://github.com/LoupiBe/omarchy-widget-system-monitor)** : Native System Monitor top bar widget and popup panel for Omarchy Linux
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-04` · `omarchy plugin add LoupiBe/omarchy-widget-system-monitor --enable`
-- **[liftoff](https://github.com/KSxx/liftoff)** : An Omarchy bar plugin: live countdown to the next rocket launch, the next 5 upcoming missions, and a stylized world map of their launch sites.
-  - ⭐ **1** · 🍴 0 · Last updated: `2026-09-04` · `omarchy plugin add KSxx/liftoff --enable`
 - **[poolsuitefm](https://github.com/hiasinho/poolsuitefm)** : Browser-free Poolsuite radio for the Omarchy bar
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-04` · `omarchy plugin add hiasinho/poolsuitefm --enable`
 - **[Omarchy-RAMDisk-ResourceWidget](https://github.com/johnboscocjt/Omarchy-RAMDisk-ResourceWidget)** : Omarchy plugin.
@@ -588,6 +610,8 @@
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-04` · `omarchy plugin add arazgray/omalang --enable`
 - **[Omarchy-Quran](https://github.com/ronald2wing/Omarchy-Quran)** : Omarchy plugin.
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-04` · `omarchy plugin add ronald2wing/Omarchy-Quran --enable`
+- **[iweather](https://github.com/alivault/iweather)** : Native Omarchy Quattro weather widget with location search, hourly and five-day forecasts, and U.S. NWS alerts.
+  - ⭐ **0** · 🍴 1 · Last updated: `2026-09-04` · `omarchy plugin add alivault/iweather --enable`
 - **[omarchy-music-dock](https://github.com/DataKnox/omarchy-music-dock)** : Tray-style Spotify icon and drop-down 'minimize' for the Omarchy bar
   - ⭐ **0** · 🍴 1 · Last updated: `2026-09-04` · `omarchy plugin add DataKnox/omarchy-music-dock --enable`
 - **[omarivian](https://github.com/ttiimmaahh/omarivian)** : Early-development read-only Rivian vehicle status widget for the Omarchy bar
@@ -604,8 +628,6 @@
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-04` · `omarchy plugin add vprenner/omarchy-monitor-workspaces --enable`
 - **[football](https://github.com/niraj-envision/football)** : Follow your club from the Omarchy bar: live scores, countdown to kick-off, results, table and fixtures — including cup and European ties. No API key, stdlib only.
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-04` · `omarchy plugin add niraj-envision/football --enable`
-- **[iweather](https://github.com/alivault/iweather)** : Native Omarchy Quattro weather widget with location search, hourly and five-day forecasts, and U.S. NWS alerts.
-  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-04` · `omarchy plugin add alivault/iweather --enable`
 - **[nextdns-omarchy](https://github.com/bitshaker/nextdns-omarchy)** : Omarchy plugin.
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-04` · `omarchy plugin add bitshaker/nextdns-omarchy --enable`
 - **[samara-quick-apps](https://github.com/samara-hub-ro/samara-quick-apps)** : A discreet launcher for the Omarchy bar — your most-used applications by category, opening on hover.
@@ -664,8 +686,6 @@
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-03` · `omarchy plugin add idarius/omarchy-homeassistant --enable`
 - **[omarchy-yamaha-avr](https://github.com/bjarkimg/omarchy-yamaha-avr)** : Yamaha network AVR remote for the Omarchy Quattro bar (YNCA / RX-V677 and similar 2010–2014 receivers)
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-03` · `omarchy plugin add bjarkimg/omarchy-yamaha-avr --enable`
-- **[omarchy-gotify](https://github.com/yey3men2/omarchy-gotify)** : Omarchy plugin.
-  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-03` · `omarchy plugin add yey3men2/omarchy-gotify --enable`
 - **[omarchy-workspaces-icons](https://github.com/deda/omarchy-workspaces-icons)** : Omarchy plugin.
   - ⭐ **2** · 🍴 2 · Last updated: `2026-09-02` · `omarchy plugin add deda/omarchy-workspaces-icons --enable`
 - **[omarchy-beatbar](https://github.com/ryrobes/omarchy-beatbar)** : A live, theme-reactive PipeWire spectrum visualizer for the Omarchy bar
@@ -696,8 +716,6 @@
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-02` · `omarchy plugin add yasuhito/clawbar --enable`
 - **[omarchy-openzoo-plugin](https://github.com/staccDOTsol/omarchy-openzoo-plugin)** : Ask 400+ models from the Omarchy bar. No account, no API key, no subscription: paid per call from a local burner wallet. Local by default.
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-02` · `omarchy plugin add staccDOTsol/omarchy-openzoo-plugin --enable`
-- **[omarchy-bouncing-ball](https://github.com/eddygarcas/omarchy-bouncing-ball)** : A customizable ball that bounces around your screen, Amiga Boing Ball style, for Omarchy.
-  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-02` · `omarchy plugin add eddygarcas/omarchy-bouncing-ball --enable`
 - **[omarchy-netbird](https://github.com/thebub/omarchy-netbird)** : Omarchy plugin.
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-02` · `omarchy plugin add thebub/omarchy-netbird --enable`
 - **[omarchy-divinum-officium](https://github.com/imr-git/omarchy-divinum-officium)** : An unofficial Divinum Officium client for the Omarchy bar.
@@ -858,8 +876,6 @@
   - ⭐ **1** · 🍴 0 · Last updated: `2026-08-30` · `omarchy plugin add sergiotapia/omarchy-timezone-bar --enable`
 - **[omarchy-media-widget](https://github.com/R4s0n3/omarchy-media-widget)** : Omarchy plugin.
   - ⭐ **0** · 🍴 0 · Last updated: `2026-08-30` · `omarchy plugin add R4s0n3/omarchy-media-widget --enable`
-- **[omarchy-airq](https://github.com/sgruendel/omarchy-airq)** : Omarchy Quickshell plugin for local air-Q air quality monitors
-  - ⭐ **0** · 🍴 0 · Last updated: `2026-08-30` · `omarchy plugin add sgruendel/omarchy-airq --enable`
 - **[FPL-Gaffer](https://github.com/weedwhitesandwine/FPL-Gaffer)** : FPL and Premier League stats on Omarchy
   - ⭐ **0** · 🍴 0 · Last updated: `2026-08-30` · `omarchy plugin add weedwhitesandwine/FPL-Gaffer --enable`
 - **[spaceera-iss-tracker](https://github.com/diogogc/spaceera-iss-tracker)** : Console-style Omarchy plugin for live ISS tracking, orbit path, visibility footprint, and next pass alerts
@@ -880,8 +896,6 @@
   - ⭐ **0** · 🍴 0 · Last updated: `2026-08-30` · `omarchy plugin add dfrost90/omarchy-ukraine-air-alert --enable`
 - **[omarchy-workspace-icons](https://github.com/lucasjr76/omarchy-workspace-icons)** : Omarchy plugin.
   - ⭐ **0** · 🍴 0 · Last updated: `2026-08-30` · `omarchy plugin add lucasjr76/omarchy-workspace-icons --enable`
-- **[headway](https://github.com/ssandys/headway)** : An Omarchy Quickshell bar widget for showing next-train countdowns for saved NYC subway stations, with MTA service alerts for the routes you ride. Pure QML/JS — no interpreter, no API key.
-  - ⭐ **2** · 🍴 1 · Last updated: `2026-08-29` · `omarchy plugin add ssandys/headway --enable`
 - **[omarchy-hermes](https://github.com/okurmustafa/omarchy-hermes)** : Omarchy bar widget for Hermes token usage, local or remote gateway.
   - ⭐ **2** · 🍴 0 · Last updated: `2026-08-29` · `omarchy plugin add okurmustafa/omarchy-hermes --enable`
 - **[omarchy-swissweather](https://github.com/jmaeder/omarchy-swissweather)** : MeteoSwiss measurements, forecasts, warnings and charts in the Omarchy bar — every Swiss postal code, searchable offline.
@@ -970,8 +984,6 @@
   - ⭐ **0** · 🍴 0 · Last updated: `2026-08-28` · `omarchy plugin add leonrlr4/rdt --enable`
 - **[omarchy-blink](https://github.com/JonathanRiche/omarchy-blink)** : Amazon Blink camera status, controls, and live view for the Omarchy bar
   - ⭐ **0** · 🍴 0 · Last updated: `2026-08-28` · `omarchy plugin add JonathanRiche/omarchy-blink --enable`
-- **[omarchy-plex](https://github.com/ianswope/omarchy-plex)** : Plex streams in the Omarchy bar: who is watching what, whether the server is transcoding for them, and whether that transcode is keeping up.
-  - ⭐ **0** · 🍴 0 · Last updated: `2026-08-28` · `omarchy plugin add ianswope/omarchy-plex --enable`
 - **[omarchy-opencloud](https://github.com/victoralensai/omarchy-opencloud)** : OpenCloud status and sync activity for the Omarchy bar
   - ⭐ **0** · 🍴 0 · Last updated: `2026-08-28` · `omarchy plugin add victoralensai/omarchy-opencloud --enable`
 - **[omarchy-fast](https://github.com/melonamin/omarchy-fast)** : A terminal-inspired Fast.com speed test for the Omarchy bar
@@ -1027,17 +1039,13 @@
 - **[omarchy-openclash](https://github.com/cbayschm74/omarchy-openclash)** : Omarchy bar widget for controlling Mihomo and OpenClash proxy groups
   - ⭐ **0** · 🍴 0 · Last updated: `2026-08-27` · `omarchy plugin add cbayschm74/omarchy-openclash --enable`
 - **[omarchy-crypto-pulse](https://github.com/guettoblasterr/omarchy-crypto-pulse)** : A compact crypto, DeFi, network, and Treasury market pulse for Omarchy Quattro.
-  - ⭐ **2** · 🍴 1 · Last updated: `2026-08-26` · `omarchy plugin add guettoblasterr/omarchy-crypto-pulse --enable`
+  - ⭐ **2** · 🍴 0 · Last updated: `2026-08-26` · `omarchy plugin add guettoblasterr/omarchy-crypto-pulse --enable`
 - **[omarchy-network-shares](https://github.com/isaact135/omarchy-network-shares)** : Omarchy shell plugin: mount, browse, and manage SMB/CIFS network shares from the bar
   - ⭐ **1** · 🍴 1 · Last updated: `2026-08-26` · `omarchy plugin add isaact135/omarchy-network-shares --enable`
 - **[sky-map](https://github.com/EdwardCaf/sky-map)** : Omarchy plugin.
   - ⭐ **1** · 🍴 0 · Last updated: `2026-08-26` · `omarchy plugin add EdwardCaf/sky-map --enable`
 - **[omarchy-scriptural](https://github.com/kenhara/omarchy-scriptural)** : Daily Bread — verse of the day. Pause. Unofficial Midvash VOTD for Omarchy.
   - ⭐ **0** · 🍴 1 · Last updated: `2026-08-26` · `omarchy plugin add kenhara/omarchy-scriptural --enable`
-- **[omarchy-plugin-omacoin](https://github.com/crueber/omarchy-plugin-omacoin)** : OmaCoin — CoinGecko crypto tracker bar widget for the Omarchy shell
-  - ⭐ **0** · 🍴 1 · Last updated: `2026-08-26` · `omarchy plugin add crueber/omarchy-plugin-omacoin --enable`
-- **[omarchy-relaunch](https://github.com/farmall856/omarchy-relaunch)** : Restore your app-to-workspace layout after a reboot. Omarchy bar widget, no daemon.
-  - ⭐ **0** · 🍴 0 · Last updated: `2026-08-26` · `omarchy plugin add farmall856/omarchy-relaunch --enable`
 - **[omarchy-wayvnc](https://github.com/LeonardoM011/omarchy-wayvnc)** : Plugin for Omarchy
   - ⭐ **0** · 🍴 0 · Last updated: `2026-08-26` · `omarchy plugin add LeonardoM011/omarchy-wayvnc --enable`
 - **[radiogram.dev](https://github.com/forcequit/radiogram.dev)** : Native Omarchy Quattro bar-widget plugin for Radiogram web radio.
@@ -1160,8 +1168,6 @@
   - ⭐ **0** · 🍴 0 · Last updated: `2026-08-24` · `omarchy plugin add poctek/omarchy-hyprland-submap-plugin --enable`
 - **[omarchy-bitcoin-pulse](https://github.com/jobu222/omarchy-bitcoin-pulse)** : Omarchy bar utility with Bitcoin market sentiment, 24-hour prices, and a price graph
   - ⭐ **0** · 🍴 0 · Last updated: `2026-08-24` · `omarchy plugin add jobu222/omarchy-bitcoin-pulse --enable`
-- **[omarchy-cw-practice](https://github.com/crueber/omarchy-cw-practice)** : CW (Morse code) receiving practice plugin for the Omarchy shell — PARIS-timed sidetone, delayed character reveal, live settings
-  - ⭐ **0** · 🍴 0 · Last updated: `2026-08-24` · `omarchy plugin add crueber/omarchy-cw-practice --enable`
 - **[omarchy-MBTA](https://github.com/cgaray/omarchy-MBTA)** : Live MBTA arrivals, route maps, and vehicle locations for the Omarchy bar
   - ⭐ **0** · 🍴 0 · Last updated: `2026-08-24` · `omarchy plugin add cgaray/omarchy-MBTA --enable`
 - **[omarchy-screen-zoom](https://github.com/chuma-beep/omarchy-screen-zoom)** : Screen Zoom — Omarchy topbar widget that magnifies your screen around the cursor: smooth ±25% steps, live percentage, one-click reset.
@@ -1244,8 +1250,6 @@
   - ⭐ **2** · 🍴 0 · Last updated: `2026-08-22` · `omarchy plugin add Jvaxx/omarchy-scrolling-position --enable`
 - **[omarchy-breakout](https://github.com/acrogenesis/omarchy-breakout)** : A native 24-level Breakout campaign for Omarchy Quattro
   - ⭐ **1** · 🍴 0 · Last updated: `2026-08-22` · `omarchy plugin add acrogenesis/omarchy-breakout --enable`
-- **[omarchy-vibez](https://github.com/JeffCortez23/omarchy-vibez)** : 🎵 Apple Music MPRIS status bar widget for Omarchy Linux with live album art & playback controls
-  - ⭐ **1** · 🍴 0 · Last updated: `2026-08-22` · `omarchy plugin add JeffCortez23/omarchy-vibez --enable`
 - **[omarchy-airplay-audio](https://github.com/KyleKincer/omarchy-airplay-audio)** : Multi-room AirPlay for Omarchy, with per-room and proportional master volume.
   - ⭐ **1** · 🍴 0 · Last updated: `2026-08-22` · `omarchy plugin add KyleKincer/omarchy-airplay-audio --enable`
 - **[Bitmochi](https://github.com/Gsirawan/Bitmochi)** : Omarchy plugin.
@@ -1360,8 +1364,6 @@
   - ⭐ **2** · 🍴 0 · Last updated: `2026-08-20` · `omarchy plugin add erzz/omarchy-codeburn --enable`
 - **[spotmarchy](https://github.com/mich-nduka/spotmarchy)** : Spotify in the Omarchy bar: now playing, transport, and a panel on a backdrop made from the album cover.
   - ⭐ **2** · 🍴 0 · Last updated: `2026-08-20` · `omarchy plugin add mich-nduka/spotmarchy --enable`
-- **[omarchy-apple-music](https://github.com/ianswope/omarchy-apple-music)** : Apple Music as a standalone player on Omarchy: its own window, its own MPRIS player, now playing and transport in the bar.
-  - ⭐ **2** · 🍴 0 · Last updated: `2026-08-20` · `omarchy plugin add ianswope/omarchy-apple-music --enable`
 - **[omasonos](https://github.com/ctl0v0/omasonos)** : Local-first Sonos controls for the Omarchy bar
   - ⭐ **1** · 🍴 4 · Last updated: `2026-08-20` · `omarchy plugin add ctl0v0/omasonos --enable`
 - **[omarchy-digital-ocean](https://github.com/craigderington/omarchy-digital-ocean)** : Digital Ocean quickshell plugin for Omarchy Quattro
@@ -1418,8 +1420,6 @@
   - ⭐ **0** · 🍴 0 · Last updated: `2026-08-19` · `omarchy plugin add 5d0tal1gat0r/omarchy-agent-watcher --enable`
 - **[omarchy-momentumctl](https://github.com/timmo001/omarchy-momentumctl)** : Omarchy controls for Sennheiser momentum headphones using momentumctl
   - ⭐ **0** · 🍴 0 · Last updated: `2026-08-19` · `omarchy plugin add timmo001/omarchy-momentumctl --enable`
-- **[omarchy-system-bridge](https://github.com/timmo001/omarchy-system-bridge)** : Generated Omarchy plugin for System Bridge
-  - ⭐ **0** · 🍴 0 · Last updated: `2026-08-19` · `omarchy plugin add timmo001/omarchy-system-bridge --enable`
 - **[omarchy-metronome](https://github.com/dlpwaters/omarchy-metronome)** : A compact, low-latency metronome for the Omarchy Quattro bar
   - ⭐ **0** · 🍴 0 · Last updated: `2026-08-19` · `omarchy plugin add dlpwaters/omarchy-metronome --enable`
 - **[omarchy-cliamp-nowplaying](https://github.com/miguelRibeir0/omarchy-cliamp-nowplaying)** : Omarchy bar widget for cliamp: now playing ticker with playback controls, popup panel, and Up next
@@ -1609,28 +1609,40 @@
 
 ### Productivity
 
-- **[sync-calendar-omarchy](https://github.com/promaaa/sync-calendar-omarchy)** : Google/Apple, etc. calendar plugin for Omarchy
-  - ⭐ **14** · 🍴 7 · Last updated: `2026-09-10` · `omarchy plugin add promaaa/sync-calendar-omarchy --enable`
-- **[Omado](https://github.com/maduki-tech/omado)** : Omarchy plugin.
-  - ⭐ **8** · 🍴 5 · Last updated: `2026-09-10` · `omarchy plugin add maduki-tech/omado --enable`
+- **[LetsFG](https://github.com/LetsFG/LetsFG)** : Agent-native flight & hotel search and booking — MCP server, CLI, and Python/JS SDKs. Hundreds of airlines plus the major booking sites, with per-flight reliability history. Free-cancellation hotel rates: hold the room with a small upfront charge, then pay the balance later by link, up to the hotel's own deadline.
+  - ⭐ **2.0k** · 🍴 134 · Last updated: `2026-09-11` · `omarchy plugin add LetsFG/LetsFG --enable`
+- **[omamail](https://github.com/huacnlee/omamail)** : Omarchy mail plugin with Gmail, HEY and IMAP supports.
+  - ⭐ **209** · 🍴 64 · Last updated: `2026-09-11` · `omarchy plugin add huacnlee/omamail --enable`
+- **[omarchy-which-key](https://github.com/huacnlee/omarchy-which-key)** : Which-Key for Omarchy
+  - ⭐ **23** · 🍴 5 · Last updated: `2026-09-11` · `omarchy plugin add huacnlee/omarchy-which-key --enable`
 - **[omarchy-caldav-calendar](https://github.com/SirWizardLizard/omarchy-caldav-calendar)** : CalDAV calendar in the Omarchy clock popup
-  - ⭐ **7** · 🍴 5 · Last updated: `2026-09-10` · `omarchy plugin add SirWizardLizard/omarchy-caldav-calendar --enable`
+  - ⭐ **7** · 🍴 7 · Last updated: `2026-09-11` · `omarchy plugin add SirWizardLizard/omarchy-caldav-calendar --enable`
+- **[omarchy-news-radar](https://github.com/mtolhuys/omarchy-news-radar)** : A visual, keyboard-first Omarchy ecosystem news reader with a panel and optional status widget.
+  - ⭐ **6** · 🍴 1 · Last updated: `2026-09-11` · `omarchy plugin add mtolhuys/omarchy-news-radar --enable`
+- **[workspace-restorer](https://github.com/Davedes83/workspace-restorer)** : Omarchy/Quickshell Hyprland bar plugin that snapshots your window layout and restores it on demand - each app back to its exact workspace, position, and floating/fullscreen state.
+  - ⭐ **3** · 🍴 3 · Last updated: `2026-09-11` · `omarchy plugin add Davedes83/workspace-restorer --enable`
+- **[sync-calendar-omarchy](https://github.com/promaaa/sync-calendar-omarchy)** : Google/Apple, etc. calendar plugin for Omarchy
+  - ⭐ **14** · 🍴 8 · Last updated: `2026-09-10` · `omarchy plugin add promaaa/sync-calendar-omarchy --enable`
+- **[Omado](https://github.com/maduki-tech/omado)** : Omarchy plugin.
+  - ⭐ **8** · 🍴 6 · Last updated: `2026-09-10` · `omarchy plugin add maduki-tech/omado --enable`
 - **[omarchy-caldir-widget](https://github.com/t4t5/omarchy-caldir-widget)** : See upcoming events in your Omarchy bar 📅
   - ⭐ **6** · 🍴 1 · Last updated: `2026-09-10` · `omarchy plugin add t4t5/omarchy-caldir-widget --enable`
 - **[omarchy-obsidian-search](https://github.com/BibekBhusal0/omarchy-obsidian-search)** : Search and open Obsidian notes from the Omarchy shell with fuzzy ranking, plus bases and canvas support and creating a new note when nothing matches.
   - ⭐ **4** · 🍴 0 · Last updated: `2026-09-10` · `omarchy plugin add BibekBhusal0/omarchy-obsidian-search --enable`
 - **[ZenPDF](https://github.com/rohan-patnaik/ZenPDF)** : My attempt at an open-source ilovepdf alternative with all premium features for free.
   - ⭐ **4** · 🍴 0 · Last updated: `2026-09-10` · `omarchy plugin add rohan-patnaik/ZenPDF --enable`
-- **[LetsFG](https://github.com/LetsFG/LetsFG)** : Agent-native flight & hotel search and booking — MCP server, CLI, and Python/JS SDKs. Hundreds of airlines plus the major booking sites, with per-flight reliability history. Free-cancellation hotel rates: hold the room with a small upfront charge, then pay the balance later by link, up to the hotel's own deadline.
-  - ⭐ **2.0k** · 🍴 134 · Last updated: `2026-09-09` · `omarchy plugin add LetsFG/LetsFG --enable`
-- **[omamail](https://github.com/huacnlee/omamail)** : Omarchy mail plugin with Gmail, HEY and IMAP supports.
-  - ⭐ **200** · 🍴 60 · Last updated: `2026-09-09` · `omarchy plugin add huacnlee/omamail --enable`
+- **[omarchy-trackpad-gestures](https://github.com/mpweaver/omarchy-trackpad-gestures)** : Omarchy Quickshell widget for configuring Hyprland trackpad gestures, clicks, and capture actions
+  - ⭐ **3** · 🍴 3 · Last updated: `2026-09-10` · `omarchy plugin add mpweaver/omarchy-trackpad-gestures --enable`
+- **[omarchy-tuxedo-todo](https://github.com/lpanebr/omarchy-tuxedo-todo)** : A todo.txt task panel for Omarchy, powered by Tuxedo
+  - ⭐ **3** · 🍴 1 · Last updated: `2026-09-10` · `omarchy plugin add lpanebr/omarchy-tuxedo-todo --enable`
 - **[omara](https://github.com/anishfn/omara)** : Switch your entire Omarchy desktop into the way you work: workspaces, notifications, audio, wallpaper, theme, apps, and commands, per mode.
   - ⭐ **8** · 🍴 0 · Last updated: `2026-09-09` · `omarchy plugin add anishfn/omara --enable`
 - **[omarchy-focusd](https://github.com/BibekBhusal0/omarchy-focusd)** : A pomodoro timer for the Omarchy bar with awesome features like streak, daily goal,sessions, stats and history.
-  - ⭐ **5** · 🍴 2 · Last updated: `2026-09-09` · `omarchy plugin add BibekBhusal0/omarchy-focusd --enable`
+  - ⭐ **6** · 🍴 2 · Last updated: `2026-09-09` · `omarchy plugin add BibekBhusal0/omarchy-focusd --enable`
 - **[omarchy-calendar-clock](https://github.com/matteodevenuto/omarchy-calendar-clock)** : Omarchy clock widget with integrated iCalendar calendar feeds (month grid, upcoming events, per-calendar colors)
   - ⭐ **4** · 🍴 1 · Last updated: `2026-09-09` · `omarchy plugin add matteodevenuto/omarchy-calendar-clock --enable`
+- **[omarchy-google-calendar-clock](https://github.com/NachoRodriguezM/omarchy-google-calendar-clock)** : Google Calendar integrated calendar and clock plugin for Omarchy
+  - ⭐ **3** · 🍴 3 · Last updated: `2026-09-09` · `omarchy plugin add NachoRodriguezM/omarchy-google-calendar-clock --enable`
 - **[omarchy-ssh-manager](https://github.com/shilai-li/omarchy-ssh-manager)** : The hosts in your ~/.ssh/config, in the Omarchy bar — with the answers to "why isn't it connecting" next to each one
   - ⭐ **3** · 🍴 0 · Last updated: `2026-09-09` · `omarchy plugin add shilai-li/omarchy-ssh-manager --enable`
 - **[omarchy-cockpit](https://github.com/Danubii/omarchy-cockpit)** : Experimental Omarchy plugin to save, preview and restore Dwindle window layouts
@@ -1640,29 +1652,23 @@
 - **[omarchy-blueferry](https://github.com/erikwb/omarchy-blueferry)** : Omarchy plugin for BlueFerry
   - ⭐ **11** · 🍴 1 · Last updated: `2026-09-08` · `omarchy plugin add erikwb/omarchy-blueferry --enable`
 - **[Omarchy-Whatsapp](https://github.com/MoizIbnYousaf/Omarchy-Whatsapp)** : WhatsApp in Quickshell. A fast, local-first Omarchy client with rich media, keyboard workflows, and background wacli sync.
-  - ⭐ **10** · 🍴 3 · Last updated: `2026-09-08` · `omarchy plugin add MoizIbnYousaf/Omarchy-Whatsapp --enable`
+  - ⭐ **9** · 🍴 3 · Last updated: `2026-09-08` · `omarchy plugin add MoizIbnYousaf/Omarchy-Whatsapp --enable`
 - **[omashot](https://github.com/brianblakely/omashot)** : Screenshot and screen recording overlay for Omarchy
   - ⭐ **9** · 🍴 2 · Last updated: `2026-09-08` · `omarchy plugin add brianblakely/omashot --enable`
 - **[omarchy-ledge](https://github.com/andreas-bylund/omarchy-ledge)** : A file drop zone that hangs off the Omarchy bar — drop files on it from anywhere, then drag them back out into any window later.
   - ⭐ **9** · 🍴 0 · Last updated: `2026-09-08` · `omarchy plugin add andreas-bylund/omarchy-ledge --enable`
 - **[hyprcorrect](https://github.com/jondkinney/hyprcorrect)** : Hyprland-first keyboard-driven spelling/typo corrector
   - ⭐ **5** · 🍴 0 · Last updated: `2026-09-08` · `omarchy plugin add jondkinney/hyprcorrect --enable`
-- **[workspace-restorer](https://github.com/Davedes83/workspace-restorer)** : Omarchy/Quickshell Hyprland bar plugin that snapshots your window layout and restores it on demand - each app back to its exact workspace, position, and floating/fullscreen state.
-  - ⭐ **3** · 🍴 3 · Last updated: `2026-09-08` · `omarchy plugin add Davedes83/workspace-restorer --enable`
 - **[omarchy-calendar](https://github.com/joryeugene/omarchy-calendar)** : Flight Deck Calendar brings Google Calendar and Outlook into one keyboard-first Omarchy panel with read-only defaults and optional editing.
   - ⭐ **3** · 🍴 0 · Last updated: `2026-09-08` · `omarchy plugin add joryeugene/omarchy-calendar --enable`
 - **[quickshell-screentime-plugin](https://github.com/ax1g/quickshell-screentime-plugin)** : Know where your time goes — live per-app screen time in your Omarchy bar with a donut breakdown, 13-week trend, yearly retro, and usage insights
-  - ⭐ **30** · 🍴 11 · Last updated: `2026-09-07` · `omarchy plugin add ax1g/quickshell-screentime-plugin --enable`
-- **[omarchy-which-key](https://github.com/huacnlee/omarchy-which-key)** : Which-Key for Omarchy
-  - ⭐ **23** · 🍴 5 · Last updated: `2026-09-07` · `omarchy plugin add huacnlee/omarchy-which-key --enable`
+  - ⭐ **31** · 🍴 11 · Last updated: `2026-09-07` · `omarchy plugin add ax1g/quickshell-screentime-plugin --enable`
 - **[omarchy-downloads](https://github.com/jankeesvw/omarchy-downloads)** : Recent downloads in the Omarchy bar, in a window you can drag files out of
   - ⭐ **13** · 🍴 3 · Last updated: `2026-09-07` · `omarchy plugin add jankeesvw/omarchy-downloads --enable`
 - **[omarchy-nag](https://github.com/jankeesvw/omarchy-nag)** : Omarchy plugin.
   - ⭐ **7** · 🍴 1 · Last updated: `2026-09-07` · `omarchy plugin add jankeesvw/omarchy-nag --enable`
 - **[omalauncher](https://github.com/mirashif/omalauncher)** : A keyboard-first command palette for Omarchy
   - ⭐ **6** · 🍴 1 · Last updated: `2026-09-07` · `omarchy plugin add mirashif/omalauncher --enable`
-- **[omarchy-news-radar](https://github.com/mtolhuys/omarchy-news-radar)** : A visual, keyboard-first Omarchy ecosystem news reader with a panel and optional status widget.
-  - ⭐ **6** · 🍴 1 · Last updated: `2026-09-07` · `omarchy plugin add mtolhuys/omarchy-news-radar --enable`
 - **[omarchy-menu-prefixes](https://github.com/BryonLewis/omarchy-menu-prefixes)** : Omarchy menu plugin with configurable search prefixes (file:, web, calc, currency, and custom commands)
   - ⭐ **5** · 🍴 1 · Last updated: `2026-09-07` · `omarchy plugin add BryonLewis/omarchy-menu-prefixes --enable`
 - **[omarchy-basecamp-plugin](https://github.com/basecamp/omarchy-basecamp-plugin)** : Omarchy plugin.
@@ -1672,9 +1678,9 @@
 - **[qs-bitwarden-cli](https://github.com/Elevate08/qs-bitwarden-cli)** : Bitwarden on quickshell with keyboard navigation and a goal to capture every feature from the browser extension
   - ⭐ **16** · 🍴 4 · Last updated: `2026-09-06` · `omarchy plugin add Elevate08/qs-bitwarden-cli --enable`
 - **[obsidian-daily-qs](https://github.com/LucaNerlich/obsidian-daily-qs)** : Omarchy Quattro Quickshell Plugin for Obsidian Daily Notes
-  - ⭐ **8** · 🍴 3 · Last updated: `2026-09-06` · `omarchy plugin add LucaNerlich/obsidian-daily-qs --enable`
+  - ⭐ **9** · 🍴 3 · Last updated: `2026-09-06` · `omarchy plugin add LucaNerlich/obsidian-daily-qs --enable`
 - **[omavoice](https://github.com/baranskyi/omavoice)** : omavoice: agentic voice assistant for Omarchy
-  - ⭐ **6** · 🍴 1 · Last updated: `2026-09-06` · `omarchy plugin add baranskyi/omavoice --enable`
+  - ⭐ **6** · 🍴 2 · Last updated: `2026-09-06` · `omarchy plugin add baranskyi/omavoice --enable`
 - **[oma2fa](https://github.com/jondkinney/oma2fa)** : Privacy-first Omarchy picker for short-lived verification codes
   - ⭐ **3** · 🍴 0 · Last updated: `2026-09-06` · `omarchy plugin add jondkinney/oma2fa --enable`
 - **[omachord](https://github.com/anothaDev/omachord)** : Compose keyboard shortcuts, Omarchy automations, and condition-driven routines with restore.
@@ -1691,34 +1697,32 @@
   - ⭐ **7** · 🍴 1 · Last updated: `2026-09-05` · `omarchy plugin add cyprusad/omakeez --enable`
 - **[omarchy-workspace-profiles](https://github.com/imRYiUK/omarchy-workspace-profiles)** : Omarchy plugin: preset the apps and tiling layout for each workspace, and have them open themselves at login.
   - ⭐ **4** · 🍴 1 · Last updated: `2026-09-05` · `omarchy plugin add imRYiUK/omarchy-workspace-profiles --enable`
-- **[omarchy-trackpad-gestures](https://github.com/mpweaver/omarchy-trackpad-gestures)** : Omarchy Quickshell widget for configuring Hyprland trackpad gestures, clicks, and capture actions
-  - ⭐ **3** · 🍴 3 · Last updated: `2026-09-05` · `omarchy plugin add mpweaver/omarchy-trackpad-gestures --enable`
 - **[omakoe](https://github.com/ok/omakoe)** : An 8-bit on-screen display for voxtype dictation on Omarchy 4: a live waveform while you speak, and a scanning bar while it transcribes.
-  - ⭐ **3** · 🍴 0 · Last updated: `2026-09-05` · `omarchy plugin add ok/omakoe --enable`
+  - ⭐ **4** · 🍴 0 · Last updated: `2026-09-05` · `omarchy plugin add ok/omakoe --enable`
 - **[omarchy-dictionary](https://github.com/tristonarmstrong/omarchy-dictionary)** : Look up English word definitions from the Free Wiktionary API directly in the Omarchy bar.
-  - ⭐ **13** · 🍴 1 · Last updated: `2026-09-04` · `omarchy plugin add tristonarmstrong/omarchy-dictionary --enable`
+  - ⭐ **13** · 🍴 2 · Last updated: `2026-09-04` · `omarchy plugin add tristonarmstrong/omarchy-dictionary --enable`
 - **[omarchy-omatab](https://github.com/r3dbars/omarchy-omatab)** : The Omarchy bar widget for Oma Tab: on-device AI autocomplete anywhere you type. Turn it on or off, pick a model, see how it is doing.
-  - ⭐ **4** · 🍴 1 · Last updated: `2026-09-04` · `omarchy plugin add r3dbars/omarchy-omatab --enable`
+  - ⭐ **5** · 🍴 1 · Last updated: `2026-09-04` · `omarchy plugin add r3dbars/omarchy-omatab --enable`
 - **[omapaste](https://github.com/pkayokay/omapaste)** : Clipboard manager for Omarchy.
   - ⭐ **3** · 🍴 1 · Last updated: `2026-09-04` · `omarchy plugin add pkayokay/omapaste --enable`
 - **[omarchy-google-tasks](https://github.com/CJKaufman/omarchy-google-tasks)** : Easy way to see, create & complete Google Tasks with a bar widget
   - ⭐ **3** · 🍴 0 · Last updated: `2026-09-04` · `omarchy plugin add CJKaufman/omarchy-google-tasks --enable`
 - **[hass](https://github.com/konradk/hass)** : Home Assistant Quickshell plugin for Omarchy 4
-  - ⭐ **31** · 🍴 13 · Last updated: `2026-09-03` · `omarchy plugin add konradk/hass --enable`
+  - ⭐ **31** · 🍴 12 · Last updated: `2026-09-03` · `omarchy plugin add konradk/hass --enable`
 - **[obsidian-tasks](https://github.com/m1kode/obsidian-tasks)** : Omarchy plugin.
   - ⭐ **5** · 🍴 2 · Last updated: `2026-09-03` · `omarchy plugin add m1kode/obsidian-tasks --enable`
 - **[omarvis](https://github.com/eliasstravik/omarvis)** : Jarvis for Omarchy. Control your computer with your voice at your desk or from your phone.
-  - ⭐ **6** · 🍴 1 · Last updated: `2026-09-02` · `omarchy plugin add eliasstravik/omarvis --enable`
+  - ⭐ **7** · 🍴 1 · Last updated: `2026-09-02` · `omarchy plugin add eliasstravik/omarvis --enable`
 - **[archy-omarchy](https://github.com/respira-crece-lidera/archy-omarchy)** : Archy — the guide that should come with Omarchy: a live first tour that teaches the OS hands-on, an AI tutor that knows YOUR machine, and one-click fixes until you're ready to edit configs yourself
   - ⭐ **5** · 🍴 1 · Last updated: `2026-09-02` · `omarchy plugin add respira-crece-lidera/archy-omarchy --enable`
 - **[omarchy-hey-plugin](https://github.com/basecamp/omarchy-hey-plugin)** : Omarchy plugin.
   - ⭐ **4** · 🍴 3 · Last updated: `2026-09-02` · `omarchy plugin add basecamp/omarchy-hey-plugin --enable`
 - **[omashift](https://github.com/omashift/omashift)** : A rally game that drills your Omarchy keybindings. It reads the keymap you actually have.
   - ⭐ **4** · 🍴 0 · Last updated: `2026-09-02` · `omarchy plugin add omashift/omashift --enable`
+- **[omarchy-board](https://github.com/timothygwright/omarchy-board)** : Learn the shortcuts for the app you're using, one useful key at a time.
+  - ⭐ **4** · 🍴 0 · Last updated: `2026-09-02` · `omarchy plugin add timothygwright/omarchy-board --enable`
 - **[omarchy-typing-test](https://github.com/leomoon-studios/omarchy-typing-test)** : A bilingual adaptive typing test for Omarchy with local coaching and progress charts.
   - ⭐ **3** · 🍴 1 · Last updated: `2026-09-02` · `omarchy plugin add leomoon-studios/omarchy-typing-test --enable`
-- **[omarchy-board](https://github.com/timothygwright/omarchy-board)** : Learn the shortcuts for the app you're using, one useful key at a time.
-  - ⭐ **3** · 🍴 0 · Last updated: `2026-09-02` · `omarchy plugin add timothygwright/omarchy-board --enable`
 - **[nives-omarchy](https://github.com/hoornet/nives-omarchy)** : Talk to your Home Assistant house in plain language, from your Omarchy desktop. A chat overlay (and push-to-talk) for any Assist conversation agent.
   - ⭐ **3** · 🍴 0 · Last updated: `2026-09-02` · `omarchy plugin add hoornet/nives-omarchy --enable`
 - **[voxtype-aura](https://github.com/adamcbrewer/voxtype-aura)** : A compact, theme-aware Voxtype dictation overlay for Omarchy.
@@ -1726,7 +1730,7 @@
 - **[omatabs](https://github.com/tony-roslund/omatabs)** : Sticky note tabs for the Omarchy desktop edge.
   - ⭐ **4** · 🍴 0 · Last updated: `2026-09-01` · `omarchy plugin add tony-roslund/omatabs --enable`
 - **[next-event](https://github.com/tobiasz-p/next-event)** : Next event in the bar — Google Calendar feed, click to join Google Meet for Omarchy
-  - ⭐ **12** · 🍴 8 · Last updated: `2026-08-31` · `omarchy plugin add tobiasz-p/next-event --enable`
+  - ⭐ **12** · 🍴 9 · Last updated: `2026-08-31` · `omarchy plugin add tobiasz-p/next-event --enable`
 - **[omarchy-google-calendar-clock-refresh](https://github.com/guiestrela/omarchy-google-calendar-clock-refresh)** : Omarchy plugin.
   - ⭐ **12** · 🍴 3 · Last updated: `2026-08-31` · `omarchy plugin add guiestrela/omarchy-google-calendar-clock-refresh --enable`
 - **[omatype](https://github.com/OldJobobo/omatype)** : Offline, keyboard-first typing practice for the Omarchy Quattro shell.
@@ -1742,17 +1746,17 @@
 - **[omaconnect](https://github.com/jitendradara12/omaconnect)** : Omarchy plugin for kde-connect integration
   - ⭐ **26** · 🍴 6 · Last updated: `2026-08-30` · `omarchy plugin add jitendradara12/omaconnect --enable`
 - **[Omodoro](https://github.com/Pnkm0nK/Omodoro)** : Pomodoro technique timer and task tracker
-  - ⭐ **7** · 🍴 2 · Last updated: `2026-08-30` · `omarchy plugin add Pnkm0nK/Omodoro --enable`
+  - ⭐ **8** · 🍴 2 · Last updated: `2026-08-30` · `omarchy plugin add Pnkm0nK/Omodoro --enable`
 - **[omarchy.dzhibas.menu](https://github.com/dzhibas/omarchy.dzhibas.menu)** : Omarchy plugin.
   - ⭐ **3** · 🍴 1 · Last updated: `2026-08-30` · `omarchy plugin add dzhibas/omarchy.dzhibas.menu --enable`
 - **[omarchy-obsidian-panel](https://github.com/rafaelmehdiyev/omarchy-obsidian-panel)** : An Omarchy bar plugin that lets you switch between Obsidian vaults and search notes directly from the menu bar.
   - ⭐ **3** · 🍴 0 · Last updated: `2026-08-30` · `omarchy plugin add rafaelmehdiyev/omarchy-obsidian-panel --enable`
 - **[omarchy-tuxedo](https://github.com/niziul/omarchy-tuxedo)** : todo.txt due-task indicator for the Omarchy bar with notifications and daily digest
   - ⭐ **3** · 🍴 0 · Last updated: `2026-08-30` · `omarchy plugin add niziul/omarchy-tuxedo --enable`
+- **[omarchy-omaflow](https://github.com/jlugner/omarchy-omaflow)** : Agent-authored desktop automations for Omarchy — described in English, compiled once into inspectable rules, executed deterministically forever.
+  - ⭐ **4** · 🍴 1 · Last updated: `2026-08-29` · `omarchy plugin add jlugner/omarchy-omaflow --enable`
 - **[omarchy-espanso](https://github.com/taisau/omarchy-espanso)** : Espanso text expander bar widget and controls for Omarchy Linux
   - ⭐ **3** · 🍴 2 · Last updated: `2026-08-29` · `omarchy plugin add taisau/omarchy-espanso --enable`
-- **[omarchy-omaflow](https://github.com/jlugner/omarchy-omaflow)** : Agent-authored desktop automations for Omarchy — described in English, compiled once into inspectable rules, executed deterministically forever.
-  - ⭐ **3** · 🍴 1 · Last updated: `2026-08-29` · `omarchy plugin add jlugner/omarchy-omaflow --enable`
 - **[OmaDash](https://github.com/djmenig/OmaDash)** : A malleable HUD/dashboard plugin for Omarchy.
   - ⭐ **3** · 🍴 0 · Last updated: `2026-08-29` · `omarchy plugin add djmenig/OmaDash --enable`
 - **[omarchy-totp](https://github.com/sasiruLK/omarchy-totp)** : TOTP authenticator for omarchy-shell. Two-factor codes in the bar, secrets in your keyring, enrolment by scanning the QR straight off the screen. Fully offline.
@@ -1760,11 +1764,11 @@
 - **[omarchy-pomodoro](https://github.com/techywilbur/omarchy-pomodoro)** : Pomodoro focus timer for the Omarchy bar: countdown in the bar, popup controls, full-screen break screen (Esc hides it), DND while you focus, chimes and daily stats.
   - ⭐ **5** · 🍴 3 · Last updated: `2026-08-28` · `omarchy plugin add techywilbur/omarchy-pomodoro --enable`
 - **[omarchy-search](https://github.com/sahzudin/omarchy-search)** : Omarchy plugin.
-  - ⭐ **4** · 🍴 0 · Last updated: `2026-08-28` · `omarchy plugin add sahzudin/omarchy-search --enable`
+  - ⭐ **4** · 🍴 1 · Last updated: `2026-08-28` · `omarchy plugin add sahzudin/omarchy-search --enable`
+- **[windscribe-omarchy](https://github.com/yegors/windscribe-omarchy)** : Experimental Omarchy Windscribe plugin
+  - ⭐ **4** · 🍴 1 · Last updated: `2026-08-28` · `omarchy plugin add yegors/windscribe-omarchy --enable`
 - **[omarchy-keybinds](https://github.com/harbefas/omarchy-keybinds)** : Searchable keybinding reference for Hyprland and the terminal tools you use
   - ⭐ **3** · 🍴 1 · Last updated: `2026-08-28` · `omarchy plugin add harbefas/omarchy-keybinds --enable`
-- **[windscribe-omarchy](https://github.com/yegors/windscribe-omarchy)** : Experimental Omarchy Windscribe plugin
-  - ⭐ **3** · 🍴 0 · Last updated: `2026-08-28` · `omarchy plugin add yegors/windscribe-omarchy --enable`
 - **[omarchy-clarity](https://github.com/TyRichards/omarchy-clarity)** : Password-guarded distraction blocking and daily focus scheduling for Omarchy
   - ⭐ **18** · 🍴 0 · Last updated: `2026-08-27` · `omarchy plugin add TyRichards/omarchy-clarity --enable`
 - **[omarchy-persian-calendar](https://github.com/leomoon-studios/omarchy-persian-calendar)** : Persian Jalali calendar widget for the Omarchy 4 shell
@@ -1784,7 +1788,7 @@
 - **[omarchy-hermes-sessions](https://github.com/stevequinn/omarchy-hermes-sessions)** : Omarchy plugin for showing and opening Hermes sessions
   - ⭐ **4** · 🍴 2 · Last updated: `2026-08-25` · `omarchy plugin add stevequinn/omarchy-hermes-sessions --enable`
 - **[omarchy-everything](https://github.com/brianblakely/omarchy-everything)** : List, search, and browse to every app, tab, window, agent... everything. An Omarchy plugin.
-  - ⭐ **17** · 🍴 7 · Last updated: `2026-08-24` · `omarchy plugin add brianblakely/omarchy-everything --enable`
+  - ⭐ **17** · 🍴 8 · Last updated: `2026-08-24` · `omarchy plugin add brianblakely/omarchy-everything --enable`
 - **[omadigest](https://github.com/jacob-vincent-mink/omadigest)** : A native Omarchy attention layer that turns interruptions into cited, skill-shaped AI briefings.
   - ⭐ **3** · 🍴 0 · Last updated: `2026-08-24` · `omarchy plugin add jacob-vincent-mink/omadigest --enable`
 - **[omarchy-adhd-kit](https://github.com/ya-luotao/omarchy-adhd-kit)** : ADHD toolkit for the Omarchy shell: Time Timer-style visual countdown in the bar + instant quick-capture inbox overlay
@@ -1802,13 +1806,13 @@
 - **[omarchy-keyguide](https://github.com/mrai125kr/omarchy-keyguide)** : Input-transparent shortcut HUD with safe shortcut editing for Omarchy
   - ⭐ **3** · 🍴 0 · Last updated: `2026-08-23` · `omarchy plugin add mrai125kr/omarchy-keyguide --enable`
 - **[omarchy-keybinding-guide](https://github.com/ctl0v0/omarchy-keybinding-guide)** : Contextual Omarchy keybinding guide that filters shortcuts as modifier keys are held.
-  - ⭐ **19** · 🍴 3 · Last updated: `2026-08-22` · `omarchy plugin add ctl0v0/omarchy-keybinding-guide --enable`
+  - ⭐ **22** · 🍴 3 · Last updated: `2026-08-22` · `omarchy plugin add ctl0v0/omarchy-keybinding-guide --enable`
 - **[omarchy-sensei](https://github.com/nilszeilon/omarchy-sensei)** : Turn mouse habits into keyboard-first Omarchy practice tasks.
   - ⭐ **4** · 🍴 0 · Last updated: `2026-08-22` · `omarchy plugin add nilszeilon/omarchy-sensei --enable`
-- **[omarchy-cloud-plugin](https://github.com/JoshuaFurman/omarchy-cloud-plugin)** : This is an Omarchy plugin that allows you to connect to cloud storage services and mount them directly to your file system.
-  - ⭐ **7** · 🍴 4 · Last updated: `2026-08-20` · `omarchy plugin add JoshuaFurman/omarchy-cloud-plugin --enable`
 - **[chordarchy](https://github.com/ctl0v0/chordarchy)** : Map Omarchy shortcuts and commands to chords played on a physical MIDI keyboard.
   - ⭐ **7** · 🍴 0 · Last updated: `2026-08-20` · `omarchy plugin add ctl0v0/chordarchy --enable`
+- **[omarchy-cloud-plugin](https://github.com/JoshuaFurman/omarchy-cloud-plugin)** : This is an Omarchy plugin that allows you to connect to cloud storage services and mount them directly to your file system.
+  - ⭐ **6** · 🍴 4 · Last updated: `2026-08-20` · `omarchy plugin add JoshuaFurman/omarchy-cloud-plugin --enable`
 - **[omarchy-emojis-nerd](https://github.com/farangkao/omarchy-emojis-nerd)** : Emoji and Nerd Font glyph picker for Omarchy — drop-in replacement for the built-in emoji picker
   - ⭐ **3** · 🍴 0 · Last updated: `2026-08-20` · `omarchy plugin add farangkao/omarchy-emojis-nerd --enable`
 - **[omarchy-notes](https://github.com/Robindfuller/omarchy-notes)** : Notes for the Omarchy shell bar: an autosaving notepad card with a clipboard clip shelf. Pinnable, IPC-drivable.
@@ -1826,7 +1830,7 @@
 - **[omarchy-browser-picker](https://github.com/K53N0/omarchy-browser-picker)** : Choose the browser and profile for every link, with per-site rules that learn. An Omarchy Quattro plugin.
   - ⭐ **6** · 🍴 2 · Last updated: `2026-08-17` · `omarchy plugin add K53N0/omarchy-browser-picker --enable`
 - **[omarchy-clipboard](https://github.com/huyhuyvu01/omarchy-clipboard)** : Quickshell omarchy clipboard plugin
-  - ⭐ **4** · 🍴 1 · Last updated: `2026-08-17` · `omarchy plugin add huyhuyvu01/omarchy-clipboard --enable`
+  - ⭐ **5** · 🍴 1 · Last updated: `2026-08-17` · `omarchy plugin add huyhuyvu01/omarchy-clipboard --enable`
 - **[omarchy-rclone](https://github.com/davidszp/omarchy-rclone)** : Omarchy plugin.
   - ⭐ **3** · 🍴 2 · Last updated: `2026-08-17` · `omarchy plugin add davidszp/omarchy-rclone --enable`
 - **[omarchy-shell-plugins](https://github.com/bjarneo/omarchy-shell-plugins)** : Personal Omarchy shell plugins, including the Omni command palette.
@@ -1834,21 +1838,27 @@
 - **[omafob](https://github.com/yogeshojha/omafob)** : Your 2FA codes in the Omarchy bar.
   - ⭐ **8** · 🍴 1 · Last updated: `2026-08-16` · `omarchy plugin add yogeshojha/omafob --enable`
 - **[omarchy-cn-input-plugin](https://github.com/gohlihan/omarchy-cn-input-plugin)** : simplified chinese typing for omarchy
-  - ⭐ **10** · 🍴 0 · Last updated: `2026-08-15` · `omarchy plugin add gohlihan/omarchy-cn-input-plugin --enable`
+  - ⭐ **9** · 🍴 0 · Last updated: `2026-08-15` · `omarchy plugin add gohlihan/omarchy-cn-input-plugin --enable`
 - **[omadoro](https://github.com/brianblakely/omadoro)** : A Pomodoro timer in the Omarchy bar.
   - ⭐ **7** · 🍴 2 · Last updated: `2026-08-11` · `omarchy plugin add brianblakely/omadoro --enable`
 
 <details>
-<summary><b>🐣 New & Emerging Productivity (419 plugins · 0–2 ⭐)</b></summary>
+<summary><b>🐣 New & Emerging Productivity (417 plugins · 0–2 ⭐)</b></summary>
 
+- **[omarchy-note-note](https://github.com/andreivinca/omarchy-note-note)** : Notes for the Omarchy shell: Markdown notebooks, Microsoft Sticky Notes and OneNote in one overlay
+  - ⭐ **2** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add andreivinca/omarchy-note-note --enable`
+- **[quick-note](https://github.com/Pilpup/quick-note)** : Omarchy plugin.
+  - ⭐ **2** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add Pilpup/quick-note --enable`
+- **[omarchy-clipboard-plus](https://github.com/idr4n/omarchy-clipboard-plus)** : Enhanced clipboard history overlay for Omarchy Quattro
+  - ⭐ **1** · 🍴 1 · Last updated: `2026-09-11` · `omarchy plugin add idr4n/omarchy-clipboard-plus --enable`
+- **[omarchy_cameras](https://github.com/chameleonbr/omarchy_cameras)** : Omarchy Quattro Frigate and ONVIF camera viewer: live thumbnails in the bar, motion alerts, fullscreen playback in mpv.
+  - ⭐ **1** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add chameleonbr/omarchy_cameras --enable`
+- **[omaclaude-swap](https://github.com/Hylkw213/omaclaude-swap)** : Omarchy plugin.
+  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add Hylkw213/omaclaude-swap --enable`
+- **[omarchy-unicode-picker](https://github.com/EFrMG/omarchy-unicode-picker)** : Quickshell plugin to search, copy, and type any Unicode character.
+  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add EFrMG/omarchy-unicode-picker --enable`
 - **[omarchy-superproductivity](https://github.com/PatrickFanella/omarchy-superproductivity)** : Show and control the current Super Productivity task from the Omarchy top bar.
   - ⭐ **2** · 🍴 0 · Last updated: `2026-09-10` · `omarchy plugin add PatrickFanella/omarchy-superproductivity --enable`
-- **[omarchy-note-note](https://github.com/andreivinca/omarchy-note-note)** : Notes for the Omarchy shell: Markdown notebooks, Microsoft Sticky Notes and OneNote in one overlay
-  - ⭐ **2** · 🍴 0 · Last updated: `2026-09-10` · `omarchy plugin add andreivinca/omarchy-note-note --enable`
-- **[omarchy-tuxedo-todo](https://github.com/lpanebr/omarchy-tuxedo-todo)** : A todo.txt task panel for Omarchy, powered by Tuxedo
-  - ⭐ **2** · 🍴 0 · Last updated: `2026-09-10` · `omarchy plugin add lpanebr/omarchy-tuxedo-todo --enable`
-- **[omarchy_cameras](https://github.com/chameleonbr/omarchy_cameras)** : Omarchy Quattro Frigate and ONVIF camera viewer: live thumbnails in the bar, motion alerts, fullscreen playback in mpv.
-  - ⭐ **1** · 🍴 0 · Last updated: `2026-09-10` · `omarchy plugin add chameleonbr/omarchy_cameras --enable`
 - **[omarchy-readest](https://github.com/BibekBhusal0/omarchy-readest)** : Search and open books from the Readest library with fuzzy ranking by title or author.
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-10` · `omarchy plugin add BibekBhusal0/omarchy-readest --enable`
 - **[omaimapmail](https://github.com/eddownes/omaimapmail)** : Multi-account IMAP unread-mail plugin for the Omarchy shell bar — one icon, unlimited accounts, in-shell settings UI. Fork of keithnyc/omafmail.
@@ -1859,8 +1869,6 @@
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-10` · `omarchy plugin add e1i3or-commits/scrim --enable`
 - **[omfasty](https://github.com/anders81fin/omfasty)** : Intermittent fasting timer for the Omarchy shell bar
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-10` · `omarchy plugin add anders81fin/omfasty --enable`
-- **[omarchy-google-calendar-clock](https://github.com/NachoRodriguezM/omarchy-google-calendar-clock)** : Google Calendar integrated calendar and clock plugin for Omarchy
-  - ⭐ **2** · 🍴 3 · Last updated: `2026-09-09` · `omarchy plugin add NachoRodriguezM/omarchy-google-calendar-clock --enable`
 - **[omarchy-todos](https://github.com/Saikomantisu/omarchy-todos)** : Omarchy shell plugin: the Big 3, daily todos, a day progress bar, and a mascot in the bar who reacts to how the day is going.
   - ⭐ **2** · 🍴 0 · Last updated: `2026-09-09` · `omarchy plugin add Saikomantisu/omarchy-todos --enable`
 - **[sparks](https://github.com/ollywarren/sparks)** : Omarchy Plugin for capturing those spur of the moment ideas and thoughts to action later.
@@ -1915,8 +1923,6 @@
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-08` · `omarchy plugin add ghpo/ghpo.quicknote --enable`
 - **[omarchy-ticktick](https://github.com/SotoAugusto/omarchy-ticktick)** : Tasks, habits and a focus timer from TickTick, in your Omarchy bar
   - ⭐ **2** · 🍴 6 · Last updated: `2026-09-07` · `omarchy plugin add SotoAugusto/omarchy-ticktick --enable`
-- **[quick-note](https://github.com/Pilpup/quick-note)** : Omarchy plugin.
-  - ⭐ **2** · 🍴 0 · Last updated: `2026-09-07` · `omarchy plugin add Pilpup/quick-note --enable`
 - **[Scene-Switcher](https://github.com/gmaxxxie/Scene-Switcher)** : Omarchy plugin.
   - ⭐ **2** · 🍴 0 · Last updated: `2026-09-07` · `omarchy plugin add gmaxxxie/Scene-Switcher --enable`
 - **[omarchy-queue](https://github.com/dobrician/omarchy-queue)** : AI-assisted edge inbox for Omarchy Quattro
@@ -1931,6 +1937,8 @@
   - ⭐ **2** · 🍴 1 · Last updated: `2026-09-06` · `omarchy plugin add seth-wood/keyarchy --enable`
 - **[omarchy-screencast-keys](https://github.com/leomoon-studios/omarchy-screencast-keys)** : Omarchy plugin.
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-06` · `omarchy plugin add leomoon-studios/omarchy-screencast-keys --enable`
+- **[omarchy-gods-eye-view](https://github.com/larrywcox/omarchy-gods-eye-view)** : Unofficial community Omarchy launcher for Bilawal Sidhu's God's Eye View
+  - ⭐ **1** · 🍴 0 · Last updated: `2026-09-06` · `omarchy plugin add larrywcox/omarchy-gods-eye-view --enable`
 - **[omarchy-myjournal](https://github.com/mohuddle/omarchy-myjournal)** : Omarchy Quattro plugin bar journal: dated notes, search, autosave, optional age encryption
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-06` · `omarchy plugin add mohuddle/omarchy-myjournal --enable`
 - **[omarchy-chord-expander](https://github.com/orthodoX/omarchy-chord-expander)** : A cursor-aware text expander built on native Hyprland submaps.
@@ -1951,8 +1959,6 @@
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-06` · `omarchy plugin add Bauta/readbrick-omarchy --enable`
 - **[keystroke-timer](https://github.com/evindor/keystroke-timer)** : Countdown timers for the Keystroke command palette on Omarchy. Reference community extension.
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-06` · `omarchy plugin add evindor/keystroke-timer --enable`
-- **[omarchy-gods-eye-view](https://github.com/larrywcox/omarchy-gods-eye-view)** : Unofficial community Omarchy launcher for Bilawal Sidhu's God's Eye View
-  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-06` · `omarchy plugin add larrywcox/omarchy-gods-eye-view --enable`
 - **[repo-keybindings-king](https://github.com/danthemadnorweign/repo-keybindings-king)** : An Omarchy overlay to learn, customize, and use Omarchy Keybindings more quickly and easily.
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-06` · `omarchy plugin add danthemadnorweign/repo-keybindings-king --enable`
 - **[omarchy-worktimer](https://github.com/brinksmatt/omarchy-worktimer)** : Omarchy shell bar widget: track time clocked on during a work day (8h) — elapsed, % done, and time remaining.
@@ -1967,6 +1973,8 @@
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-05` · `omarchy plugin add CarlOscarHMJ/omarchy-menu-plus --enable`
 - **[omarchy-hyper](https://github.com/digitalbase/omarchy-hyper)** : Native Omarchy Hyper key panel for Caps Lock app shortcuts
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-05` · `omarchy plugin add digitalbase/omarchy-hyper --enable`
+- **[omabark](https://github.com/NeroSong/omabark)** : Send text from your Omarchy bar or terminal to your Apple device with Bark.
+  - ⭐ **1** · 🍴 0 · Last updated: `2026-09-05` · `omarchy plugin add NeroSong/omabark --enable`
 - **[Omarchy-Omagent](https://github.com/ellion369/Omarchy-Omagent)** : A command pill that runs your Omarchy default coding agent under the overlay
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-05` · `omarchy plugin add ellion369/Omarchy-Omagent --enable`
 - **[omarchy-agents](https://github.com/duketopceo/omarchy-agents)** : Claude Code, Codex, and Fireworks usage, limits, and pace in a native Omarchy bar panel.
@@ -1985,14 +1993,10 @@
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-05` · `omarchy plugin add pooriaarab/content-rabbit-omarchy --enable`
 - **[file-shelf](https://github.com/KigoJomo/file-shelf)** : An Omarchy screen-edge shelf for browsing files directly in Nautilus
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-05` · `omarchy plugin add KigoJomo/file-shelf --enable`
-- **[omabark](https://github.com/NeroSong/omabark)** : Send text from your Omarchy bar or terminal to your Apple device with Bark.
-  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-05` · `omarchy plugin add NeroSong/omabark --enable`
 - **[omarchy-nextcloud](https://github.com/aerorohit/omarchy-nextcloud)** : nextcloud plugin for omarchy
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-05` · `omarchy plugin add aerorohit/omarchy-nextcloud --enable`
 - **[omarchy-scout](https://github.com/studioxvii/omarchy-scout)** : Scout: native Omarchy plugin discovery, follows, and marketplace sorting.
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-05` · `omarchy plugin add studioxvii/omarchy-scout --enable`
-- **[omaclaude-swap](https://github.com/Hylkw213/omaclaude-swap)** : Omarchy plugin.
-  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-05` · `omarchy plugin add Hylkw213/omaclaude-swap --enable`
 - **[rss-reeder](https://github.com/sanjyay/rss-reeder)** : Omarchy plugin.
   - ⭐ **2** · 🍴 1 · Last updated: `2026-09-04` · `omarchy plugin add sanjyay/rss-reeder --enable`
 - **[omapass](https://github.com/cschaba/omapass)** : OmaPass — Password App for Omarchy, based on the "pass" CLI Tool
@@ -2037,16 +2041,12 @@
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-04` · `omarchy plugin add Hank-dev/omalisten --enable`
 - **[omarchy-almanac](https://github.com/harbefas/omarchy-almanac)** : Calendar, agenda and event manager for Omarchy, backed by khal
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-04` · `omarchy plugin add harbefas/omarchy-almanac --enable`
-- **[omarchy-unicode-picker](https://github.com/EFrMG/omarchy-unicode-picker)** : Quickshell plugin to search, copy, and type any Unicode character.
-  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-04` · `omarchy plugin add EFrMG/omarchy-unicode-picker --enable`
 - **[omarchy-birdseye](https://github.com/harel/omarchy-birdseye)** : Gnome Shell style birds eye view of all open apps
   - ⭐ **2** · 🍴 0 · Last updated: `2026-09-03` · `omarchy plugin add harel/omarchy-birdseye --enable`
 - **[omarchy-bar-hints](https://github.com/hanssound/omarchy-bar-hints)** : Keyboard hints for opening Omarchy bar widgets
   - ⭐ **2** · 🍴 0 · Last updated: `2026-09-03` · `omarchy plugin add hanssound/omarchy-bar-hints --enable`
 - **[voxtype-meeting-transcriber](https://github.com/boomdev/voxtype-meeting-transcriber)** : Omarchy plugin.
   - ⭐ **2** · 🍴 0 · Last updated: `2026-09-03` · `omarchy plugin add boomdev/voxtype-meeting-transcriber --enable`
-- **[omarchy-clipboard-plus](https://github.com/idr4n/omarchy-clipboard-plus)** : Enhanced clipboard history overlay for Omarchy Quattro
-  - ⭐ **1** · 🍴 1 · Last updated: `2026-09-03` · `omarchy plugin add idr4n/omarchy-clipboard-plus --enable`
 - **[omarchy-menu-calc](https://github.com/ricardosuman/omarchy-menu-calc)** : Do quick sums straight from the Omarchy menu, the way Spotlight does on macOS. Also gives the search box a real cursor.
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-03` · `omarchy plugin add ricardosuman/omarchy-menu-calc --enable`
 - **[omarchy-you-got-mail](https://github.com/BVisagie/omarchy-you-got-mail)** : Omarchy bar widget: unread mail only. Click a message to open it.
@@ -2061,14 +2061,16 @@
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-03` · `omarchy plugin add vichong/omarchy-gorelo --enable`
 - **[GlyphTap](https://github.com/invrnt/GlyphTap)** : Omarchy plugin.
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-03` · `omarchy plugin add invrnt/GlyphTap --enable`
+- **[omarmail](https://github.com/JoeJoeflyn/omarmail)** : Native email status bar widget and rich reader for Omarchy shell powered by Himalaya
+  - ⭐ **2** · 🍴 1 · Last updated: `2026-09-02` · `omarchy plugin add JoeJoeflyn/omarmail --enable`
 - **[omarchy-alias-manager](https://github.com/leonaffi-byte/omarchy-alias-manager)** : Omarchy shell plugin: view, add, edit, and delete your bash aliases from a bar panel
   - ⭐ **2** · 🍴 0 · Last updated: `2026-09-02` · `omarchy plugin add leonaffi-byte/omarchy-alias-manager --enable`
 - **[omarchy-rollingshot](https://github.com/ErikBurdett/omarchy-rollingshot)** : RollingShot: full-page screenshots for Omarchy — the whole web page in one keypress
   - ⭐ **2** · 🍴 0 · Last updated: `2026-09-02` · `omarchy plugin add ErikBurdett/omarchy-rollingshot --enable`
 - **[omarchy-things](https://github.com/reysu/omarchy-things)** : Things 3 in your Omarchy bar — counts, a full task panel, quick-add with a natural date grammar, synced through Things Cloud
   - ⭐ **1** · 🍴 3 · Last updated: `2026-09-02` · `omarchy plugin add reysu/omarchy-things --enable`
-- **[omarmail](https://github.com/JoeJoeflyn/omarmail)** : Native email status bar widget and rich reader for Omarchy shell powered by Himalaya
-  - ⭐ **1** · 🍴 1 · Last updated: `2026-09-02` · `omarchy plugin add JoeJoeflyn/omarmail --enable`
+- **[omarchy-restreminder](https://github.com/camilolunacom/omarchy-restreminder)** : 20-20-20 eye break reminders for Omarchy: a themed fullscreen break screen every 20 minutes, with a bar countdown and popup
+  - ⭐ **1** · 🍴 1 · Last updated: `2026-09-02` · `omarchy plugin add camilolunacom/omarchy-restreminder --enable`
 - **[omarchy-beeper](https://github.com/prdlk/omarchy-beeper)** : Omarchy plugin.
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-02` · `omarchy plugin add prdlk/omarchy-beeper --enable`
 - **[airtype-for-omarchy](https://github.com/topmass/airtype-for-omarchy)** : Fast local push-to-talk speech-to-text for Omarchy with a theme-matched waveform overlay and bar widget
@@ -2081,8 +2083,6 @@
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-02` · `omarchy plugin add mantisdotdev/omarchy-jotdown --enable`
 - **[tailbridge](https://github.com/swheel33/tailbridge)** : Move clipboard content between Omarchy and iPhone over Tailscale
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-02` · `omarchy plugin add swheel33/tailbridge --enable`
-- **[omarchy-restreminder](https://github.com/camilolunacom/omarchy-restreminder)** : 20-20-20 eye break reminders for Omarchy: a themed fullscreen break screen every 20 minutes, with a bar countdown and popup
-  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-02` · `omarchy plugin add camilolunacom/omarchy-restreminder --enable`
 - **[omarchy-zulip-hub](https://github.com/valentin-briez-banuls/omarchy-zulip-hub)** : Zulip messages, notifications, and direct replies integrated into Omarchy.
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-02` · `omarchy plugin add valentin-briez-banuls/omarchy-zulip-hub --enable`
 - **[key-promoter](https://github.com/megabyte0x/key-promoter)** : Omarchy service plugin: OSD the Hyprland shortcut when you open an app without using it
@@ -2126,7 +2126,7 @@
 - **[omarchy-chatgpt-archive](https://github.com/anujraja/omarchy-chatgpt-archive)** : Omarchy plugin: import official ChatGPT export ZIPs into a local Markdown archive
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-01` · `omarchy plugin add anujraja/omarchy-chatgpt-archive --enable`
 - **[Omalog](https://github.com/Palccod/Omalog)** : Capture your daily screen time.
-  - ⭐ **1** · 🍴 1 · Last updated: `2026-08-31` · `omarchy plugin add Palccod/Omalog --enable`
+  - ⭐ **1** · 🍴 2 · Last updated: `2026-08-31` · `omarchy plugin add Palccod/Omalog --enable`
 - **[omarchy-calendar-agenda](https://github.com/alexinslc/omarchy-calendar-agenda)** : A lightweight, secure, agenda-focused Google Calendar widget for Omarchy
   - ⭐ **1** · 🍴 0 · Last updated: `2026-08-31` · `omarchy plugin add alexinslc/omarchy-calendar-agenda --enable`
 - **[omarchy-ytclip](https://github.com/Zedster07/omarchy-ytclip)** : Omarchy plugin: cut a section out of a YouTube video without downloading the whole thing
@@ -2684,24 +2684,28 @@
 
 ### System
 
+- **[omarchy-plugin-manager](https://github.com/juancasanueva/omarchy-plugin-manager)** : Omarchy plugin.
+  - ⭐ **5** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add juancasanueva/omarchy-plugin-manager --enable`
+- **[omarchy-dynamic-island](https://github.com/rblalock/omarchy-dynamic-island)** : A morphing bar widget for Omarchy controls, panels, and plugin-native activity views.
+  - ⭐ **4** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add rblalock/omarchy-dynamic-island --enable`
+- **[omarchy-vi-mode](https://github.com/oliverlukschander/omarchy-vi-mode)** : Omarchy plugin: system-wide Caps Lock + hjkl arrow keys
+  - ⭐ **3** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add oliverlukschander/omarchy-vi-mode --enable`
 - **[omaplug](https://github.com/fross100/omaplug)** : Standalone Omarchy plugin manager: enable/disable, update, install, and remove plugins
-  - ⭐ **51** · 🍴 9 · Last updated: `2026-09-10` · `omarchy plugin add fross100/omaplug --enable`
+  - ⭐ **53** · 🍴 9 · Last updated: `2026-09-10` · `omarchy plugin add fross100/omaplug --enable`
 - **[omarchy-nexthop](https://github.com/x3me/omarchy-nexthop)** : Splits your Wi-Fi from your ISP, hop by hop. Internet quality monitor plugin for Omarchy.
   - ⭐ **49** · 🍴 5 · Last updated: `2026-09-10` · `omarchy plugin add x3me/omarchy-nexthop --enable`
 - **[omarchy-config-sync-plugin](https://github.com/gladimdim/omarchy-config-sync-plugin)** : A plugin for Omarchy Linux to sync all of your configs, shortcuts, plugins and other stuff.
-  - ⭐ **16** · 🍴 9 · Last updated: `2026-09-10` · `omarchy plugin add gladimdim/omarchy-config-sync-plugin --enable`
+  - ⭐ **19** · 🍴 10 · Last updated: `2026-09-10` · `omarchy plugin add gladimdim/omarchy-config-sync-plugin --enable`
 - **[sia](https://github.com/AnubisQuantumCipher/sia)** : SIA — the Omarchy Brain: a persistent, associative, self-consolidating memory for your Linux desktop. Local embeddings, typed knowledge graph, deterministic cognitive core, outcome learning with an audited judge, mission-control cockpit, MCP for every agent.
   - ⭐ **15** · 🍴 7 · Last updated: `2026-09-10` · `omarchy plugin add AnubisQuantumCipher/sia --enable`
 - **[omarchy-power-manager](https://github.com/onlyVishesh/omarchy-power-manager)** : The ultimate power management and battery controller plugin for OMarchy. Completely replaces the default power plugin with smart thresholds, dynamic profile switching, and native Wayland lock-screen integration.
-  - ⭐ **9** · 🍴 2 · Last updated: `2026-09-10` · `omarchy plugin add onlyVishesh/omarchy-power-manager --enable`
+  - ⭐ **10** · 🍴 2 · Last updated: `2026-09-10` · `omarchy plugin add onlyVishesh/omarchy-power-manager --enable`
 - **[dizziee.system-updates](https://github.com/JJDizz1L/dizziee.system-updates)** : Intended for use on Omarchy 4 (QUATTRO) with QuickShell Bar.
-  - ⭐ **9** · 🍴 0 · Last updated: `2026-09-10` · `omarchy plugin add JJDizz1L/dizziee.system-updates --enable`
-- **[omarchy-dynamic-island](https://github.com/rblalock/omarchy-dynamic-island)** : A morphing bar widget for Omarchy controls, panels, and plugin-native activity views.
-  - ⭐ **4** · 🍴 0 · Last updated: `2026-09-10` · `omarchy plugin add rblalock/omarchy-dynamic-island --enable`
+  - ⭐ **10** · 🍴 1 · Last updated: `2026-09-10` · `omarchy plugin add JJDizz1L/dizziee.system-updates --enable`
 - **[proton-vpn-omarchy](https://github.com/48hoursnonstop/proton-vpn-omarchy)** : Native Proton VPN client plugin for Omarchy Quattro
   - ⭐ **4** · 🍴 0 · Last updated: `2026-09-09` · `omarchy plugin add 48hoursnonstop/proton-vpn-omarchy --enable`
 - **[omaonedrive](https://github.com/salemsayed/omaonedrive)** : OneDrive service status, cloud storage, and recent sync activity in the Omarchy bar.
-  - ⭐ **3** · 🍴 2 · Last updated: `2026-09-09` · `omarchy plugin add salemsayed/omaonedrive --enable`
+  - ⭐ **3** · 🍴 4 · Last updated: `2026-09-09` · `omarchy plugin add salemsayed/omaonedrive --enable`
 - **[omarchy-omatop](https://github.com/ryanyogan/omarchy-omatop)** : System monitor for Omarchy: pressure-aware chip in the bar, clean quick view, and a full-screen instrument-cluster overlay with vim keys
   - ⭐ **4** · 🍴 2 · Last updated: `2026-09-08` · `omarchy plugin add ryanyogan/omarchy-omatop --enable`
 - **[omasend-quattro](https://github.com/28allday/omasend-quattro)** : LocalSend-compatible file transfer and messaging, native to the Omarchy 4 shell
@@ -2710,14 +2714,12 @@
   - ⭐ **6** · 🍴 0 · Last updated: `2026-09-07` · `omarchy plugin add Davidxap/omarchy-zen --enable`
 - **[omaqbt](https://github.com/Aweiward/omaqbt)** : OmaqBT: qBittorrent transfers in the Omarchy bar
   - ⭐ **5** · 🍴 2 · Last updated: `2026-09-07` · `omarchy plugin add Aweiward/omaqbt --enable`
-- **[omarchy-plugin-manager](https://github.com/juancasanueva/omarchy-plugin-manager)** : Omarchy plugin.
-  - ⭐ **4** · 🍴 0 · Last updated: `2026-09-07` · `omarchy plugin add juancasanueva/omarchy-plugin-manager --enable`
 - **[omarchy-disk-lens](https://github.com/mtolhuys/omarchy-disk-lens)** : See exactly what is eating your disk—right from the Omarchy bar.
   - ⭐ **3** · 🍴 0 · Last updated: `2026-09-07` · `omarchy plugin add mtolhuys/omarchy-disk-lens --enable`
 - **[omarchy-time-machine](https://github.com/jankeesvw/omarchy-time-machine)** : Scheduled restic backups for Omarchy, with a snapshot browser in the bar
-  - ⭐ **100** · 🍴 6 · Last updated: `2026-09-06` · `omarchy plugin add jankeesvw/omarchy-time-machine --enable`
+  - ⭐ **103** · 🍴 6 · Last updated: `2026-09-06` · `omarchy plugin add jankeesvw/omarchy-time-machine --enable`
 - **[omasettings](https://github.com/twiking/omasettings)** : One window for every Omarchy setting, from Hyprland to your keybindings to tmux
-  - ⭐ **22** · 🍴 4 · Last updated: `2026-09-06` · `omarchy plugin add twiking/omasettings --enable`
+  - ⭐ **24** · 🍴 4 · Last updated: `2026-09-06` · `omarchy plugin add twiking/omasettings --enable`
 - **[omarchy-keybindings](https://github.com/Firstp1ck/omarchy-keybindings)** : Community keybinding editor for Omarchy: browse, record, remap, and reset Hyprland shortcuts.
   - ⭐ **6** · 🍴 0 · Last updated: `2026-09-06` · `omarchy plugin add Firstp1ck/omarchy-keybindings --enable`
 - **[omarchy-btop-activity](https://github.com/omarchy-QOL/omarchy-btop-activity)** : Low-overhead btop access from the Omarchy bar with live CPU, RAM, GPU, and temperature meters.
@@ -2727,17 +2729,17 @@
 - **[omavault](https://github.com/mutahir/omavault)** : omarchy config backup vault
   - ⭐ **3** · 🍴 0 · Last updated: `2026-09-05` · `omarchy plugin add mutahir/omavault --enable`
 - **[omastats](https://github.com/crmne/omastats)** : System monitor for the Omarchy bar: CPU, GPU, memory, disk, network, temperature, fan and battery stats with live graphs and a detailed panel. An iStat Menus-style activity monitor.
-  - ⭐ **19** · 🍴 1 · Last updated: `2026-09-04` · `omarchy plugin add crmne/omastats --enable`
+  - ⭐ **19** · 🍴 2 · Last updated: `2026-09-04` · `omarchy plugin add crmne/omastats --enable`
 - **[omarchy_tableau](https://github.com/novuon/omarchy_tableau)** : Workspace layout manager for Omarchy
   - ⭐ **13** · 🍴 1 · Last updated: `2026-09-04` · `omarchy plugin add novuon/omarchy_tableau --enable`
 - **[vitals](https://github.com/niraletter/vitals)** : System monitor for your desktop
   - ⭐ **7** · 🍴 4 · Last updated: `2026-09-04` · `omarchy plugin add niraletter/vitals --enable`
 - **[omarchy-argus](https://github.com/diegopluna/omarchy-argus)** : Argus — system monitor plugin for the Omarchy shell bar
   - ⭐ **5** · 🍴 5 · Last updated: `2026-09-04` · `omarchy plugin add diegopluna/omarchy-argus --enable`
+- **[omarchy-vitals](https://github.com/Woogy7/omarchy-vitals)** : Vitals — a calm, tabbed btop-style system monitor panel for the Omarchy shell (CPU · Memory · Disks · Network · GPU · Processes)
+  - ⭐ **4** · 🍴 2 · Last updated: `2026-09-04` · `omarchy plugin add Woogy7/omarchy-vitals --enable`
 - **[MultiVPN](https://github.com/Nepomuk-Software/MultiVPN)** : One bar widget for every VPN on the machine — OpenVPN, WireGuard and GlobalProtect side by side in the Omarchy shell, with throughput, connection details and config import.
   - ⭐ **4** · 🍴 2 · Last updated: `2026-09-04` · `omarchy plugin add Nepomuk-Software/MultiVPN --enable`
-- **[omarchy-vitals](https://github.com/Woogy7/omarchy-vitals)** : Vitals — a calm, tabbed btop-style system monitor panel for the Omarchy shell (CPU · Memory · Disks · Network · GPU · Processes)
-  - ⭐ **4** · 🍴 1 · Last updated: `2026-09-04` · `omarchy plugin add Woogy7/omarchy-vitals --enable`
 - **[omarchy-resurrect](https://github.com/tsouth89/omarchy-resurrect)** : Bare metal to your machine, in one command. Capture an Omarchy install — packages, dotfiles, themes, web apps, plugins — and replay it onto a fresh one. Share your setup as a link.
   - ⭐ **4** · 🍴 1 · Last updated: `2026-09-04` · `omarchy plugin add tsouth89/omarchy-resurrect --enable`
 - **[OmaValet](https://github.com/jcarcinogen/OmaValet)** : Park and assign apps to Omarchy workspaces. Optional silent login start.
@@ -2753,15 +2755,15 @@
 - **[omarchy-activity-monitor](https://github.com/stappmus/omarchy-activity-monitor)** : Lightweight system activity monitor for Omarchy Quattro.
   - ⭐ **37** · 🍴 7 · Last updated: `2026-08-31` · `omarchy plugin add stappmus/omarchy-activity-monitor --enable`
 - **[omarchy-system-monitor](https://github.com/Harshith292002/omarchy-system-monitor)** : Low-overhead system dashboard for the Omarchy bar
-  - ⭐ **13** · 🍴 4 · Last updated: `2026-08-31` · `omarchy plugin add Harshith292002/omarchy-system-monitor --enable`
+  - ⭐ **13** · 🍴 5 · Last updated: `2026-08-31` · `omarchy plugin add Harshith292002/omarchy-system-monitor --enable`
 - **[omarchy-omaglass](https://github.com/labrat-0/omarchy-omaglass)** : Omarchy plugin.
   - ⭐ **4** · 🍴 0 · Last updated: `2026-08-31` · `omarchy plugin add labrat-0/omarchy-omaglass --enable`
-- **[omarchy-vi-mode](https://github.com/oliverlukschander/omarchy-vi-mode)** : Omarchy plugin: system-wide Caps Lock + hjkl arrow keys
-  - ⭐ **3** · 🍴 0 · Last updated: `2026-08-31` · `omarchy plugin add oliverlukschander/omarchy-vi-mode --enable`
+- **[omarchy-quadrant](https://github.com/BVisagie/omarchy-quadrant)** : A unified system monitor for Omarchy.
+  - ⭐ **3** · 🍴 0 · Last updated: `2026-08-31` · `omarchy plugin add BVisagie/omarchy-quadrant --enable`
 - **[omarchy-sidecar](https://github.com/mtolhuys/omarchy-sidecar)** : Private Omarchy phone companion for workspaces, themes, media controls, and bounded file Drop.
   - ⭐ **7** · 🍴 0 · Last updated: `2026-08-30` · `omarchy plugin add mtolhuys/omarchy-sidecar --enable`
 - **[omarchy-control-panel](https://github.com/avillagran/omarchy-control-panel)** : Simple Control Panel for Mac and PC users!
-  - ⭐ **3** · 🍴 0 · Last updated: `2026-08-30` · `omarchy plugin add avillagran/omarchy-control-panel --enable`
+  - ⭐ **4** · 🍴 0 · Last updated: `2026-08-30` · `omarchy plugin add avillagran/omarchy-control-panel --enable`
 - **[Omarchy-PredatorSense](https://github.com/Rezwoan/Omarchy-PredatorSense)** : Omarchy omarchy-shell plugin: power/CPU/GPU/battery/keyboard control center for Acer Predator laptops
   - ⭐ **3** · 🍴 1 · Last updated: `2026-08-29` · `omarchy plugin add Rezwoan/Omarchy-PredatorSense --enable`
 - **[omarchy-clamav-monitor](https://github.com/szentesg/omarchy-clamav-monitor)** : ClamAV on-access scan status bar widget for Omarchy
@@ -2773,11 +2775,13 @@
 - **[omasys](https://github.com/rookepoole/omasys)** : Native Omarchy task manager with CPU, RAM, GPU, live process monitoring, and safe end-task controls.
   - ⭐ **3** · 🍴 0 · Last updated: `2026-08-27` · `omarchy plugin add rookepoole/omasys --enable`
 - **[omarchy-system-monitor](https://github.com/rmacy/omarchy-system-monitor)** : Native Omarchy system monitor bar widget, process viewer, hardware inventory, and task manager.
-  - ⭐ **3** · 🍴 2 · Last updated: `2026-08-26` · `omarchy plugin add rmacy/omarchy-system-monitor --enable`
+  - ⭐ **4** · 🍴 2 · Last updated: `2026-08-26` · `omarchy plugin add rmacy/omarchy-system-monitor --enable`
 - **[omarchy-plugins](https://github.com/brianblakely/omarchy-plugins)** : Storefront and manager for plugins that provide useful new widgets and features for Omarchy (https://omarchy.org/).
-  - ⭐ **60** · 🍴 29 · Last updated: `2026-08-25` · `omarchy plugin add brianblakely/omarchy-plugins --enable`
+  - ⭐ **60** · 🍴 30 · Last updated: `2026-08-25` · `omarchy plugin add brianblakely/omarchy-plugins --enable`
 - **[omarchy-session-restore](https://github.com/wbarakat/omarchy-session-restore)** : Session save & restore for Omarchy — dual-boot friendly workspace persistence with optional herdr agent resume
   - ⭐ **3** · 🍴 1 · Last updated: `2026-08-25` · `omarchy plugin add wbarakat/omarchy-session-restore --enable`
+- **[omarchy-better-emojis](https://github.com/Wessel-Boers/omarchy-better-emojis)** : An Omarchy plugin that improves on the default emoji overlay by adding categories, sizing options, and hotkeys for accessing skin tones and genders. All while keeping the easy and fast emoji search accessible.
+  - ⭐ **3** · 🍴 0 · Last updated: `2026-08-25` · `omarchy plugin add Wessel-Boers/omarchy-better-emojis --enable`
 - **[plugin-control-center](https://github.com/brm-src/plugin-control-center)** : See and manage installed Omarchy plugins from one compact bar panel
   - ⭐ **3** · 🍴 0 · Last updated: `2026-08-25` · `omarchy plugin add brm-src/plugin-control-center --enable`
 - **[omarchy-controld-panel](https://github.com/joaodrp/omarchy-controld-panel)** : What Control D is doing on your machine, in the Omarchy bar. Powered by cdctl.
@@ -2791,13 +2795,13 @@
 - **[omarchy-notification-center-plugin](https://github.com/Shavanced/omarchy-notification-center-plugin)** : Beautiful Omarchy Notification center built directly on Omarchy’s existing notification service.
   - ⭐ **23** · 🍴 9 · Last updated: `2026-08-23` · `omarchy plugin add Shavanced/omarchy-notification-center-plugin --enable`
 - **[hazel](https://github.com/ryrobes/hazel)** : A polished, read-only PostgreSQL, MySQL, MariaDB, Percona, and ClickHouse monitor for the Omarchy bar.
-  - ⭐ **8** · 🍴 1 · Last updated: `2026-08-23` · `omarchy plugin add ryrobes/hazel --enable`
+  - ⭐ **10** · 🍴 1 · Last updated: `2026-08-23` · `omarchy plugin add ryrobes/hazel --enable`
 - **[omaprox](https://github.com/AndresSM415/omaprox)** : Proxmox VE dashboard for the Omarchy bar — status and per-guest stats, with pct/SSH terminals for Linux, remote desktop for Windows.
   - ⭐ **7** · 🍴 0 · Last updated: `2026-08-23` · `omarchy plugin add AndresSM415/omaprox --enable`
 - **[omarchy-mihomo-plugin](https://github.com/lijiawei0305-pixel/omarchy-mihomo-plugin)** : Omarchy status-bar plugin for a standalone mihomo core
   - ⭐ **56** · 🍴 7 · Last updated: `2026-08-22` · `omarchy plugin add lijiawei0305-pixel/omarchy-mihomo-plugin --enable`
 - **[sandman](https://github.com/lgse/sandman)** : Omarchy plugin.
-  - ⭐ **21** · 🍴 5 · Last updated: `2026-08-22` · `omarchy plugin add lgse/sandman --enable`
+  - ⭐ **22** · 🍴 5 · Last updated: `2026-08-22` · `omarchy plugin add lgse/sandman --enable`
 - **[omasync](https://github.com/dupontbertrand/omasync)** : Pair two Omarchy machines over your LAN and sync theme, bar, Hyprland and configs — one-way, authenticated, with live theme sync.
   - ⭐ **4** · 🍴 1 · Last updated: `2026-08-22` · `omarchy plugin add dupontbertrand/omasync --enable`
 - **[omarchy-synchro](https://github.com/harel/omarchy-synchro)** : Omarchy plugin.
@@ -2810,6 +2814,8 @@
   - ⭐ **4** · 🍴 0 · Last updated: `2026-08-21` · `omarchy plugin add nameless312/protonvpn-plugin-omarchy --enable`
 - **[omalab](https://github.com/thebenwalther/omalab)** : OmaLab — Fearless Mode for Omarchy. Checkpoint your desktop, experiment freely, then keep or rewind.
   - ⭐ **4** · 🍴 0 · Last updated: `2026-08-21` · `omarchy plugin add thebenwalther/omalab --enable`
+- **[omarchy-snitch](https://github.com/ccdwyer/omarchy-snitch)** : Little Snitch for Omarchy: live per-app outbound connection map with country flags and one-key firewall blocks.
+  - ⭐ **3** · 🍴 0 · Last updated: `2026-08-21` · `omarchy plugin add ccdwyer/omarchy-snitch --enable`
 - **[lid-sleep](https://github.com/jdmu/lid-sleep)** : Omarchy bar widget plugin to toggle laptop sleep on lid close
   - ⭐ **3** · 🍴 0 · Last updated: `2026-08-20` · `omarchy plugin add jdmu/lid-sleep --enable`
 - **[omarchy-passwordstore](https://github.com/hegjon/omarchy-passwordstore)** : pass, the standard unix password manager, as an Omarchy launcher
@@ -2832,10 +2838,22 @@
   - ⭐ **13** · 🍴 3 · Last updated: `2026-08-02` · `omarchy plugin add glafeara/omarchy-wireguard --enable`
 
 <details>
-<summary><b>🐣 New & Emerging System (320 plugins · 0–2 ⭐)</b></summary>
+<summary><b>🐣 New & Emerging System (317 plugins · 0–2 ⭐)</b></summary>
 
 - **[omarchy-nzbget-queue](https://github.com/Kyrunner/omarchy-nzbget-queue)** : Live NZBGet download speed in the Omarchy bar, with the queue, pause/resume and a speed limit one click away.
-  - ⭐ **2** · 🍴 0 · Last updated: `2026-09-10` · `omarchy plugin add Kyrunner/omarchy-nzbget-queue --enable`
+  - ⭐ **2** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add Kyrunner/omarchy-nzbget-queue --enable`
+- **[omarchy-omasift](https://github.com/labrat-0/omarchy-omasift)** : Search the Omarchy plugin marketplace from your shell — and see what has actually been reviewed before you install it.
+  - ⭐ **1** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add labrat-0/omarchy-omasift --enable`
+- **[omarchy-omarank](https://github.com/ozdil/omarchy-omarank)** : Hardware benchmark, humorous tier ranking, and OmaStat survey widget for Omarchy
+  - ⭐ **1** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add ozdil/omarchy-omarank --enable`
+- **[plug](https://github.com/weedwhitesandwine/plug)** : The Big Daddy plugin manager
+  - ⭐ **0** · 🍴 1 · Last updated: `2026-09-11` · `omarchy plugin add weedwhitesandwine/plug --enable`
+- **[omarchy-netdata](https://github.com/BonesGit/omarchy-netdata)** : Omarchy bar widget for GPU utilization via Netdata
+  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add BonesGit/omarchy-netdata --enable`
+- **[albus](https://github.com/oqullcan/albus)** : A kernel-level deep packet inspection (DPI) evasion engine and post-quantum DNS-over-HTTPS resolver for Linux.
+  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add oqullcan/albus --enable`
+- **[omarchy-mac-option](https://github.com/oliverlukschander/omarchy-mac-option)** : Omarchy plugin: macOS Option-key umlauts (Option+U then a/o/u → ä/ö/ü)
+  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add oliverlukschander/omarchy-mac-option --enable`
 - **[omarchy-power-saving](https://github.com/selfcrypto/omarchy-power-saving)** : Idle power saving in three independent stages — screensaver, lock and suspend — each with its own switch and timeout, configured from a bar panel.
   - ⭐ **2** · 🍴 0 · Last updated: `2026-09-10` · `omarchy plugin add selfcrypto/omarchy-power-saving --enable`
 - **[omarchy-rdp-manager](https://github.com/cahva/omarchy-rdp-manager)** : Saved RDP connections in the Omarchy bar — passwords in the system keyring, never in the process list
@@ -2864,18 +2882,16 @@
   - ⭐ **2** · 🍴 0 · Last updated: `2026-09-09` · `omarchy plugin add weedwhitesandwine/omasnatch --enable`
 - **[Zenbu](https://github.com/weedwhitesandwine/Zenbu)** : 全部 — a theme-aware launcher for everything (Omarchy plugin)
   - ⭐ **2** · 🍴 0 · Last updated: `2026-09-09` · `omarchy plugin add weedwhitesandwine/Zenbu --enable`
+- **[omarchy-security-posture](https://github.com/omarkamal/omarchy-security-posture)** : Private, evidence-based security posture and activity monitor for the Omarchy bar
+  - ⭐ **1** · 🍴 1 · Last updated: `2026-09-09` · `omarchy plugin add omarkamal/omarchy-security-posture --enable`
 - **[omarchy-canary](https://github.com/melonamin/omarchy-canary)** : Mic, camera, and screen-capture privacy alerts for Omarchy
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-09` · `omarchy plugin add melonamin/omarchy-canary --enable`
-- **[omarchy-security-posture](https://github.com/omarkamal/omarchy-security-posture)** : Private, evidence-based security posture and activity monitor for the Omarchy bar
-  - ⭐ **1** · 🍴 0 · Last updated: `2026-09-09` · `omarchy plugin add omarkamal/omarchy-security-posture --enable`
 - **[omarchy-omaudit-status](https://github.com/godhiraj-code/omarchy-omaudit-status)** : Native Omarchy bar status and review companion for Omaudit.
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-09` · `omarchy plugin add godhiraj-code/omarchy-omaudit-status --enable`
 - **[omarchy-nebula](https://github.com/iryzhkov/omarchy-nebula)** : Nebula mesh VPN status and on/off toggle for the Omarchy bar
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-09` · `omarchy plugin add iryzhkov/omarchy-nebula --enable`
 - **[omarchy-amneziawg](https://github.com/antesmd/omarchy-amneziawg)** : Omazia — an unofficial Omarchy bar widget for AmneziaWG tunnels: connect, switch, import, edit and QR-export from the bar
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-09` · `omarchy plugin add antesmd/omarchy-amneziawg --enable`
-- **[omarchy-omarank](https://github.com/ozdil/omarchy-omarank)** : Hardware benchmark, humorous tier ranking, and OmaStat survey widget for Omarchy
-  - ⭐ **1** · 🍴 0 · Last updated: `2026-09-09` · `omarchy plugin add ozdil/omarchy-omarank --enable`
 - **[omarchy-server-status](https://github.com/ryuhzk/omarchy-server-status)** : Agentless server & Docker monitoring for the Omarchy bar — one read-only SSH round trip, nothing installed on your servers
   - ⭐ **0** · 🍴 3 · Last updated: `2026-09-09` · `omarchy plugin add ryuhzk/omarchy-server-status --enable`
 - **[omasafe-plugin](https://github.com/tuthan/omasafe-plugin)** : Your plugins are unsandboxed. At least know when they change.
@@ -2902,8 +2918,6 @@
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-08` · `omarchy plugin add houz42/omarchy-plugin-switcher --enable`
 - **[oma-netscan](https://github.com/Kiryuuki/oma-netscan)** : Local network discovery, service fingerprinting, and security audit sidepanel for Omarchy Desktop
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-08` · `omarchy plugin add Kiryuuki/oma-netscan --enable`
-- **[plug](https://github.com/weedwhitesandwine/plug)** : The Big Daddy plugin manager
-  - ⭐ **0** · 🍴 1 · Last updated: `2026-09-08` · `omarchy plugin add weedwhitesandwine/plug --enable`
 - **[omarchy-super-button](https://github.com/knivfjell/omarchy-super-button)** : Drive Hyprland from a remote desktop that swallows Super. An Omarchy shell plugin: clickable Super, a floating modifier pad, and a leader layer mirroring every Super binding.
   - ⭐ **0** · 🍴 1 · Last updated: `2026-09-08` · `omarchy plugin add knivfjell/omarchy-super-button --enable`
 - **[omarchy-plain-english](https://github.com/joelgaff/omarchy-plain-english)** : Your Omarchy system statistics as plain English sentences: what each program is doing, whether that is normal, and what is actually worth acting on.
@@ -2924,18 +2938,16 @@
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-07` · `omarchy plugin add thetxeagle/omarchy-monitor-blanker --enable`
 - **[omafile](https://github.com/dovydasv0/omafile)** : omarchy menu plugin for searching files and file content
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-07` · `omarchy plugin add dovydasv0/omafile --enable`
+- **[omarchy-input-method](https://github.com/komagata/omarchy-input-method)** : Omarchy bar widget for Fcitx 5 input methods
+  - ⭐ **2** · 🍴 0 · Last updated: `2026-09-06` · `omarchy plugin add komagata/omarchy-input-method --enable`
 - **[omarchy-keyboard-languages](https://github.com/NOmarkOO/omarchy-keyboard-languages)** : Native-style keyboard language indicator and manager for Omarchy Quattro
   - ⭐ **1** · 🍴 1 · Last updated: `2026-09-06` · `omarchy plugin add NOmarkOO/omarchy-keyboard-languages --enable`
 - **[omarchy-unraid](https://github.com/tuthan/omarchy-unraid)** : Monitor an Unraid server from the Omarchy bar
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-06` · `omarchy plugin add tuthan/omarchy-unraid --enable`
-- **[omarchy-input-method](https://github.com/komagata/omarchy-input-method)** : Omarchy bar widget for Fcitx 5 input methods
-  - ⭐ **1** · 🍴 0 · Last updated: `2026-09-06` · `omarchy plugin add komagata/omarchy-input-method --enable`
 - **[omarchy-tailscale-plus](https://github.com/hehh2001/omarchy-tailscale-plus)** : A full-featured native Tailscale control panel for Omarchy
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-06` · `omarchy plugin add hehh2001/omarchy-tailscale-plus --enable`
 - **[myip-omarchy-plugin](https://github.com/Shirak-Semonian/myip-omarchy-plugin)** : Omarchy bar widget: shows your public IP with its country flag, detects IP changes (VPN-leak alert), copy action and details panel.
   - ⭐ **0** · 🍴 1 · Last updated: `2026-09-06` · `omarchy plugin add Shirak-Semonian/myip-omarchy-plugin --enable`
-- **[albus](https://github.com/oqullcan/albus)** : A kernel-level deep packet inspection (DPI) evasion engine and post-quantum DNS-over-HTTPS resolver for Linux.
-  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-06` · `omarchy plugin add oqullcan/albus --enable`
 - **[gpu-monitor](https://github.com/candycrabmusic/gpu-monitor)** : Omarchy plugin.
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-06` · `omarchy plugin add candycrabmusic/gpu-monitor --enable`
 - **[omarchy-ollama-status](https://github.com/Brams-s/omarchy-ollama-status)** : Omarchy plugin.
@@ -2966,8 +2978,6 @@
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-05` · `omarchy plugin add xeTaiz/dome.power --enable`
 - **[omarchy-panel-resources](https://github.com/VillainRU/omarchy-panel-resources)** : Selectable CPU, memory, disk and GPU sensors for the Omarchy QuickShell bar.
   - ⭐ **0** · 🍴 1 · Last updated: `2026-09-05` · `omarchy plugin add VillainRU/omarchy-panel-resources --enable`
-- **[omarchy-netdata](https://github.com/BonesGit/omarchy-netdata)** : Omarchy bar widget for GPU utilization via Netdata
-  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-05` · `omarchy plugin add BonesGit/omarchy-netdata --enable`
 - **[omarchy-omapreflight](https://github.com/p134c0d3/omarchy-omapreflight)** : Omarchy-aware preflight diagnostics and change intelligence — know what an update will break, before you run it.
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-05` · `omarchy plugin add p134c0d3/omarchy-omapreflight --enable`
 - **[omakill](https://github.com/Hangovers/omakill)** : Force-close frozen apps from the Omarchy bar: click-to-kill, window and process pickers
@@ -3074,8 +3084,6 @@
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-02` · `omarchy plugin add calmasacow/omarchy-vncpp --enable`
 - **[menuvitals](https://github.com/ierror/menuvitals)** : System vitals for the Omarchy bar.
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-02` · `omarchy plugin add ierror/menuvitals --enable`
-- **[omarchy-omasift](https://github.com/labrat-0/omarchy-omasift)** : Search the Omarchy plugin marketplace from your shell — and see what has actually been reviewed before you install it.
-  - ⭐ **1** · 🍴 0 · Last updated: `2026-09-02` · `omarchy plugin add labrat-0/omarchy-omasift --enable`
 - **[omaspeedmeter](https://github.com/mt-shihab26/omaspeedmeter)** : Omarchy bar widget showing CPU, memory, network, temperature, GPU, and process count stats.
   - ⭐ **0** · 🍴 1 · Last updated: `2026-09-02` · `omarchy plugin add mt-shihab26/omaspeedmeter --enable`
 - **[omarchy-firefox-passwords](https://github.com/chupre/omarchy-firefox-passwords)** : Omarchy bar widget to search, view and copy Firefox saved logins
@@ -3116,8 +3124,6 @@
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-01` · `omarchy plugin add MAXI8594/omarchy-sec-plugin --enable`
 - **[borgbar](https://github.com/epicbagel/borgbar)** : Watch Borg and borgmatic backups from the Omarchy bar: when the last one ran, whether it worked, and when the next one is due.
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-01` · `omarchy plugin add epicbagel/borgbar --enable`
-- **[omarchy-quadrant](https://github.com/BVisagie/omarchy-quadrant)** : A unified system monitor for Omarchy.
-  - ⭐ **2** · 🍴 0 · Last updated: `2026-08-31` · `omarchy plugin add BVisagie/omarchy-quadrant --enable`
 - **[deepseek-harness-switch](https://github.com/LinuxGamerUK/deepseek-harness-switch)** : Omarchy plugin.
   - ⭐ **1** · 🍴 0 · Last updated: `2026-08-31` · `omarchy plugin add LinuxGamerUK/deepseek-harness-switch --enable`
 - **[omarchy-clippy](https://github.com/mjtiempo/omarchy-clippy)** : Omarchy plugin.
@@ -3140,8 +3146,6 @@
   - ⭐ **0** · 🍴 0 · Last updated: `2026-08-31` · `omarchy plugin add nathanp/omarchy-game-awake --enable`
 - **[omarchy-idle-inhibit](https://github.com/lukaseppler/omarchy-idle-inhibit)** : Omarchy plugin: keep the screensaver off while a browser plays video
   - ⭐ **0** · 🍴 0 · Last updated: `2026-08-31` · `omarchy plugin add lukaseppler/omarchy-idle-inhibit --enable`
-- **[omarchy-mac-option](https://github.com/oliverlukschander/omarchy-mac-option)** : Omarchy plugin: macOS Option-key umlauts (Option+U then a/o/u → ä/ö/ü)
-  - ⭐ **0** · 🍴 0 · Last updated: `2026-08-31` · `omarchy plugin add oliverlukschander/omarchy-mac-option --enable`
 - **[colophon](https://github.com/ssandys/colophon)** : An Omarchy Quickshell bar widget for Ollama — see whether the server is running, start or stop it, and load a model .
   - ⭐ **2** · 🍴 1 · Last updated: `2026-08-30` · `omarchy plugin add ssandys/colophon --enable`
 - **[omasecurity](https://github.com/ucmz851/omasecurity)** : Security posture auditor and plugin code health monitor for Omarchy Quattro shell
@@ -3150,14 +3154,14 @@
   - ⭐ **2** · 🍴 1 · Last updated: `2026-08-30` · `omarchy plugin add LinuxGamerUK/omarchy-ollama-status --enable`
 - **[omarchy-plugin-aether-guard](https://github.com/eerengz/omarchy-plugin-aether-guard)** : Omarchy plugin.
   - ⭐ **2** · 🍴 0 · Last updated: `2026-08-30` · `omarchy plugin add eerengz/omarchy-plugin-aether-guard --enable`
+- **[omarchy-openvpn](https://github.com/tug-benson/omarchy-openvpn)** : omarchy-openvpn
+  - ⭐ **1** · 🍴 1 · Last updated: `2026-08-30` · `omarchy plugin add tug-benson/omarchy-openvpn --enable`
 - **[omaguard](https://github.com/fcsonline/omaguard)** : Omarchy plugin.
   - ⭐ **1** · 🍴 1 · Last updated: `2026-08-30` · `omarchy plugin add fcsonline/omaguard --enable`
 - **[omarchy-system-health](https://github.com/DevInBlack001/omarchy-system-health)** : Task Manager style system monitor for the Omarchy Quickshell bar: CPU, memory, battery, and disk SMART health
   - ⭐ **1** · 🍴 0 · Last updated: `2026-08-30` · `omarchy plugin add DevInBlack001/omarchy-system-health --enable`
 - **[omarchy-network-devices](https://github.com/intrepid-developer/omarchy-network-devices)** : Omarchy Plugin that lists Network Devices
   - ⭐ **1** · 🍴 0 · Last updated: `2026-08-30` · `omarchy plugin add intrepid-developer/omarchy-network-devices --enable`
-- **[omarchy-openvpn](https://github.com/tug-benson/omarchy-openvpn)** : omarchy-openvpn
-  - ⭐ **1** · 🍴 0 · Last updated: `2026-08-30` · `omarchy plugin add tug-benson/omarchy-openvpn --enable`
 - **[refresh-rate](https://github.com/tngyema/refresh-rate)** : Omarchy plugin.
   - ⭐ **1** · 🍴 0 · Last updated: `2026-08-30` · `omarchy plugin add tngyema/refresh-rate --enable`
 - **[omaseafile](https://github.com/FelipeMayerDev/omaseafile)** : Seafile widget for the Omarchy bar — starts its own daemon, connects to the server and syncs libraries by itself; the Seafile desktop client is optional.
@@ -3200,10 +3204,10 @@
   - ⭐ **0** · 🍴 0 · Last updated: `2026-08-29` · `omarchy plugin add DevInBlack001/omarchy-wazuh-view --enable`
 - **[omarchy-omarchomander](https://github.com/asfarsadewa/omarchy-omarchomander)** : Omarchy plugin.
   - ⭐ **0** · 🍴 0 · Last updated: `2026-08-29` · `omarchy plugin add asfarsadewa/omarchy-omarchomander --enable`
+- **[omarchy-stats](https://github.com/yaotutu/omarchy-stats)** : A theme-aware system monitor for the Omarchy bar with real-time CPU, memory, disk, network, GPU, and process insights.
+  - ⭐ **2** · 🍴 0 · Last updated: `2026-08-28` · `omarchy plugin add yaotutu/omarchy-stats --enable`
 - **[omarchy-windows-vm-plugin](https://github.com/jkwuc89/omarchy-windows-vm-plugin)** : Omarchy plugin.
   - ⭐ **2** · 🍴 0 · Last updated: `2026-08-28` · `omarchy plugin add jkwuc89/omarchy-windows-vm-plugin --enable`
-- **[omarchy-stats](https://github.com/yaotutu/omarchy-stats)** : A theme-aware system monitor for the Omarchy bar with real-time CPU, memory, disk, network, GPU, and process insights.
-  - ⭐ **1** · 🍴 0 · Last updated: `2026-08-28` · `omarchy plugin add yaotutu/omarchy-stats --enable`
 - **[dockhand-control-omarchy-plugin](https://github.com/nag3sy/dockhand-control-omarchy-plugin)** : Bar-widget plugin for Omarchy that shows a badge when containers on your Dockhand instance have image updates available
   - ⭐ **1** · 🍴 0 · Last updated: `2026-08-28` · `omarchy plugin add nag3sy/dockhand-control-omarchy-plugin --enable`
 - **[omarchy-cloud-drives](https://github.com/edbron/omarchy-cloud-drives)** : Omarchy plugin: mount Google Drive, OneDrive and iCloud Drive under ~/Cloud with rclone, credentials in the keyring
@@ -3282,8 +3286,6 @@
   - ⭐ **2** · 🍴 0 · Last updated: `2026-08-25` · `omarchy plugin add thecdrz/omarchy-sabarchy --enable`
 - **[omarchy-osu-typing-sounds](https://github.com/countluss/omarchy-osu-typing-sounds)** : An Omarchy plugin that replaces system-wide typing sounds with osu! typing sounds.
   - ⭐ **2** · 🍴 0 · Last updated: `2026-08-25` · `omarchy plugin add countluss/omarchy-osu-typing-sounds --enable`
-- **[omarchy-better-emojis](https://github.com/Wessel-Boers/omarchy-better-emojis)** : An Omarchy plugin that improves on the default emoji overlay by adding categories, sizing options, and hotkeys for accessing skin tones and genders. All while keeping the easy and fast emoji search accessible.
-  - ⭐ **2** · 🍴 0 · Last updated: `2026-08-25` · `omarchy plugin add Wessel-Boers/omarchy-better-emojis --enable`
 - **[omavault-plugin](https://github.com/skvggor/omavault-plugin)** : Omavault is a safe for your files, right in the Omarchy bar. Files stored in it are encrypted on your disk (both contents and file names) and are only readable while the vault is unlocked. When you are done, it locks itself.
   - ⭐ **2** · 🍴 0 · Last updated: `2026-08-25` · `omarchy plugin add skvggor/omavault-plugin --enable`
 - **[omarchy-cleaner-plugin](https://github.com/SeanGSR/omarchy-cleaner-plugin)** : Safe, review-first system cleanup widget for Omarchy Quattro
@@ -3322,14 +3324,14 @@
   - ⭐ **1** · 🍴 0 · Last updated: `2026-08-24` · `omarchy plugin add prudhviy99/omalive --enable`
 - **[omascenes](https://github.com/prudhviy99/omascenes)** : Transactional desktop scenes for Omarchy with preview, rollback, and smart restore
   - ⭐ **1** · 🍴 0 · Last updated: `2026-08-24` · `omarchy plugin add prudhviy99/omascenes --enable`
+- **[omarchy-plugin-mirror-android](https://github.com/sumdahl/omarchy-plugin-mirror-android)** : Mirror an Android phone or tablet with scrcpy — USB and Wireless Debugging, no terminal required
+  - ⭐ **1** · 🍴 0 · Last updated: `2026-08-24` · `omarchy plugin add sumdahl/omarchy-plugin-mirror-android --enable`
 - **[omarchy-network-routes](https://github.com/denisdmarques/omarchy-network-routes)** : Omarchy widget for managing NetworkManager connections and per-profile static routes
   - ⭐ **0** · 🍴 0 · Last updated: `2026-08-24` · `omarchy plugin add denisdmarques/omarchy-network-routes --enable`
 - **[omarchy-system-menu](https://github.com/jianlongliu/omarchy-system-menu)** : One-click bar button that opens the Omarchy System menu (power actions).
   - ⭐ **0** · 🍴 0 · Last updated: `2026-08-24` · `omarchy plugin add jianlongliu/omarchy-system-menu --enable`
 - **[omarchy-boot-macos](https://github.com/Sudhanshugtm/omarchy-boot-macos)** : Omarchy bar widget: one-click reboot into macOS on Asahi Linux Macs
   - ⭐ **0** · 🍴 0 · Last updated: `2026-08-24` · `omarchy plugin add Sudhanshugtm/omarchy-boot-macos --enable`
-- **[omarchy-plugin-mirror-android](https://github.com/sumdahl/omarchy-plugin-mirror-android)** : Mirror an Android phone or tablet with scrcpy — USB and Wireless Debugging, no terminal required
-  - ⭐ **0** · 🍴 0 · Last updated: `2026-08-24` · `omarchy plugin add sumdahl/omarchy-plugin-mirror-android --enable`
 - **[omarchy-curl-check](https://github.com/rafaelsieber/omarchy-curl-check)** : Omarchy plugin: review curl|bash install scripts with your default AI coding agent before running them
   - ⭐ **0** · 🍴 0 · Last updated: `2026-08-24` · `omarchy plugin add rafaelsieber/omarchy-curl-check --enable`
 - **[omarchy.taufderl.ipinfo](https://github.com/taufderl/omarchy.taufderl.ipinfo)** : Omarchy bar widget: local interface IPs + public IPv4/IPv6 via ipinfo.io
@@ -3374,8 +3376,6 @@
   - ⭐ **0** · 🍴 0 · Last updated: `2026-08-22` · `omarchy plugin add bhanuprassad/omarchy-navigator --enable`
 - **[galley](https://github.com/ssandys/galley)** : CUPS printers and print queue, managed from your Omarchy bar.
   - ⭐ **2** · 🍴 1 · Last updated: `2026-08-21` · `omarchy plugin add ssandys/galley --enable`
-- **[omarchy-snitch](https://github.com/ccdwyer/omarchy-snitch)** : Little Snitch for Omarchy: live per-app outbound connection map with country flags and one-key firewall blocks.
-  - ⭐ **2** · 🍴 0 · Last updated: `2026-08-21` · `omarchy plugin add ccdwyer/omarchy-snitch --enable`
 - **[omascan](https://github.com/ucmz851/omascan)** : URL and domain threat intelligence scanner integrating urlscan.io and VirusTotal for Omarchy Quattro shell
   - ⭐ **1** · 🍴 0 · Last updated: `2026-08-21` · `omarchy plugin add ucmz851/omascan --enable`
 - **[omarchy-cassandra](https://github.com/diegopluna/omarchy-cassandra)** : Failed systemd units, journal errors, and coredumps in the Omarchy bar — the disasters that scroll past unseen
@@ -3479,20 +3479,20 @@
 
 ### Hardware
 
+- **[omarchy-screens](https://github.com/IM0001GT/omarchy-screens)** : Snap-to-edge monitor layout for Omarchy: HDR, VRR, refresh, and hardware-aware profiles in the bar.
+  - ⭐ **22** · 🍴 7 · Last updated: `2026-09-11` · `omarchy plugin add IM0001GT/omarchy-screens --enable`
+- **[omavoice](https://github.com/gigasolo/omavoice)** : Virtual microphone for Omarchy: noise cancellation and echo cancel for Zoom, Meet, and podcasts
+  - ⭐ **19** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add gigasolo/omavoice --enable`
+- **[omarchy-headphones](https://github.com/ncr/omarchy-headphones)** : Wireless headphones in the Omarchy bar — per-earbud battery and noise control
+  - ⭐ **10** · 🍴 13 · Last updated: `2026-09-11` · `omarchy plugin add ncr/omarchy-headphones --enable`
+- **[omarchy-logitech](https://github.com/rvcabc/omarchy-logitech)** : Control Logitech devices from the Omarchy bar: battery, DPI, keyboard RGB, headset sidetone and EQ over HID++
+  - ⭐ **3** · 🍴 2 · Last updated: `2026-09-11` · `omarchy plugin add rvcabc/omarchy-logitech --enable`
 - **[omarchy-audio-control](https://github.com/ssupt/omarchy-audio-control)** : Route application audio and manage PipeWire device profiles and Bluetooth codecs
   - ⭐ **10** · 🍴 4 · Last updated: `2026-09-10` · `omarchy plugin add ssupt/omarchy-audio-control --enable`
-- **[omarchy-screens](https://github.com/IM0001GT/omarchy-screens)** : Snap-to-edge monitor layout for Omarchy: HDR, VRR, refresh, and hardware-aware profiles in the bar.
-  - ⭐ **21** · 🍴 7 · Last updated: `2026-09-09` · `omarchy plugin add IM0001GT/omarchy-screens --enable`
 - **[mouse-keybind-plugin](https://github.com/Davedes83/mouse-keybind-plugin)** : Combined Omarchy plugin for mouse/pointer settings and Hyprland keybinding management
   - ⭐ **7** · 🍴 1 · Last updated: `2026-09-09` · `omarchy plugin add Davedes83/mouse-keybind-plugin --enable`
-- **[omarchy-logitech](https://github.com/rvcabc/omarchy-logitech)** : Control Logitech devices from the Omarchy bar: battery, DPI, keyboard RGB, headset sidetone and EQ over HID++
-  - ⭐ **3** · 🍴 2 · Last updated: `2026-09-09` · `omarchy plugin add rvcabc/omarchy-logitech --enable`
-- **[omavoice](https://github.com/gigasolo/omavoice)** : Virtual microphone for Omarchy: noise cancellation and echo cancel for Zoom, Meet, and podcasts
-  - ⭐ **19** · 🍴 0 · Last updated: `2026-09-08` · `omarchy plugin add gigasolo/omavoice --enable`
 - **[camera-effects](https://github.com/alanfortlink/camera-effects)** : MacOS-like camera effects on quickshell
   - ⭐ **10** · 🍴 4 · Last updated: `2026-09-08` · `omarchy plugin add alanfortlink/camera-effects --enable`
-- **[omarchy-headphones](https://github.com/ncr/omarchy-headphones)** : Wireless headphones in the Omarchy bar — per-earbud battery and noise control
-  - ⭐ **9** · 🍴 13 · Last updated: `2026-09-08` · `omarchy plugin add ncr/omarchy-headphones --enable`
 - **[omarchy-laptop-power-center](https://github.com/cbayschm74/omarchy-laptop-power-center)** : Omarchy laptop power widget with battery health, travel controls, energy saving, and optional NVIDIA GPU modes
   - ⭐ **5** · 🍴 1 · Last updated: `2026-09-07` · `omarchy plugin add cbayschm74/omarchy-laptop-power-center --enable`
 - **[omarchy-cpu](https://github.com/DanSmith888/omarchy-cpu)** : Omarchy plugin.
@@ -3502,7 +3502,7 @@
 - **[galaxy-buds-control](https://github.com/aislandener/galaxy-buds-control)** : Galaxy Buds control for the Omarchy bar: noise modes, per-earbud battery, 360 Audio, touch controls, quick connect and Bluetooth codec.
   - ⭐ **3** · 🍴 2 · Last updated: `2026-09-06` · `omarchy plugin add aislandener/galaxy-buds-control --enable`
 - **[omarchy-removable-drives](https://github.com/Wian47/omarchy-removable-drives)** : USB sticks, SD cards, and external drives in the Omarchy bar: mount, open, and safely eject.
-  - ⭐ **5** · 🍴 1 · Last updated: `2026-09-04` · `omarchy plugin add Wian47/omarchy-removable-drives --enable`
+  - ⭐ **6** · 🍴 1 · Last updated: `2026-09-04` · `omarchy plugin add Wian47/omarchy-removable-drives --enable`
 - **[mouse-settings](https://github.com/meviusisback/mouse-settings)** : Omarchy plugin.
   - ⭐ **3** · 🍴 1 · Last updated: `2026-09-03` · `omarchy plugin add meviusisback/mouse-settings --enable`
 - **[omarchy-phone](https://github.com/AdamMusa/omarchy-phone)** : Android control and iPhone AirPlay mirroring for Omarchy, built with Omarchy UI
@@ -3536,9 +3536,11 @@
 - **[omarchy-battery-health](https://github.com/patcastle/omarchy-battery-health)** : Omarchy power widget with battery charge protection
   - ⭐ **9** · 🍴 0 · Last updated: `2026-08-27` · `omarchy plugin add patcastle/omarchy-battery-health --enable`
 - **[omarchy-pods](https://github.com/thisisgm/omarchy-pods)** : AirPods in the Omarchy bar: per-pod and case battery, listening mode, adaptive noise level, conversation awareness, one-bud ANC and ear detection.
-  - ⭐ **191** · 🍴 25 · Last updated: `2026-08-26` · `omarchy plugin add thisisgm/omarchy-pods --enable`
+  - ⭐ **191** · 🍴 26 · Last updated: `2026-08-26` · `omarchy plugin add thisisgm/omarchy-pods --enable`
 - **[omaFrigate](https://github.com/luccast/omafrigate)** : Frigate NVR camera viewer plugin for Omarchy
-  - ⭐ **4** · 🍴 0 · Last updated: `2026-08-25` · `omarchy plugin add luccast/omafrigate --enable`
+  - ⭐ **4** · 🍴 1 · Last updated: `2026-08-25` · `omarchy plugin add luccast/omafrigate --enable`
+- **[omarchy-asus](https://github.com/moneytosms/omarchy-asus)** : Tabbed ASUS laptop control panel for the Omarchy bar (GHelper-style), built on asusctl
+  - ⭐ **3** · 🍴 5 · Last updated: `2026-08-24` · `omarchy plugin add moneytosms/omarchy-asus --enable`
 - **[omargb](https://github.com/ilkaydnc/omargb)** : Device lighting from the Omarchy bar, through OpenRGB
   - ⭐ **11** · 🍴 0 · Last updated: `2026-08-23` · `omarchy plugin add ilkaydnc/omargb --enable`
 - **[omarchy-hw-tooltip](https://github.com/IM0001GT/omarchy-hw-tooltip)** : Omarchy hover panel that names your CPU, RAM, GPU, and disks, with live load bars that follow the theme. Tuned for the ASRock BC-250.
@@ -3550,29 +3552,37 @@
 - **[omarchy-hw-monitor](https://github.com/edgarsilva/omarchy-hw-monitor)** : Omarchy bar widget: memory, CPU, and GPU as gauges, temperatures, or spelled-out figures — read straight from /proc and /sys
   - ⭐ **3** · 🍴 2 · Last updated: `2026-08-19` · `omarchy plugin add edgarsilva/omarchy-hw-monitor --enable`
 - **[omarchy-openrgb](https://github.com/didlix/omarchy-openrgb)** : RGB lighting control for the Omarchy bar via OpenRGB — presets, hue/brightness, follow-theme, per-device management
-  - ⭐ **5** · 🍴 0 · Last updated: `2026-08-15` · `omarchy plugin add didlix/omarchy-openrgb --enable`
+  - ⭐ **5** · 🍴 1 · Last updated: `2026-08-15` · `omarchy plugin add didlix/omarchy-openrgb --enable`
 
 <details>
-<summary><b>🐣 New & Emerging Hardware (190 plugins · 0–2 ⭐)</b></summary>
+<summary><b>🐣 New & Emerging Hardware (189 plugins · 0–2 ⭐)</b></summary>
 
+- **[omarchy-pixelbuds](https://github.com/rdoupe/omarchy-pixelbuds)** : Pixel Buds battery and ANC control in the Omarchy bar (Quickshell plugin)
+  - ⭐ **1** · 🍴 1 · Last updated: `2026-09-11` · `omarchy plugin add rdoupe/omarchy-pixelbuds --enable`
+- **[omarchy-insta360](https://github.com/illegalstudio/omarchy-insta360)** : A native Insta360 Link webcam widget for Omarchy: live preview, natural drag control, PTZ, tracking, presets, and image settings.
+  - ⭐ **1** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add illegalstudio/omarchy-insta360 --enable`
+- **[omarchy-homebridge](https://github.com/ianswope/omarchy-homebridge)** : Your home in the Omarchy bar: arm the security system, toggle the lights, read the sensors — from Homebridge
+  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add ianswope/omarchy-homebridge --enable`
+- **[omarchy-momentum4](https://github.com/DanSmith888/omarchy-momentum4)** : Sennheiser Momentum 4 battery, noise control, EQ and touch controls in the Omarchy bar
+  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add DanSmith888/omarchy-momentum4 --enable`
+- **[omarchy-razer-blade](https://github.com/luxore/omarchy-razer-blade)** : Native Razer Blade firmware, cooling, charge, and display controls for Omarchy
+  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add luxore/omarchy-razer-blade --enable`
 - **[OmaDeck](https://github.com/TheAirick/OmaDeck)** : A touch-native Omarchy command surface for secondary displays
   - ⭐ **2** · 🍴 1 · Last updated: `2026-09-10` · `omarchy plugin add TheAirick/OmaDeck --enable`
-- **[omarchy-pixelbuds](https://github.com/rdoupe/omarchy-pixelbuds)** : Pixel Buds battery and ANC control in the Omarchy bar (Quickshell plugin)
-  - ⭐ **1** · 🍴 1 · Last updated: `2026-09-10` · `omarchy plugin add rdoupe/omarchy-pixelbuds --enable`
 - **[omacast](https://github.com/hardiepiennar/omacast)** : Cast your Omarchy desktop and audio to a Miracast display
   - ⭐ **2** · 🍴 1 · Last updated: `2026-09-09` · `omarchy plugin add hardiepiennar/omacast --enable`
 - **[omarchy-headsetcontrol](https://github.com/hrzlgnm/omarchy-headsetcontrol)** : Omarchy bar widget: control HeadsetControl-compatible headsets (battery, sidetone, EQ, chatmix, more)
   - ⭐ **1** · 🍴 1 · Last updated: `2026-09-09` · `omarchy plugin add hrzlgnm/omarchy-headsetcontrol --enable`
 - **[omacore](https://github.com/birajdotdev/omacore)** : Soundcore earbuds (battery + ANC mode) in the Omarchy bar, via OpenSCQ30. Sibling to omapods.
   - ⭐ **1** · 🍴 1 · Last updated: `2026-09-09` · `omarchy plugin add birajdotdev/omacore --enable`
-- **[omarchy-any-monitor](https://github.com/tymurbogach/omarchy-any-monitor)** : Omarchy plugin.
-  - ⭐ **1** · 🍴 0 · Last updated: `2026-09-09` · `omarchy plugin add tymurbogach/omarchy-any-monitor --enable`
 - **[lightctl](https://github.com/sshbrian/lightctl)** : Extensible peripheral lighting for Linux / Omarchy — CLI plus bar widget
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-09` · `omarchy plugin add sshbrian/lightctl --enable`
 - **[omarchy-lenslink](https://github.com/camerontucker/omarchy-lenslink)** : Omarchy bar controls and live OBS framing for iPhone LensLink over USB or Wi-Fi
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-09` · `omarchy plugin add camerontucker/omarchy-lenslink --enable`
 - **[omarchy-audio-priority](https://github.com/melonamin/omarchy-audio-priority)** : Priority-based audio device switching for Omarchy
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-09` · `omarchy plugin add melonamin/omarchy-audio-priority --enable`
+- **[omarchy-any-monitor](https://github.com/tymurbogach/omarchy-any-monitor)** : Omarchy plugin.
+  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-09` · `omarchy plugin add tymurbogach/omarchy-any-monitor --enable`
 - **[Charge-Cap](https://github.com/JustNak/Charge-Cap)** : Simple battery limit plugin via option as a slider from 60-100%
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-08` · `omarchy plugin add JustNak/Charge-Cap --enable`
 - **[omarchy-z13-power](https://github.com/randallyash/omarchy-z13-power)** : Omarchy bar plugin for ROG Flow Z13 power: Max/Perf/Mid/Quiet/Low flyout in the battery slot
@@ -3581,8 +3591,6 @@
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-08` · `omarchy plugin add luxore/omarchy-octoprint --enable`
 - **[omarchy-bose](https://github.com/andresantonioriveros/omarchy-bose)** : Omarchy plugin.
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-08` · `omarchy plugin add andresantonioriveros/omarchy-bose --enable`
-- **[omarchy-razer-blade](https://github.com/luxore/omarchy-razer-blade)** : Native Razer Blade firmware, cooling, charge, and display controls for Omarchy
-  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-08` · `omarchy plugin add luxore/omarchy-razer-blade --enable`
 - **[omakeychron](https://github.com/paulsp94/omakeychron)** : Omarchy plugin.
   - ⭐ **2** · 🍴 0 · Last updated: `2026-09-07` · `omarchy plugin add paulsp94/omakeychron --enable`
 - **[omarchy-bandwidth](https://github.com/DanSmith888/omarchy-bandwidth)** : Omarchy plugin.
@@ -3591,8 +3599,6 @@
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-07` · `omarchy plugin add DanSmith888/omarchy-gpu --enable`
 - **[omarchy-synology-drive](https://github.com/DanSmith888/omarchy-synology-drive)** : Synology Drive Client status in the Omarchy bar: live transfers, log, pause/resume — without the Qt tray icon
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-07` · `omarchy plugin add DanSmith888/omarchy-synology-drive --enable`
-- **[omarchy-momentum4](https://github.com/DanSmith888/omarchy-momentum4)** : Sennheiser Momentum 4 battery, noise control, EQ and touch controls in the Omarchy bar
-  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-07` · `omarchy plugin add DanSmith888/omarchy-momentum4 --enable`
 - **[omarchy-keylights](https://github.com/Milofax/omarchy-keylights)** : Omarchy bar plugin for discovering, controlling, and setting up Elgato Key Lights
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-07` · `omarchy plugin add Milofax/omarchy-keylights --enable`
 - **[omarchy-display](https://github.com/marashiai/omarchy-display)** : Omarchy display arrangement and picture settings from the bar.
@@ -3603,8 +3609,6 @@
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-07` · `omarchy plugin add rliessum/omarchy-luxafor-dot --enable`
 - **[omarchy-starlink](https://github.com/wvdominick/omarchy-starlink)** : Unofficial Omarchy bar widget for a local Starlink dish
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-06` · `omarchy plugin add wvdominick/omarchy-starlink --enable`
-- **[omarchy-insta360](https://github.com/illegalstudio/omarchy-insta360)** : A native Insta360 Link webcam widget for Omarchy: live preview, natural drag control, PTZ, tracking, presets, and image settings.
-  - ⭐ **1** · 🍴 0 · Last updated: `2026-09-06` · `omarchy plugin add illegalstudio/omarchy-insta360 --enable`
 - **[omarchy-multi-output](https://github.com/MADS0LADEN/omarchy-multi-output)** : Omarchy plugin.
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-06` · `omarchy plugin add MADS0LADEN/omarchy-multi-output --enable`
 - **[omarazer](https://github.com/asdfsnlr/omarazer)** : OmaRazer - OpenRazer Devices Plugin for Omarchy
@@ -3635,10 +3639,14 @@
   - ⭐ **2** · 🍴 1 · Last updated: `2026-09-04` · `omarchy plugin add fidecastro/decomposer --enable`
 - **[omarchy-workspace-touch-swipe](https://github.com/rainan16/omarchy-workspace-touch-swipe)** : Omarchy plugin: one-finger edge swipes switch Hyprland workspaces, with live previews. No daemon. No extra permissions.
   - ⭐ **2** · 🍴 0 · Last updated: `2026-09-04` · `omarchy plugin add rainan16/omarchy-workspace-touch-swipe --enable`
+- **[omarchy-hw-monitor](https://github.com/meviusisback/omarchy-hw-monitor)** : Omarchy bar widget: memory, CPU, and GPU as gauges, temperatures, or spelled-out figures — read straight from /proc and /sys
+  - ⭐ **2** · 🍴 0 · Last updated: `2026-09-04` · `omarchy plugin add meviusisback/omarchy-hw-monitor --enable`
 - **[faraday](https://github.com/bprendie/faraday)** : Reversible radio and firewall isolation widget for Omarchy Quattro
   - ⭐ **2** · 🍴 0 · Last updated: `2026-09-04` · `omarchy plugin add bprendie/faraday --enable`
 - **[omarchy-anker-c200](https://github.com/camerontucker/omarchy-anker-c200)** : Omarchy bar controls, live preview, and OBS framing for the Anker PowerConf C200 webcam
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-04` · `omarchy plugin add camerontucker/omarchy-anker-c200 --enable`
+- **[omarchy-battery-alerts](https://github.com/NeroSong/omarchy-battery-alerts)** : Configurable two-stage battery notifications for the Omarchy
+  - ⭐ **1** · 🍴 0 · Last updated: `2026-09-04` · `omarchy plugin add NeroSong/omarchy-battery-alerts --enable`
 - **[Mimarchy](https://github.com/villenull/mimarchy)** : Omarchy-native LED control for CPU cooler fans, GPU, and the cooler's built-in display
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-04` · `omarchy plugin add villenull/mimarchy --enable`
 - **[samara-tuf-keyboard-light](https://github.com/samara-hub-ro/samara-tuf-keyboard-light)** : Asus TUF/ROG keyboard backlight control for the Omarchy bar — brightness, effect, colour and speed.
@@ -3647,16 +3655,12 @@
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-04` · `omarchy plugin add niraj-envision/touch-bar --enable`
 - **[keyboard-brightness-plugin](https://github.com/Anes-03/keyboard-brightness-plugin)** : Omarchy bar widget for controlling keyboard backlight brightness
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-04` · `omarchy plugin add Anes-03/keyboard-brightness-plugin --enable`
-- **[omarchy-hw-monitor](https://github.com/meviusisback/omarchy-hw-monitor)** : Omarchy bar widget: memory, CPU, and GPU as gauges, temperatures, or spelled-out figures — read straight from /proc and /sys
-  - ⭐ **1** · 🍴 0 · Last updated: `2026-09-04` · `omarchy plugin add meviusisback/omarchy-hw-monitor --enable`
 - **[omarchy-monitor-profiles](https://github.com/Mario-Mohar/omarchy-monitor-profiles)** : Omarchy bar widget: named monitor arrangements. Capture how your screens are placed, save it as a setup, switch back with one click. Auto follows what is plugged in.
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-04` · `omarchy plugin add Mario-Mohar/omarchy-monitor-profiles --enable`
 - **[omarchy-zmk](https://github.com/ashmortar/omarchy-zmk)** : ZMK keyboard status for the Omarchy bar: connection path, per-piece battery, charging
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-04` · `omarchy plugin add ashmortar/omarchy-zmk --enable`
 - **[omarchy-obsbot-center](https://github.com/stefanomainardi/omarchy-obsbot-center)** : OBSBOT Meet 2 control panel for the Omarchy bar
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-04` · `omarchy plugin add stefanomainardi/omarchy-obsbot-center --enable`
-- **[omarchy-battery-alerts](https://github.com/NeroSong/omarchy-battery-alerts)** : Configurable two-stage battery notifications for the Omarchy
-  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-04` · `omarchy plugin add NeroSong/omarchy-battery-alerts --enable`
 - **[omarchy-logi-battery](https://github.com/Proxy1967/omarchy-logi-battery)** : Logitech mouse battery percentage in the Omarchy bar, read directly over HID++
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-04` · `omarchy plugin add Proxy1967/omarchy-logi-battery --enable`
 - **[omarchy-keyboard-backlight](https://github.com/DataKnox/omarchy-keyboard-backlight)** : macOS-style keyboard backlight for Omarchy on Apple Silicon: ambient light + idle control (Omarchy shell plugin)
@@ -3701,8 +3705,6 @@
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-01` · `omarchy plugin add jzuijlek/omarchy-buds --enable`
 - **[omarchy-battery](https://github.com/AROICE-HQ/omarchy-battery)** : Better Battery for Omarchy: charge-threshold toggle, Quick Dim, Travel Mode, hybrid-GPU status, power-draw history
   - ⭐ **0** · 🍴 2 · Last updated: `2026-09-01` · `omarchy plugin add AROICE-HQ/omarchy-battery --enable`
-- **[omarchy-homebridge](https://github.com/ianswope/omarchy-homebridge)** : Your home in the Omarchy bar: arm the security system, toggle the lights, read the sensors — from Homebridge
-  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-01` · `omarchy plugin add ianswope/omarchy-homebridge --enable`
 - **[omarchy-reolink-cameras](https://github.com/rodrix2000/omarchy-reolink-cameras)** : Native local-first Reolink cameras for Omarchy
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-01` · `omarchy plugin add rodrix2000/omarchy-reolink-cameras --enable`
 - **[omarchy-xeneon-edge](https://github.com/amitcpatel/omarchy-xeneon-edge)** : Omarchy plugin for Corsair XENEON EDGE touchscreen control
@@ -3821,8 +3823,6 @@
   - ⭐ **0** · 🍴 0 · Last updated: `2026-08-25` · `omarchy plugin add djsmanchanda/Blue_Star_Smart_AC_control --enable`
 - **[omadrives](https://github.com/brm-src/omadrives)** : A beautiful Omarchy bar widget for mounting, repairing, and safely ejecting drives.
   - ⭐ **0** · 🍴 0 · Last updated: `2026-08-25` · `omarchy plugin add brm-src/omadrives --enable`
-- **[omarchy-asus](https://github.com/moneytosms/omarchy-asus)** : Tabbed ASUS laptop control panel for the Omarchy bar (GHelper-style), built on asusctl
-  - ⭐ **2** · 🍴 5 · Last updated: `2026-08-24` · `omarchy plugin add moneytosms/omarchy-asus --enable`
 - **[omarchy-g14-controls](https://github.com/Ayumad/omarchy-g14-controls)** : Native Omarchy controls for ASUS ROG Zephyrus G14 laptops
   - ⭐ **1** · 🍴 0 · Last updated: `2026-08-24` · `omarchy plugin add Ayumad/omarchy-g14-controls --enable`
 - **[omarchy-key-swap](https://github.com/wqsaali/omarchy-key-swap)** : Omarchy plugin.
@@ -3862,7 +3862,7 @@
 - **[omarchy-herdy](https://github.com/dghelm/omarchy-herdy)** : Omarchy Shell configuration panel for the herdy MIDI controller
   - ⭐ **0** · 🍴 0 · Last updated: `2026-08-22` · `omarchy plugin add dghelm/omarchy-herdy --enable`
 - **[omarchy-elgato-control](https://github.com/amitcpatel/omarchy-elgato-control)** : Native Omarchy controls for Elgato Stream Deck and Key Lights on Linux
-  - ⭐ **2** · 🍴 5 · Last updated: `2026-08-21` · `omarchy plugin add amitcpatel/omarchy-elgato-control --enable`
+  - ⭐ **2** · 🍴 6 · Last updated: `2026-08-21` · `omarchy plugin add amitcpatel/omarchy-elgato-control --enable`
 - **[echo-shelf](https://github.com/subirats345/echo-shelf)** : Snowsky Echo Mini control, library, and firmware panel for Omarchy Quattro.
   - ⭐ **2** · 🍴 0 · Last updated: `2026-08-21` · `omarchy plugin add subirats345/echo-shelf --enable`
 - **[Ember-Tray](https://github.com/Confined-/Ember-Tray)** : Omarchy plugin.
@@ -3940,8 +3940,10 @@
 
 ### Desktop
 
+- **[omarchy-dock](https://github.com/rosakodu/omarchy-dock)** : Plugin Dock for Omarchy
+  - ⭐ **32** · 🍴 10 · Last updated: `2026-09-10` · `omarchy plugin add rosakodu/omarchy-dock --enable`
 - **[omadock](https://github.com/thepathless/omadock)** : Clean, minimal application dock for Omarchy with autohide, multi-window management, and deep customization
-  - ⭐ **14** · 🍴 3 · Last updated: `2026-09-10` · `omarchy plugin add thepathless/omadock --enable`
+  - ⭐ **15** · 🍴 3 · Last updated: `2026-09-10` · `omarchy plugin add thepathless/omadock --enable`
 - **[omarchy-side-panel](https://github.com/grigoryshulga/omarchy-side-panel)** : A configurable edge-mounted panel for Omarchy that organizes and embeds plugin panels into pages, with flexible positioning, resizing, and quick screen-edge access.
   - ⭐ **4** · 🍴 1 · Last updated: `2026-09-10` · `omarchy plugin add grigoryshulga/omarchy-side-panel --enable`
 - **[omarchy-tidal](https://github.com/ph0bos/omarchy-tidal)** : TIDAL for Omarchy — 24-bit/192kHz hi-res lossless, native to the Quickshell desktop. Player, search, lyrics, artist and album pages, gapless.
@@ -3951,25 +3953,23 @@
 - **[omarchy-glide-menus](https://github.com/iryzhkov/omarchy-glide-menus)** : An alternative to the default Omarchy Menu (SUPER + Space)
   - ⭐ **3** · 🍴 0 · Last updated: `2026-09-09` · `omarchy plugin add iryzhkov/omarchy-glide-menus --enable`
 - **[Mirador](https://github.com/sanjyay/Mirador)** : Omarchy plugin.
-  - ⭐ **24** · 🍴 2 · Last updated: `2026-09-08` · `omarchy plugin add sanjyay/Mirador --enable`
+  - ⭐ **24** · 🍴 3 · Last updated: `2026-09-08` · `omarchy plugin add sanjyay/Mirador --enable`
 - **[omaclock](https://github.com/ubeyidah/omaclock)** : OmaClock — a simple, minimal, theme-aware desktop clock widget for Omarchy that renders behind all windows on the bottom layer.
   - ⭐ **6** · 🍴 1 · Last updated: `2026-09-08` · `omarchy plugin add ubeyidah/omaclock --enable`
 - **[omarchy-xmb-menu](https://github.com/surfacedP/omarchy-xmb-menu)** : A full-screen, PS3-inspired XMB interface for the Omarchy menu
   - ⭐ **4** · 🍴 1 · Last updated: `2026-09-08` · `omarchy plugin add surfacedP/omarchy-xmb-menu --enable`
-- **[omarchy-dock](https://github.com/rosakodu/omarchy-dock)** : Plugin Dock for Omarchy
-  - ⭐ **32** · 🍴 10 · Last updated: `2026-09-07` · `omarchy plugin add rosakodu/omarchy-dock --enable`
 - **[omarchy-key-visualizer](https://github.com/felixzsh/omarchy-key-visualizer)** : Omarchy plugin to see what you type on the screen
   - ⭐ **10** · 🍴 5 · Last updated: `2026-09-07` · `omarchy plugin add felixzsh/omarchy-key-visualizer --enable`
 - **[omarchy-stage](https://github.com/zzwong/omarchy-stage)** : Mission Control for Omarchy: theme-picker carousel of live workspace previews with pane zoom and now-playing pills
-  - ⭐ **7** · 🍴 1 · Last updated: `2026-09-07` · `omarchy plugin add zzwong/omarchy-stage --enable`
+  - ⭐ **8** · 🍴 1 · Last updated: `2026-09-07` · `omarchy plugin add zzwong/omarchy-stage --enable`
 - **[Omate](https://github.com/Palccod/Omate)** : Desktop-mate for Omarchy
   - ⭐ **6** · 🍴 1 · Last updated: `2026-09-07` · `omarchy plugin add Palccod/Omate --enable`
 - **[omadock](https://github.com/matheusmedrado/omadock)** : A fast, terminal-inspired application dock for Omarchy Quattro.
-  - ⭐ **5** · 🍴 0 · Last updated: `2026-09-07` · `omarchy plugin add matheusmedrado/omadock --enable`
+  - ⭐ **5** · 🍴 1 · Last updated: `2026-09-07` · `omarchy plugin add matheusmedrado/omadock --enable`
 - **[QuickSwitch](https://github.com/ewweberlin/QuickSwitch)** : macOS-style task/window switcher with window previews. Hold SUPER, tap TAB to cycle, release SUPER to switch to the selected window's workspace. SUPER+Q quits the highlighted app.
   - ⭐ **4** · 🍴 0 · Last updated: `2026-09-07` · `omarchy plugin add ewweberlin/QuickSwitch --enable`
 - **[vimarchy](https://github.com/clickety-clacks/vimarchy)** : Vimium-style window management UI for Omarchy
-  - ⭐ **24** · 🍴 1 · Last updated: `2026-09-06` · `omarchy plugin add clickety-clacks/vimarchy --enable`
+  - ⭐ **26** · 🍴 1 · Last updated: `2026-09-06` · `omarchy plugin add clickety-clacks/vimarchy --enable`
 - **[omarchy-overview-workspaces](https://github.com/iamcheyan/omarchy-overview-workspaces)** : A full-screen Omarchy workspace overview with live window thumbnails, wallpaper-backed cards, dynamic and native ordering, drag-and-drop movement, and keyboard navigation.
   - ⭐ **12** · 🍴 2 · Last updated: `2026-09-06` · `omarchy plugin add iamcheyan/omarchy-overview-workspaces --enable`
 - **[omarchy-hotspot](https://github.com/shivamnarkar47/omarchy-hotspot)** : Mobile hotspot for Omarchy/Hyprland that never drops your Wi-Fi: concurrent STA+AP via hostapd on a virtual interface, QR-code join, Quickshell bar plugin
@@ -3981,7 +3981,7 @@
 - **[omarchy-keyboard-indicator](https://github.com/iamcheyan/omarchy-keyboard-indicator)** : CapsLock ⇄ Left Ctrl swap with a top-bar toggle for Omarchy
   - ⭐ **4** · 🍴 1 · Last updated: `2026-09-05` · `omarchy plugin add iamcheyan/omarchy-keyboard-indicator --enable`
 - **[omarchy-notification-center](https://github.com/jankeesvw/omarchy-notification-center)** : Every notification you were sent, kept and readable again: a notification center for the Omarchy bar
-  - ⭐ **50** · 🍴 14 · Last updated: `2026-09-04` · `omarchy plugin add jankeesvw/omarchy-notification-center --enable`
+  - ⭐ **51** · 🍴 15 · Last updated: `2026-09-04` · `omarchy plugin add jankeesvw/omarchy-notification-center --enable`
 - **[keybinds-plugin](https://github.com/meviusisback/keybinds-plugin)** : Omarchy plugin.
   - ⭐ **6** · 🍴 4 · Last updated: `2026-09-04` · `omarchy plugin add meviusisback/keybinds-plugin --enable`
 - **[omarchy-ui-sounds](https://github.com/gobijan/omarchy-ui-sounds)** : Theme-aware interface sounds for Omarchy
@@ -3993,13 +3993,13 @@
 - **[omarchy-scratchpad](https://github.com/nlboris/omarchy-scratchpad)** : Scratchpad occupancy indicator and toggle for Omarchy shell bar
   - ⭐ **3** · 🍴 0 · Last updated: `2026-09-03` · `omarchy plugin add nlboris/omarchy-scratchpad --enable`
 - **[omarchy-expose](https://github.com/kristofferR/omarchy-expose)** : macOS-style Exposé for Omarchy: one key or a hot corner shows every open window as a live preview. Type to search, press Space to Quick Look, press Enter to launch
-  - ⭐ **22** · 🍴 6 · Last updated: `2026-09-02` · `omarchy plugin add kristofferR/omarchy-expose --enable`
+  - ⭐ **22** · 🍴 8 · Last updated: `2026-09-02` · `omarchy plugin add kristofferR/omarchy-expose --enable`
 - **[omarchy-mclovin](https://github.com/guilhermeyo/omarchy-mclovin)** : Omarchy shell plugin: pick which browser opens every link, with rules that remember the choice
   - ⭐ **4** · 🍴 1 · Last updated: `2026-09-02` · `omarchy plugin add guilhermeyo/omarchy-mclovin --enable`
 - **[omarchy-minimizable-dock](https://github.com/bogdart/omarchy-minimizable-dock)** : Omarchy plugin.
   - ⭐ **4** · 🍴 0 · Last updated: `2026-08-31` · `omarchy plugin add bogdart/omarchy-minimizable-dock --enable`
 - **[omarchy-altswitch](https://github.com/Pablo-Merino/omarchy-altswitch)** : Windows-style ALT+TAB window switcher across every workspace, for Omarchy
-  - ⭐ **20** · 🍴 7 · Last updated: `2026-08-30` · `omarchy plugin add Pablo-Merino/omarchy-altswitch --enable`
+  - ⭐ **21** · 🍴 9 · Last updated: `2026-08-30` · `omarchy plugin add Pablo-Merino/omarchy-altswitch --enable`
 - **[omarchy-super-apps](https://github.com/younesdahdouh/omarchy-super-apps)** : Tap Super to see every installed app in a searchable grid — an Omarchy shell plugin
   - ⭐ **4** · 🍴 1 · Last updated: `2026-08-30` · `omarchy plugin add younesdahdouh/omarchy-super-apps --enable`
 - **[i3-workspaces](https://github.com/coquer/i3-workspaces)** : i3bar-style workspace numbers.
@@ -4015,11 +4015,11 @@
 - **[Omalive](https://github.com/nikbos/Omalive)** : Omarchy plugin.
   - ⭐ **4** · 🍴 0 · Last updated: `2026-08-26` · `omarchy plugin add nikbos/Omalive --enable`
 - **[SHIBUMI](https://github.com/HANCORE-linux/Shibumi-Shell)** : A native bar and modular plugin suite for Omarchy Quattro, with layouts, controls, widgets, panels, and a guided user-scoped installation.
-  - ⭐ **145** · 🍴 18 · Last updated: `2026-08-24` · `omarchy plugin add HANCORE-linux/Shibumi-Shell --enable`
+  - ⭐ **148** · 🍴 18 · Last updated: `2026-08-24` · `omarchy plugin add HANCORE-linux/Shibumi-Shell --enable`
 - **[hyprscroll2d](https://github.com/kirollosatef/hyprscroll2d)** : Verified Omarchy marketplace plugin: an infinite 2D scrolling layout for Hyprland
   - ⭐ **12** · 🍴 3 · Last updated: `2026-08-24` · `omarchy plugin add kirollosatef/hyprscroll2d --enable`
 - **[omaswitch](https://github.com/piyush97/omaswitch)** : Windows-style Alt-Tab overlay for Omarchy with MRU ordering, search, and live previews.
-  - ⭐ **6** · 🍴 5 · Last updated: `2026-08-24` · `omarchy plugin add piyush97/omaswitch --enable`
+  - ⭐ **7** · 🍴 6 · Last updated: `2026-08-24` · `omarchy plugin add piyush97/omaswitch --enable`
 - **[omarchy-workspace-switcher](https://github.com/Woogy7/omarchy-workspace-switcher)** : Workspace Switcher for Omarchy: alt-tab through live workspace previews (ribbon or carousel)
   - ⭐ **5** · 🍴 0 · Last updated: `2026-08-23` · `omarchy plugin add Woogy7/omarchy-workspace-switcher --enable`
 - **[omarchy-chess](https://github.com/rodrix2000/omarchy-chess)** : Native offline chess for Omarchy with computer and local two-player modes.
@@ -4046,16 +4046,28 @@
 <details>
 <summary><b>🐣 New & Emerging Desktop (154 plugins · 0–2 ⭐)</b></summary>
 
+- **[omarchy-windows](https://github.com/jwm3000/omarchy-windows)** : toggle to window mode in omarchy
+  - ⭐ **1** · 🍴 1 · Last updated: `2026-09-11` · `omarchy plugin add jwm3000/omarchy-windows --enable`
+- **[omarchy-inappropriate-clippy](https://github.com/CostaFot/omarchy-inappropriate-clippy)** : Clippy as-a-plugin, on the Omarchy bar. He walks, parks between your widgets, and mouths off every few minutes.
+  - ⭐ **1** · 🍴 1 · Last updated: `2026-09-11` · `omarchy plugin add CostaFot/omarchy-inappropriate-clippy --enable`
+- **[gustavo.notchbar](https://github.com/GuustTaillieu/gustavo.notchbar)** : Custom bar for omarchy based on Tide-Island
+  - ⭐ **1** · 🍴 1 · Last updated: `2026-09-11` · `omarchy plugin add GuustTaillieu/gustavo.notchbar --enable`
+- **[omarchy-dashboard](https://github.com/grigoryshulga/omarchy-dashboard)** : A keyboard-first grid for embedded, popout, and control tiles from Omarchy plugins.
+  - ⭐ **1** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add grigoryshulga/omarchy-dashboard --enable`
+- **[minimize-pill](https://github.com/paudelsamir/minimize-pill)** : Minimal Hyprland window minimizer widget.
+  - ⭐ **1** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add paudelsamir/minimize-pill --enable`
+- **[omarchy-context-switcher](https://github.com/darcy/omarchy-context-switcher)** : Omarchy plugin to scope workspaces to contexts
+  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add darcy/omarchy-context-switcher --enable`
 - **[omarchy-nightlight](https://github.com/key-tone/omarchy-nightlight)** : f.lux-style night light for Omarchy: Kelvin slider, sunrise/sunset schedule, presets.
-  - ⭐ **1** · 🍴 1 · Last updated: `2026-09-10` · `omarchy plugin add key-tone/omarchy-nightlight --enable`
+  - ⭐ **2** · 🍴 1 · Last updated: `2026-09-10` · `omarchy plugin add key-tone/omarchy-nightlight --enable`
 - **[omarchy-bottom-launcher](https://github.com/taisau/omarchy-bottom-launcher)** : Mouse-activated and Alt+Tab rising window switcher and launcher for Omarchy on Hyprland
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-10` · `omarchy plugin add taisau/omarchy-bottom-launcher --enable`
-- **[omarchy-dashboard](https://github.com/grigoryshulga/omarchy-dashboard)** : A keyboard-first grid for embedded, popout, and control tiles from Omarchy plugins.
-  - ⭐ **1** · 🍴 0 · Last updated: `2026-09-10` · `omarchy plugin add grigoryshulga/omarchy-dashboard --enable`
 - **[orbit](https://github.com/rohan-patnaik/orbit)** : Orbit — a three-mode visual window switcher for Omarchy Quattro.
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-10` · `omarchy plugin add rohan-patnaik/orbit --enable`
 - **[omarchy-simple-start-menu](https://github.com/Librael-The-Culprit/omarchy-simple-start-menu)** : Simple Start Menu For Omarchy Linux, With Search, "Places", Pinned Apps And Transparency Slider
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-10` · `omarchy plugin add Librael-The-Culprit/omarchy-simple-start-menu --enable`
+- **[omarchy-capture-overlay](https://github.com/imcmurray/omarchy-capture-overlay)** : Overlay Screenrecord for Omarchy: live 1080p grab, a webcam pip in the file, crop/zoom, fades, and key overlay.
+  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-10` · `omarchy plugin add imcmurray/omarchy-capture-overlay --enable`
 - **[omarchy-simple-task-bar](https://github.com/Librael-The-Culprit/omarchy-simple-task-bar)** : Plasma-style task bar for Omarchy: running/pinned app icons with minimize-to-scratchpad on click
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-10` · `omarchy plugin add Librael-The-Culprit/omarchy-simple-task-bar --enable`
 - **[omarchy-workscape](https://github.com/calebhat/omarchy-workscape)** : Monitor and workspace management suite for Omarchy + Hyprland: display profiles, window presets, overflow automation.
@@ -4064,8 +4076,6 @@
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-09` · `omarchy plugin add ekrist1/nordstart --enable`
 - **[omarkmeter](https://github.com/Compourri/omarkmeter)** : Omarchy plugin.
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-09` · `omarchy plugin add Compourri/omarkmeter --enable`
-- **[omarchy-windows](https://github.com/jwm3000/omarchy-windows)** : toggle to window mode in omarchy
-  - ⭐ **1** · 🍴 1 · Last updated: `2026-09-08` · `omarchy plugin add jwm3000/omarchy-windows --enable`
 - **[omarchy-ichi](https://github.com/aesko/omarchy-ichi)** : One window, room to breathe. Per-workspace inset for the lone window on Omarchy.
   - ⭐ **1** · 🍴 1 · Last updated: `2026-09-08` · `omarchy plugin add aesko/omarchy-ichi --enable`
 - **[omarchy-workspace-switcher](https://github.com/cmyk/omarchy-workspace-switcher)** : A Mac-style visual workspace switcher for Omarchy
@@ -4074,30 +4084,24 @@
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-08` · `omarchy plugin add rossvz/omarchy-focus-mode --enable`
 - **[falser-window-preview](https://github.com/falser101/falser-window-preview)** : KDE Overview-style window preview overlay for Omarchy
   - ⭐ **2** · 🍴 1 · Last updated: `2026-09-07` · `omarchy plugin add falser101/falser-window-preview --enable`
+- **[gnome-like-workspaces](https://github.com/avalgott/gnome-like-workspaces)** : GNOME-style synchronized multi-monitor workspaces for Omarchy/Hyprland
+  - ⭐ **2** · 🍴 0 · Last updated: `2026-09-07` · `omarchy plugin add avalgott/gnome-like-workspaces --enable`
 - **[controller-launcher](https://github.com/perfektnacht/controller-launcher)** : Hold a controller button for a radial wheel of your game launchers, each opening in its console/gaming mode. An Omarchy shell plugin.
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-07` · `omarchy plugin add perfektnacht/controller-launcher --enable`
 - **[omarchy-parquet](https://github.com/andreireanu/omarchy-parquet)** : Tile your screen like a parquet floor: you choose the shapes once, the windows fit into them. One layout per workspace, from the Omarchy bar.
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-07` · `omarchy plugin add andreireanu/omarchy-parquet --enable`
 - **[omarchy-pretty-screenshot](https://github.com/ricardosuman/omarchy-pretty-screenshot)** : Screenshots that look like Omarchy: square corners, your theme's border and shadow, over your wallpaper or theme colors. Replaces the PRINT key, with settings right in the menu.
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-07` · `omarchy plugin add ricardosuman/omarchy-pretty-screenshot --enable`
-- **[gnome-like-workspaces](https://github.com/avalgott/gnome-like-workspaces)** : GNOME-style synchronized multi-monitor workspaces for Omarchy/Hyprland
-  - ⭐ **1** · 🍴 0 · Last updated: `2026-09-07` · `omarchy plugin add avalgott/gnome-like-workspaces --enable`
 - **[omarchy-workspace-swipe](https://github.com/wookelvin/omarchy-workspace-swipe)** : Finger-tracked four-finger workspace gestures for Omarchy and Hyprland
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-07` · `omarchy plugin add wookelvin/omarchy-workspace-swipe --enable`
 - **[omarchy-omaperch](https://github.com/iryzhkov/omarchy-omaperch)** : Pin one window into an edge dock that stays visible across every workspace, in reserved space the tiling flows around. An Omarchy shell plugin.
   - ⭐ **2** · 🍴 0 · Last updated: `2026-09-06` · `omarchy plugin add iryzhkov/omarchy-omaperch --enable`
 - **[IkeA](https://github.com/ike-kavas/IkeA)** : IkeA — I know every App. An Omarchy shell plugin for switching running windows.
   - ⭐ **1** · 🍴 1 · Last updated: `2026-09-06` · `omarchy plugin add ike-kavas/IkeA --enable`
-- **[omarchy-inappropriate-clippy](https://github.com/CostaFot/omarchy-inappropriate-clippy)** : Clippy as-a-plugin, on the Omarchy bar. He walks, parks between your widgets, and mouths off every few minutes.
-  - ⭐ **1** · 🍴 1 · Last updated: `2026-09-06` · `omarchy plugin add CostaFot/omarchy-inappropriate-clippy --enable`
-- **[minimize-pill](https://github.com/paudelsamir/minimize-pill)** : Minimal Hyprland window minimizer widget.
-  - ⭐ **1** · 🍴 0 · Last updated: `2026-09-06` · `omarchy plugin add paudelsamir/minimize-pill --enable`
 - **[omarchy-window-ward](https://github.com/r404r/omarchy-window-ward)** : Protect selected Omarchy applications from accidental window closes
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-06` · `omarchy plugin add r404r/omarchy-window-ward --enable`
 - **[zoom-in-out](https://github.com/2Dennis/zoom-in-out)** : Omarchy plugin: Super++ / Super+- text zoom (macOS-style) for the focused terminal or browser
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-06` · `omarchy plugin add 2Dennis/zoom-in-out --enable`
-- **[omarchy-capture-overlay](https://github.com/imcmurray/omarchy-capture-overlay)** : Overlay Screenrecord for Omarchy: live 1080p grab, a webcam pip in the file, crop/zoom, fades, and key overlay.
-  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-06` · `omarchy plugin add imcmurray/omarchy-capture-overlay --enable`
 - **[omageddon](https://github.com/CrsMthw/omageddon)** : Take a hammer to your own desktop — a nine-weapon desktop-smashing toy for the Omarchy shell.
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-06` · `omarchy plugin add CrsMthw/omageddon --enable`
 - **[omarchy-philips-hue](https://github.com/sethchev/omarchy-philips-hue)** : Omarchy plugin.
@@ -4106,16 +4110,12 @@
   - ⭐ **2** · 🍴 0 · Last updated: `2026-09-05` · `omarchy plugin add shavenking/omarchy-mouse-mode --enable`
 - **[wallpicker](https://github.com/maiosx/wallpicker)** : Fullscreen Wallpaper Picker from Pictures folder on Omarchy
   - ⭐ **2** · 🍴 0 · Last updated: `2026-09-05` · `omarchy plugin add maiosx/wallpicker --enable`
-- **[gustavo.notchbar](https://github.com/GuustTaillieu/gustavo.notchbar)** : Custom bar for omarchy based on Tide-Island
-  - ⭐ **1** · 🍴 1 · Last updated: `2026-09-05` · `omarchy plugin add GuustTaillieu/gustavo.notchbar --enable`
 - **[omarchy-pane-ratio](https://github.com/r404r/omarchy-pane-ratio)** : Omarchy plugin.
   - ⭐ **0** · 🍴 1 · Last updated: `2026-09-05` · `omarchy plugin add r404r/omarchy-pane-ratio --enable`
+- **[omarchy-alt-tab](https://github.com/luwojtaszek/omarchy-alt-tab)** : macOS-style Alt-Tab window switcher plugin for the Omarchy shell
+  - ⭐ **0** · 🍴 1 · Last updated: `2026-09-05` · `omarchy plugin add luwojtaszek/omarchy-alt-tab --enable`
 - **[omarchy-h4x0r](https://github.com/johnsideserf/omarchy-h4x0r)** : Omarchy plugin.
   - ⭐ **0** · 🍴 1 · Last updated: `2026-09-05` · `omarchy plugin add johnsideserf/omarchy-h4x0r --enable`
-- **[omarchy-context-switcher](https://github.com/darcy/omarchy-context-switcher)** : Omarchy plugin to scope workspaces to contexts
-  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-05` · `omarchy plugin add darcy/omarchy-context-switcher --enable`
-- **[omarchy-alt-tab](https://github.com/luwojtaszek/omarchy-alt-tab)** : macOS-style Alt-Tab window switcher plugin for the Omarchy shell
-  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-05` · `omarchy plugin add luwojtaszek/omarchy-alt-tab --enable`
 - **[omarchy-passwd-reminder](https://github.com/p-kania/omarchy-passwd-reminder)** : Omarchy desktop widget that tracks your password rotation cycle and reminds you to change it. Nothing enforced system-side.
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-05` · `omarchy plugin add p-kania/omarchy-passwd-reminder --enable`
 - **[omarchy-zoom-space](https://github.com/cytracon/omarchy-zoom-space)** : Click-to-zoom window overlays with configurable enlargement for Omarchy Quattro and Hyprland
@@ -4132,24 +4132,24 @@
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-04` · `omarchy plugin add roubilibo/omarchy-workspace-navigator --enable`
 - **[omarchy-panes](https://github.com/RogerGdot/omarchy-panes)** : Constrain the tiling area of a Hyprland workspace on ultrawide monitors — an Omarchy bar widget
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-04` · `omarchy plugin add RogerGdot/omarchy-panes --enable`
+- **[oma-pad](https://github.com/Kiryuuki/oma-pad)** : App-to-Workspace pinning and boot auto-launch manager with smart app dropdown for Hyprland on Omarchy.
+  - ⭐ **1** · 🍴 0 · Last updated: `2026-09-04` · `omarchy plugin add Kiryuuki/oma-pad --enable`
 - **[dynamic-bar](https://github.com/grechman/dynamic-bar)** : Dynamic-island top bar for Omarchy: coding agents, AI limits, music, system
   - ⭐ **0** · 🍴 1 · Last updated: `2026-09-04` · `omarchy plugin add grechman/dynamic-bar --enable`
 - **[omafetti](https://github.com/weedwhitesandwine/omafetti)** : OmaFetti - it had to happen sooner or later - a useless plugin that blows confetti on your screen
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-04` · `omarchy plugin add weedwhitesandwine/omafetti --enable`
 - **[omarchy-windows-menu](https://github.com/nahuelvara/omarchy-windows-menu)** : Omarchy bar-widget: dropdown listing every open window, grouped by workspace
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-04` · `omarchy plugin add nahuelvara/omarchy-windows-menu --enable`
-- **[oma-pad](https://github.com/Kiryuuki/oma-pad)** : App-to-Workspace pinning and boot auto-launch manager with smart app dropdown for Hyprland on Omarchy.
-  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-04` · `omarchy plugin add Kiryuuki/oma-pad --enable`
 - **[omarchy-pip-handler](https://github.com/SoftARV/omarchy-pip-handler)** : Omarchy plugin.
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-04` · `omarchy plugin add SoftARV/omarchy-pip-handler --enable`
 - **[omarchy-roma-workspaces](https://github.com/SmartALB/omarchy-roma-workspaces)** : Workspace indicators for the Omarchy bar in Roman numerals, with a right-click menu for how many to show.
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-03` · `omarchy plugin add SmartALB/omarchy-roma-workspaces --enable`
+- **[omarchy-lan-mouse](https://github.com/mdelgert/omarchy-lan-mouse)** : An Omarchy bar widget for Lan Mouse: install and diagnose the Wayland-friendly LAN keyboard/mouse sharing service, manage its headless daemon, and open its GUI, configuration, and logs.
+  - ⭐ **1** · 🍴 0 · Last updated: `2026-09-03` · `omarchy plugin add mdelgert/omarchy-lan-mouse --enable`
 - **[omarchy-ptbr-menu](https://github.com/robertlindomar/omarchy-ptbr-menu)** : Tradução pt-BR do plugin Menu para Omarchy 🇧🇷
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-03` · `omarchy plugin add robertlindomar/omarchy-ptbr-menu --enable`
 - **[omarchy-ptbr-notifications](https://github.com/robertlindomar/omarchy-ptbr-notifications)** : Tradução pt-BR do plugin Notificações para Omarchy 🇧🇷
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-03` · `omarchy plugin add robertlindomar/omarchy-ptbr-notifications --enable`
-- **[omarchy-lan-mouse](https://github.com/mdelgert/omarchy-lan-mouse)** : An Omarchy bar widget for Lan Mouse: install and diagnose the Wayland-friendly LAN keyboard/mouse sharing service, manage its headless daemon, and open its GUI, configuration, and logs.
-  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-03` · `omarchy plugin add mdelgert/omarchy-lan-mouse --enable`
 - **[OmaGoku](https://github.com/BrianBoitano/OmaGoku)** : A Dragon Ball desktop pet for Omarchy. It hatches from an attack pod in your bar, grows up in its own room, roams your screen, and transforms when the machine works hard.
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-03` · `omarchy plugin add BrianBoitano/OmaGoku --enable`
 - **[ripandburn](https://github.com/scottharvey/ripandburn)** : Rip audio CDs to FLAC and burn playable audio CDs from the Omarchy bar
@@ -4232,6 +4232,8 @@
   - ⭐ **1** · 🍴 0 · Last updated: `2026-08-28` · `omarchy plugin add danbosscher/omarchy-fullscreen-workspace --enable`
 - **[omaVNC](https://github.com/rsd/omaVNC)** : Oh Mah VNC!
   - ⭐ **1** · 🍴 0 · Last updated: `2026-08-28` · `omarchy plugin add rsd/omaVNC --enable`
+- **[omarchy-desktop-undo](https://github.com/dougfour/omarchy-desktop-undo)** : Tile Park and Undo: Super+W parks the window instead of killing it. Super+Z restores.
+  - ⭐ **1** · 🍴 0 · Last updated: `2026-08-28` · `omarchy plugin add dougfour/omarchy-desktop-undo --enable`
 - **[omacorners](https://github.com/OmarGonD/omacorners)** : macOS-style hot corners for Omarchy
   - ⭐ **0** · 🍴 1 · Last updated: `2026-08-28` · `omarchy plugin add OmarGonD/omacorners --enable`
 - **[omarchy-switchboard](https://github.com/krall12/omarchy-switchboard)** : A grid launcher for Omarchy. Same menu, laid out so you can see it.
@@ -4244,8 +4246,6 @@
   - ⭐ **0** · 🍴 0 · Last updated: `2026-08-28` · `omarchy plugin add apurvasaraiya/omarchy-notification-center --enable`
 - **[omarchy-hotcorners](https://github.com/abdul/omarchy-hotcorners)** : Omarchy plugin.
   - ⭐ **0** · 🍴 0 · Last updated: `2026-08-28` · `omarchy plugin add abdul/omarchy-hotcorners --enable`
-- **[omarchy-desktop-undo](https://github.com/dougfour/omarchy-desktop-undo)** : Tile Park and Undo: Super+W parks the window instead of killing it. Super+Z restores.
-  - ⭐ **0** · 🍴 0 · Last updated: `2026-08-28` · `omarchy plugin add dougfour/omarchy-desktop-undo --enable`
 - **[omarchy-hot-corners](https://github.com/sahzudin/omarchy-hot-corners)** : macOS-style hot corners for Omarchy
   - ⭐ **2** · 🍴 0 · Last updated: `2026-08-27` · `omarchy plugin add sahzudin/omarchy-hot-corners --enable`
 - **[super-w-wait](https://github.com/zharinov/super-w-wait)** : Omarchy plugin: requires a second press of SUPER + W to close a window
@@ -4291,7 +4291,7 @@
 - **[omarchy-switchboard](https://github.com/thebenwalther/omarchy-switchboard)** : A live window overview for Omarchy
   - ⭐ **2** · 🍴 0 · Last updated: `2026-08-22` · `omarchy plugin add thebenwalther/omarchy-switchboard --enable`
 - **[omarchy-nightlight-auto](https://github.com/matt-shearing/omarchy-nightlight-auto)** : Sunset Night Light — a blue-light ramp anchored to real local sunset, for the Omarchy bar
-  - ⭐ **1** · 🍴 0 · Last updated: `2026-08-22` · `omarchy plugin add matt-shearing/omarchy-nightlight-auto --enable`
+  - ⭐ **1** · 🍴 1 · Last updated: `2026-08-22` · `omarchy plugin add matt-shearing/omarchy-nightlight-auto --enable`
 - **[omarchy-tour](https://github.com/herr-brandt/omarchy-tour)** : Interactive desktop tour for Omarchy
   - ⭐ **0** · 🍴 0 · Last updated: `2026-08-22` · `omarchy plugin add herr-brandt/omarchy-tour --enable`
 - **[omaharbor](https://github.com/anelcelik/omaharbor)** : Workspace switcher + running-apps dock, combined into one Omarchy bar widget
@@ -4359,14 +4359,18 @@
 
 ### Developer Tools
 
+- **[portwatch](https://github.com/ZerubbabelT/portwatch)** : Omarchy plugin.
+  - ⭐ **42** · 🍴 3 · Last updated: `2026-09-11` · `omarchy plugin add ZerubbabelT/portwatch --enable`
 - **[omarchy-github](https://github.com/robzolkos/omarchy-github)** : A keyboard-friendly GitHub command center for the Omarchy bar
   - ⭐ **55** · 🍴 15 · Last updated: `2026-09-10` · `omarchy plugin add robzolkos/omarchy-github --enable`
 - **[omarchy-herdr](https://github.com/jankeesvw/omarchy-herdr)** : Running herdr servers in the Omarchy bar, with every agent inside them, and a click that lands you on the one you picked
-  - ⭐ **40** · 🍴 4 · Last updated: `2026-09-10` · `omarchy plugin add jankeesvw/omarchy-herdr --enable`
+  - ⭐ **44** · 🍴 6 · Last updated: `2026-09-10` · `omarchy plugin add jankeesvw/omarchy-herdr --enable`
 - **[agent-usage-plus](https://github.com/viganogabriele/agent-usage-plus)** : Omarchy bar widget for AI coding usage, limits, balances, pace, costs and history.
   - ⭐ **3** · 🍴 6 · Last updated: `2026-09-10` · `omarchy plugin add viganogabriele/agent-usage-plus --enable`
 - **[omarchy-beam-deck](https://github.com/nshkrdotcom/omarchy-beam-deck)** : Host-aware BEAM and OTP control plane for Omarchy Quattro. Observes every local and distributed BEAM VM, manages host scheduler budgets and density, detects process pathologies and mailbox backpressure, visualizes supervision and cluster topology, and provides reversible runtime controls with zero application instrumentation required.
   - ⭐ **4** · 🍴 0 · Last updated: `2026-09-09` · `omarchy plugin add nshkrdotcom/omarchy-beam-deck --enable`
+- **[omarchy-docker](https://github.com/Majkelll/omarchy-docker)** : Omarchy bar plugin: manage Docker containers, watch logs, and see live CPU/RAM per container and in total
+  - ⭐ **3** · 🍴 0 · Last updated: `2026-09-07` · `omarchy plugin add Majkelll/omarchy-docker --enable`
 - **[plugin-control](https://github.com/omarchy-QOL/plugin-control)** : Ctrl+P fuzzy command palette for managing Omarchy plugins.
   - ⭐ **5** · 🍴 4 · Last updated: `2026-09-06` · `omarchy plugin add omarchy-QOL/plugin-control --enable`
 - **[omarchy-quick-chat](https://github.com/goktugvatandas/omarchy-quick-chat)** : Keyboard-first quick chat for Omarchy: summon your agent CLIs (Codex, Claude Code, OpenCode, Grok, Cursor, Pi) in a floating window with launchers, history, and markdown replies
@@ -4383,10 +4387,8 @@
   - ⭐ **3** · 🍴 1 · Last updated: `2026-09-04` · `omarchy plugin add oliwier-xiao/opencode-config-manager --enable`
 - **[omarchy-github-build-monitor](https://github.com/jankeesvw/omarchy-github-build-monitor)** : Whether the branch you deploy from is green right now, in the Omarchy bar.
   - ⭐ **8** · 🍴 1 · Last updated: `2026-09-03` · `omarchy plugin add jankeesvw/omarchy-github-build-monitor --enable`
-- **[portwatch](https://github.com/ZerubbabelT/portwatch)** : Omarchy plugin.
-  - ⭐ **42** · 🍴 3 · Last updated: `2026-09-02` · `omarchy plugin add ZerubbabelT/portwatch --enable`
 - **[omarchy-boomux](https://github.com/gardnmi/omarchy-boomux)** : Monitor coding agents and manage Boomux workspaces from the Omarchy bar
-  - ⭐ **3** · 🍴 3 · Last updated: `2026-09-01` · `omarchy plugin add gardnmi/omarchy-boomux --enable`
+  - ⭐ **3** · 🍴 2 · Last updated: `2026-09-01` · `omarchy plugin add gardnmi/omarchy-boomux --enable`
 - **[omaportless](https://github.com/dingyi/omaportless)** : Omarchy plugin: named .localhost URLs for local dev servers
   - ⭐ **7** · 🍴 2 · Last updated: `2026-08-31` · `omarchy plugin add dingyi/omaportless --enable`
 - **[omarchy-herdr](https://github.com/fabean/omarchy-herdr)** : Omarchy plugin.
@@ -4428,7 +4430,7 @@
 - **[omarchy-opencode-usage](https://github.com/markbus-ai/omarchy-opencode-usage)** : Omarchy Quattro bar widget: OpenCode token usage by day and by model from the local OpenCode database
   - ⭐ **3** · 🍴 1 · Last updated: `2026-08-19` · `omarchy plugin add markbus-ai/omarchy-opencode-usage --enable`
 - **[omarchy-dev-git](https://github.com/ariadev/omarchy-dev-git)** : Omarchy plugin.
-  - ⭐ **3** · 🍴 2 · Last updated: `2026-08-18` · `omarchy plugin add ariadev/omarchy-dev-git --enable`
+  - ⭐ **4** · 🍴 2 · Last updated: `2026-08-18` · `omarchy plugin add ariadev/omarchy-dev-git --enable`
 - **[omarchy-vercel](https://github.com/wesleycole/omarchy-vercel)** : Vercel projects and deployment monitoring for the Omarchy bar
   - ⭐ **3** · 🍴 1 · Last updated: `2026-08-17` · `omarchy plugin add wesleycole/omarchy-vercel --enable`
 - **[omarchy-plugin-opencode-go](https://github.com/M4Marvin/omarchy-plugin-opencode-go)** : OpenCode Go usage bar widget for Omarchy — live usage, limits, and token history
@@ -4437,14 +4439,26 @@
   - ⭐ **3** · 🍴 0 · Last updated: `2026-08-14` · `omarchy plugin add meirdick/omarchy-cloudflare --enable`
 
 <details>
-<summary><b>🐣 New & Emerging Developer Tools (158 plugins · 0–2 ⭐)</b></summary>
+<summary><b>🐣 New & Emerging Developer Tools (157 plugins · 0–2 ⭐)</b></summary>
 
+- **[omarchy-tokentrackerv2](https://github.com/ayan-de/omarchy-tokentrackerv2)** : Omarchy plugin.
+  - ⭐ **1** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add ayan-de/omarchy-tokentrackerv2 --enable`
+- **[omarchy-pipelines](https://github.com/alexandre-vl/omarchy-pipelines)** : Track GitHub Actions across your projects from the Omarchy bar. Rust helper, conditional requests, theme-aware status badge.
+  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add alexandre-vl/omarchy-pipelines --enable`
+- **[omarchy-kamal-deploy](https://github.com/eddygarcas/omarchy-kamal-deploy)** : Omarchy shell plugin: bar-panel task list for Kamal deploy targets, with terminal-backed actions (setup, deploy, logs, console, accessories, lock)
+  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add eddygarcas/omarchy-kamal-deploy --enable`
+- **[omarchweb](https://github.com/giodc/omarchweb)** : Omarchy Plugin plugin for local web development: start/stop services, manage MariaDB and PostgreSQL databases and users, and add Nginx virtual hosts (PHP, WordPress, Laravel, Node) from the bar.
+  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add giodc/omarchweb --enable`
 - **[omarchy-github-status](https://github.com/HalmyLyseas/omarchy-github-status)** : Github status plugin for Omarchy
   - ⭐ **2** · 🍴 1 · Last updated: `2026-09-10` · `omarchy plugin add HalmyLyseas/omarchy-github-status --enable`
 - **[omarchy-mise-radar](https://github.com/chyld/omarchy-mise-radar)** : Omarchy plugin.
   - ⭐ **2** · 🍴 0 · Last updated: `2026-09-10` · `omarchy plugin add chyld/omarchy-mise-radar --enable`
 - **[omarchy_ultra_docker](https://github.com/chameleonbr/omarchy_ultra_docker)** : Ultra Docker for the Omarchy bar: container status as a mosaic, grouped by compose stack, with lazydocker, disk cleanup and a coding-agent handoff
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-10` · `omarchy plugin add chameleonbr/omarchy_ultra_docker --enable`
+- **[omarchy-copilot-panel-usage](https://github.com/wellatleastitried/omarchy-copilot-panel-usage)** : Displays Copilot usage and quota in the Omarchy agents panel.
+  - ⭐ **1** · 🍴 0 · Last updated: `2026-09-10` · `omarchy plugin add wellatleastitried/omarchy-copilot-panel-usage --enable`
+- **[cloud-sql-tracker-oma-plugin](https://github.com/golgor/cloud-sql-tracker-oma-plugin)** : Omarchy bar plugin for cloud-sql-tracker (Cloud SQL Auth Proxy switchboard)
+  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-10` · `omarchy plugin add golgor/cloud-sql-tracker-oma-plugin --enable`
 - **[omarchy-wisps](https://github.com/Bert0424/omarchy-wisps)** : Wisps that haunt your desktop while your coding agents work, and drift over to your cursor when one needs you
   - ⭐ **1** · 🍴 1 · Last updated: `2026-09-09` · `omarchy plugin add Bert0424/omarchy-wisps --enable`
 - **[hive-omarchy](https://github.com/ivankuznetsov/hive-omarchy)** : Monitor Hive instances and active tasks from the Omarchy bar
@@ -4467,8 +4481,6 @@
   - ⭐ **2** · 🍴 1 · Last updated: `2026-09-07` · `omarchy plugin add mrlarsendk/omarchy-cursor-usage --enable`
 - **[omarchy-forge](https://github.com/acobrerosf/omarchy-forge)** : Laravel Forge servers and deployments in the Omarchy bar
   - ⭐ **2** · 🍴 0 · Last updated: `2026-09-07` · `omarchy plugin add acobrerosf/omarchy-forge --enable`
-- **[omarchy-docker](https://github.com/Majkelll/omarchy-docker)** : Omarchy bar plugin: manage Docker containers, watch logs, and see live CPU/RAM per container and in total
-  - ⭐ **2** · 🍴 0 · Last updated: `2026-09-07` · `omarchy plugin add Majkelll/omarchy-docker --enable`
 - **[omarchy-ioc-lookup](https://github.com/desmedo/omarchy-ioc-lookup)** : Omarchy plugin.
   - ⭐ **1** · 🍴 1 · Last updated: `2026-09-07` · `omarchy plugin add desmedo/omarchy-ioc-lookup --enable`
 - **[omarchy-crook](https://github.com/parker-brown-family/omarchy-crook)** : Crook — which coding agent needs you, on the Omarchy bar. One icon that goes urgent the moment something is waiting on you, and a tray that says who.
@@ -4511,8 +4523,6 @@
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-04` · `omarchy plugin add GimpyHand/omarchy-t3code --enable`
 - **[signal](https://github.com/tsouth89/signal)** : Native Sentry incident inbox for Omarchy—regressions, alerts, search, and issue actions from the bar.
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-04` · `omarchy plugin add tsouth89/signal --enable`
-- **[omarchweb](https://github.com/giodc/omarchweb)** : Omarchy Plugin plugin for local web development: start/stop services, manage MariaDB and PostgreSQL databases and users, and add Nginx virtual hosts (PHP, WordPress, Laravel, Node) from the bar.
-  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-04` · `omarchy plugin add giodc/omarchweb --enable`
 - **[omarchy-opencode-launcher](https://github.com/SmartALB/omarchy-opencode-launcher)** : Open opencode in a project directory, with the model chosen before it starts. The model travels as a flag; your opencode.json is never written to.
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-04` · `omarchy plugin add SmartALB/omarchy-opencode-launcher --enable`
 - **[omarchy-sshmanager-plugin](https://github.com/luizeof/omarchy-sshmanager-plugin)** : Omarchy plugin.
@@ -4531,8 +4541,6 @@
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-02` · `omarchy plugin add LimeChain/omarchy-web3 --enable`
 - **[omarchy-claude-agent](https://github.com/daocoding/omarchy-claude-agent)** : Omarchy bar widget: live Claude Code state (working / blocked / idle) from Claude's own hooks via herdr-claude-lifecycle
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-02` · `omarchy plugin add daocoding/omarchy-claude-agent --enable`
-- **[omarchy-kamal-deploy](https://github.com/eddygarcas/omarchy-kamal-deploy)** : Omarchy shell plugin: bar-panel task list for Kamal deploy targets, with terminal-backed actions (setup, deploy, logs, console, accessories, lock)
-  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-02` · `omarchy plugin add eddygarcas/omarchy-kamal-deploy --enable`
 - **[omarchy-plugin-pulse](https://github.com/AdamMusa/omarchy-plugin-pulse)** : Omarchy plugin.
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-02` · `omarchy plugin add AdamMusa/omarchy-plugin-pulse --enable`
 - **[omarchy-env-bridge](https://github.com/AdamMusa/omarchy-env-bridge)** : Safe environment-variable drift inspector for interactive and systemd user sessions.
@@ -4563,8 +4571,6 @@
   - ⭐ **1** · 🍴 0 · Last updated: `2026-08-31` · `omarchy plugin add edgarsilva/omarchy-gitlab-ci --enable`
 - **[DevTrack](https://github.com/shreyasmene06/DevTrack)** : Native Omarchy plugin for tracking LeetCode, Codeforces, and GitHub streaks with daily reminders.
   - ⭐ **1** · 🍴 0 · Last updated: `2026-08-31` · `omarchy plugin add shreyasmene06/DevTrack --enable`
-- **[omarchy-copilot-panel-usage](https://github.com/wellatleastitried/omarchy-copilot-panel-usage)** : Displays Copilot usage and quota in the Omarchy agents panel.
-  - ⭐ **1** · 🍴 0 · Last updated: `2026-08-31` · `omarchy plugin add wellatleastitried/omarchy-copilot-panel-usage --enable`
 - **[omarchy-premonition](https://github.com/tcballard/omarchy-premonition)** : Omarchy plugin.
   - ⭐ **1** · 🍴 0 · Last updated: `2026-08-31` · `omarchy plugin add tcballard/omarchy-premonition --enable`
 - **[omarchy-agent-gemini](https://github.com/Chispes/omarchy-agent-gemini)** : Google Gemini / Antigravity usage and token collector for Omarchy Linux
@@ -4615,6 +4621,8 @@
   - ⭐ **2** · 🍴 0 · Last updated: `2026-08-28` · `omarchy plugin add jondkinney/omasnip --enable`
 - **[studio-omarchy](https://github.com/RegionallyFamous/studio-omarchy)** : Native WordPress Studio for Omarchy with direct installation and automated upstream releases
   - ⭐ **1** · 🍴 0 · Last updated: `2026-08-28` · `omarchy plugin add RegionallyFamous/studio-omarchy --enable`
+- **[jukebox](https://github.com/JamesWeatherhead/jukebox)** : Turn long-form speech into precise, domain-specific prompts with a tactile voice console for Omarchy.
+  - ⭐ **1** · 🍴 0 · Last updated: `2026-08-28` · `omarchy plugin add JamesWeatherhead/jukebox --enable`
 - **[omarchy-bootable](https://github.com/debpalash/omarchy-bootable)** : Omarchy bar plugin for launching the Bootable GUI and TUI
   - ⭐ **1** · 🍴 0 · Last updated: `2026-08-28` · `omarchy plugin add debpalash/omarchy-bootable --enable`
 - **[omarchy-fleet-shepherd](https://github.com/joshuaswarren/omarchy-fleet-shepherd)** : Read-only Herdr agent operations and OMP usage telemetry across an Omarchy connector fleet
@@ -4623,8 +4631,6 @@
   - ⭐ **1** · 🍴 0 · Last updated: `2026-08-28` · `omarchy plugin add skuthus/omarchy-agent-term --enable`
 - **[omarchy-n8n](https://github.com/legendik/omarchy-n8n)** : An Omarchy/Quickshell plugin that shows n8n workflow and execution status in the bar, with vim-motion navigation and desktop notifications on execution failure.
   - ⭐ **1** · 🍴 0 · Last updated: `2026-08-28` · `omarchy plugin add legendik/omarchy-n8n --enable`
-- **[jukebox](https://github.com/JamesWeatherhead/jukebox)** : Turn long-form speech into precise, domain-specific prompts with a tactile voice console for Omarchy.
-  - ⭐ **0** · 🍴 0 · Last updated: `2026-08-28` · `omarchy plugin add JamesWeatherhead/jukebox --enable`
 - **[omarchy-grok-usage](https://github.com/vitally/omarchy-grok-usage)** : Omarchy bar widget: Grok usage on the agents panel, with a dependency-free node/bun collector
   - ⭐ **0** · 🍴 0 · Last updated: `2026-08-28` · `omarchy plugin add vitally/omarchy-grok-usage --enable`
 - **[omarchy-kaj](https://github.com/leonlarsson/omarchy-kaj)** : Docker containers in the Omarchy bar.
@@ -4637,8 +4643,6 @@
   - ⭐ **2** · 🍴 0 · Last updated: `2026-08-26` · `omarchy plugin add angus-mcritchie/omarchy-caliper --enable`
 - **[sinannar.omarchy.plugin.aspire](https://github.com/sinannar/sinannar.omarchy.plugin.aspire)** : Aspire plugin for managing Aspire host and resources in Omarchy
   - ⭐ **2** · 🍴 0 · Last updated: `2026-08-26` · `omarchy plugin add sinannar/sinannar.omarchy.plugin.aspire --enable`
-- **[omarchy-tokentrackerv2](https://github.com/ayan-de/omarchy-tokentrackerv2)** : Omarchy plugin.
-  - ⭐ **1** · 🍴 0 · Last updated: `2026-08-26` · `omarchy plugin add ayan-de/omarchy-tokentrackerv2 --enable`
 - **[omarci](https://github.com/matiacone/omarci)** : Local CI jobs in the Omarchy bar
   - ⭐ **1** · 🍴 0 · Last updated: `2026-08-26` · `omarchy plugin add matiacone/omarci --enable`
 - **[omarchy-agent-cockpit](https://github.com/apollopower/omarchy-agent-cockpit)** : Agent session cockpit for the Omarchy bar. Lists live AI sessions across worktrees with blocked/working state and exact tmux pane targeting. Includes worktree status with git dirty/branch info. Navigate with vim keys, press enter to jump to the specific terminal pane.
@@ -4655,8 +4659,6 @@
   - ⭐ **1** · 🍴 0 · Last updated: `2026-08-25` · `omarchy plugin add jvanbaarsen/omatunnel --enable`
 - **[omarchy-agents](https://github.com/OverStyleFR/omarchy-agents)** : Omarchy bar widget — Claude Code, Codex, Fireworks and OpenCode usage with rate-limit meters, per-day token history and optional cross-machine aggregation.
   - ⭐ **0** · 🍴 1 · Last updated: `2026-08-25` · `omarchy plugin add OverStyleFR/omarchy-agents --enable`
-- **[cloud-sql-tracker-oma-plugin](https://github.com/golgor/cloud-sql-tracker-oma-plugin)** : Omarchy bar plugin for cloud-sql-tracker (Cloud SQL Auth Proxy switchboard)
-  - ⭐ **0** · 🍴 0 · Last updated: `2026-08-25` · `omarchy plugin add golgor/cloud-sql-tracker-oma-plugin --enable`
 - **[omarchy-sqlite-viewer](https://github.com/Sudhanshugtm/omarchy-sqlite-viewer)** : Omarchy bar panel: recent SQLite databases at a glance, click to open in DB Browser
   - ⭐ **0** · 🍴 0 · Last updated: `2026-08-25` · `omarchy plugin add Sudhanshugtm/omarchy-sqlite-viewer --enable`
 - **[qs-herdr-agents](https://github.com/mrpbennett/qs-herdr-agents)** : Many Herdr agent panels for Omarchy but this is mine... baaaaaa
@@ -4751,8 +4753,6 @@
   - ⭐ **2** · 🍴 1 · Last updated: `2026-08-14` · `omarchy plugin add tmn73/omarchy-jira --enable`
 - **[omarchy-github-search](https://github.com/EmiiFont/omarchy-github-search)** : GitHub repository search launcher plugin for the Omarchy shell — fuzzy-search your repos, open in browser, or clone with one keystroke
   - ⭐ **2** · 🍴 1 · Last updated: `2026-08-14` · `omarchy plugin add EmiiFont/omarchy-github-search --enable`
-- **[omarchy-pipelines](https://github.com/alexandre-vl/omarchy-pipelines)** : Track GitHub Actions across your projects from the Omarchy bar. Rust helper, conditional requests, theme-aware status badge.
-  - ⭐ **0** · 🍴 0 · Last updated: `2026-08-14` · `omarchy plugin add alexandre-vl/omarchy-pipelines --enable`
 - **[omarchy-codex-notifications](https://github.com/brianblakely/omarchy-codex-notifications)** : Show clickable notifications in response to events in Codex. An Omarchy plugin.
   - ⭐ **1** · 🍴 1 · Last updated: `2026-08-11` · `omarchy plugin add brianblakely/omarchy-codex-notifications --enable`
 
@@ -4760,28 +4760,30 @@
 
 ### Appearance
 
-- **[omagen](https://github.com/prettyletto/omagen)** : Generate, preview, and safely apply cohesive Omarchy themes from any wallpaper, with optional desktop and bar customization.
-  - ⭐ **39** · 🍴 3 · Last updated: `2026-09-10` · `omarchy plugin add prettyletto/omagen --enable`
-- **[dizziee.auto-wallpaper](https://github.com/JJDizz1L/dizziee.auto-wallpaper)** : Automatically switch between local theme's wallpapers on Omarchy.
-  - ⭐ **9** · 🍴 2 · Last updated: `2026-09-10` · `omarchy plugin add JJDizz1L/dizziee.auto-wallpaper --enable`
+- **[omarchy-lock-explorer](https://github.com/SirJul1337/omarchy-lock-explorer)** : Lock screen designs for Omarchy with a picker to preview and switch between them
+  - ⭐ **147** · 🍴 17 · Last updated: `2026-09-11` · `omarchy plugin add SirJul1337/omarchy-lock-explorer --enable`
+- **[omarchy-dock](https://github.com/ifubaraboye/omarchy-dock)** : macOS inspired Dock for Linux Omarchy
+  - ⭐ **8** · 🍴 4 · Last updated: `2026-09-11` · `omarchy plugin add ifubaraboye/omarchy-dock --enable`
 - **[omarchy-pocket](https://github.com/jrmmhm/omarchy-pocket)** : Hide the bar widgets you rarely use behind one mark and reveal them on hover — a drawer that declutters a crowded bar. Drag a widget onto the mark to tuck it away, drag it back past it to take it out. Call it folding, grouping, collapse or overflow. Nothing moves: the hidden icons keep their own bar slots and settings, and stay enabled.
-  - ⭐ **4** · 🍴 1 · Last updated: `2026-09-10` · `omarchy plugin add jrmmhm/omarchy-pocket --enable`
+  - ⭐ **4** · 🍴 1 · Last updated: `2026-09-11` · `omarchy plugin add jrmmhm/omarchy-pocket --enable`
+- **[omagen](https://github.com/prettyletto/omagen)** : Generate, preview, and safely apply cohesive Omarchy themes from any wallpaper, with optional desktop and bar customization.
+  - ⭐ **40** · 🍴 3 · Last updated: `2026-09-10` · `omarchy plugin add prettyletto/omagen --enable`
+- **[dizziee.auto-wallpaper](https://github.com/JJDizz1L/dizziee.auto-wallpaper)** : Automatically switch between local theme's wallpapers on Omarchy.
+  - ⭐ **9** · 🍴 3 · Last updated: `2026-09-10` · `omarchy plugin add JJDizz1L/dizziee.auto-wallpaper --enable`
+- **[omarchy-theme-manager](https://github.com/mtolhuys/omarchy-theme-manager)** : Browse, install, and remove Omarchy themes from the native full-screen theme switcher.
+  - ⭐ **3** · 🍴 3 · Last updated: `2026-09-10` · `omarchy plugin add mtolhuys/omarchy-theme-manager --enable`
 - **[omarchy-fresh-wallpaper](https://github.com/orienw/omarchy-fresh-wallpaper)** : A minimal Omarchy plugin for rotating high-resolution daily wallpapers.
   - ⭐ **3** · 🍴 0 · Last updated: `2026-09-10` · `omarchy plugin add orienw/omarchy-fresh-wallpaper --enable`
-- **[omarchy-lock-explorer](https://github.com/SirJul1337/omarchy-lock-explorer)** : Lock screen designs for Omarchy with a picker to preview and switch between them
-  - ⭐ **144** · 🍴 17 · Last updated: `2026-09-09` · `omarchy plugin add SirJul1337/omarchy-lock-explorer --enable`
-- **[omarchy-dock](https://github.com/ifubaraboye/omarchy-dock)** : macOS inspired Dock for Linux Omarchy
-  - ⭐ **5** · 🍴 3 · Last updated: `2026-09-09` · `omarchy plugin add ifubaraboye/omarchy-dock --enable`
+- **[omarchy-quattro-wave](https://github.com/ltehacker/omarchy-quattro-wave)** : Built with Grok · Cava visualizer integration for Omarchy Quattro quickshell
+  - ⭐ **3** · 🍴 0 · Last updated: `2026-09-10` · `omarchy plugin add ltehacker/omarchy-quattro-wave --enable`
+- **[wallpaper-omarchy-manager](https://github.com/guiestrela/wallpaper-omarchy-manager)** : Omarchy plugin.
+  - ⭐ **3** · 🍴 0 · Last updated: `2026-09-10` · `omarchy plugin add guiestrela/wallpaper-omarchy-manager --enable`
 - **[omarchy-border-fx](https://github.com/wmfeht/omarchy-border-fx)** : Animated border effects for Omarchy. A ring of light around windows, panels, and notification toasts, rendered as a directional comet or traveling ripples and styled from a single config.
   - ⭐ **4** · 🍴 1 · Last updated: `2026-09-09` · `omarchy plugin add wmfeht/omarchy-border-fx --enable`
-- **[wallpaper-omarchy-manager](https://github.com/guiestrela/wallpaper-omarchy-manager)** : Omarchy plugin.
-  - ⭐ **3** · 🍴 0 · Last updated: `2026-09-09` · `omarchy plugin add guiestrela/wallpaper-omarchy-manager --enable`
-- **[omarchy-theme-manager](https://github.com/mtolhuys/omarchy-theme-manager)** : Browse, install, and remove Omarchy themes from the native full-screen theme switcher.
-  - ⭐ **3** · 🍴 3 · Last updated: `2026-09-08` · `omarchy plugin add mtolhuys/omarchy-theme-manager --enable`
 - **[voxtype-prism](https://github.com/jonhenshaw/voxtype-prism)** : A compact, theme-aware Voxtype recording indicator for Omarchy.
   - ⭐ **7** · 🍴 0 · Last updated: `2026-09-06` · `omarchy plugin add jonhenshaw/voxtype-prism --enable`
 - **[Omapaper](https://github.com/IuriAmauri/Omapaper)** : Omarchy plugin.
-  - ⭐ **6** · 🍴 0 · Last updated: `2026-09-06` · `omarchy plugin add IuriAmauri/Omapaper --enable`
+  - ⭐ **7** · 🍴 0 · Last updated: `2026-09-06` · `omarchy plugin add IuriAmauri/Omapaper --enable`
 - **[omarchy-themebook](https://github.com/calebhat/omarchy-themebook)** : ThemeBook — Omarchy installed-theme catalog with favorites and folders
   - ⭐ **5** · 🍴 1 · Last updated: `2026-09-06` · `omarchy plugin add calebhat/omarchy-themebook --enable`
 - **[omarchy-window-close-buttons](https://github.com/axelfontaine/omarchy-window-close-buttons)** : Omarchy shell plugin: hover a window's corner to reveal a theme-colored close button
@@ -4789,9 +4791,9 @@
 - **[omarchy-pane](https://github.com/Bert0424/omarchy-pane)** : Weather on the inside of your screen: rain, snow and storms rendered on a click-through overlay over your desktop
   - ⭐ **5** · 🍴 1 · Last updated: `2026-09-04` · `omarchy plugin add Bert0424/omarchy-pane --enable`
 - **[live-wallpaper](https://github.com/yesheytenzin/live-wallpaper)** : Omarchy shell plugin: live video wallpapers alongside static images in the background picker
-  - ⭐ **13** · 🍴 0 · Last updated: `2026-09-03` · `omarchy plugin add yesheytenzin/live-wallpaper --enable`
+  - ⭐ **14** · 🍴 0 · Last updated: `2026-09-03` · `omarchy plugin add yesheytenzin/live-wallpaper --enable`
 - **[Omarchy-Voxtype-OSD](https://github.com/Blizl/Omarchy-Voxtype-OSD)** : A modern UI for Voxtype, built with the Omarchy Quattro plugin ecosystem
-  - ⭐ **10** · 🍴 3 · Last updated: `2026-09-02` · `omarchy plugin add Blizl/Omarchy-Voxtype-OSD --enable`
+  - ⭐ **10** · 🍴 2 · Last updated: `2026-09-02` · `omarchy plugin add Blizl/Omarchy-Voxtype-OSD --enable`
 - **[omarchy-rice-bar](https://github.com/jcarcinogen/omarchy-rice-bar)** : Theme-aware visual presets for the stock Omarchy Quattro bar.
   - ⭐ **4** · 🍴 0 · Last updated: `2026-09-02` · `omarchy plugin add jcarcinogen/omarchy-rice-bar --enable`
 - **[Motion-Wallpaper-Omarchy](https://github.com/28allday/Motion-Wallpaper-Omarchy)** : Animated video wallpapers for Omarchy 4 - native omarchy-shell plugin with a different clip per monitor, cross-fades and auto-pause on fullscreen
@@ -4820,8 +4822,6 @@
   - ⭐ **7** · 🍴 2 · Last updated: `2026-08-23` · `omarchy plugin add nick-friedrich/hyprland-dock --enable`
 - **[displaywright-shell-plugin](https://github.com/BlackKingBarOrg/displaywright-shell-plugin)** : Omarchy shell plugin: a different wallpaper on each display, with every fit mode Windows has
   - ⭐ **3** · 🍴 3 · Last updated: `2026-08-23` · `omarchy plugin add BlackKingBarOrg/displaywright-shell-plugin --enable`
-- **[omarchy-quattro-wave](https://github.com/ltehacker/omarchy-quattro-wave)** : Built with Grok · Cava visualizer integration for Omarchy Quattro quickshell
-  - ⭐ **3** · 🍴 0 · Last updated: `2026-08-22` · `omarchy plugin add ltehacker/omarchy-quattro-wave --enable`
 - **[bg-pasticcio](https://github.com/WinCisky/bg-pasticcio)** : Omarchy shell plugin that changes your desktop background on a timer, pulling images from a JSON endpoint.
   - ⭐ **3** · 🍴 0 · Last updated: `2026-08-22` · `omarchy plugin add WinCisky/bg-pasticcio --enable`
 - **[Omarchy-lock-style](https://github.com/MrDemonc/Omarchy-lock-style)** : Lock Style is a customization engine and bar widget for the Omarchy lock screen based on Quickshell. It provides an interactive real-time preview, deep visual customization (LockView), automatic backup of the stock lock screen, custom lock wallpapers with blur control, and one-click factory restoration.
@@ -4838,10 +4838,12 @@
   - ⭐ **4** · 🍴 1 · Last updated: `2026-08-18` · `omarchy plugin add mehiel/mehiel.darky --enable`
 - **[omarchy-waypaper-video-background](https://github.com/GavidetDoliath/omarchy-waypaper-video-background)** : Omarchy Quattro service plugin for Waypaper-managed mpvpaper video backgrounds
   - ⭐ **3** · 🍴 0 · Last updated: `2026-08-18` · `omarchy plugin add GavidetDoliath/omarchy-waypaper-video-background --enable`
+- **[omarchy-aether-wallpapers](https://github.com/smillunchick/omarchy-aether-wallpapers)** : Browse 4K omarchy-themes wallpapers and apply the matching Aether theme from the Omarchy bar
+  - ⭐ **3** · 🍴 0 · Last updated: `2026-08-17` · `omarchy plugin add smillunchick/omarchy-aether-wallpapers --enable`
 - **[backdrop](https://github.com/lgse/backdrop)** : A multi-display wallpaper manager for Omarchy.
   - ⭐ **5** · 🍴 0 · Last updated: `2026-08-15` · `omarchy plugin add lgse/backdrop --enable`
 - **[omawall](https://github.com/matjam/omawall)** : Wallpaper manager for Omarchy
-  - ⭐ **3** · 🍴 1 · Last updated: `2026-08-12` · `omarchy plugin add matjam/omawall --enable`
+  - ⭐ **3** · 🍴 3 · Last updated: `2026-08-12` · `omarchy plugin add matjam/omawall --enable`
 - **[omarchy-wallpaper-engine](https://github.com/dkgamer02ai/omarchy-wallpaper-engine)** : Simple Integration of Omarchy with official Wallpaper Engine.
   - ⭐ **6** · 🍴 1 · Last updated: `2026-08-03` · `omarchy plugin add dkgamer02ai/omarchy-wallpaper-engine --enable`
 - **[shell-settings](https://github.com/AyushKr2003/shell-settings)** : Omarchy plugin.
@@ -4854,18 +4856,28 @@
   - ⭐ **8** · 🍴 2 · Last updated: `2026-07-28` · `omarchy plugin add AyushKr2003/omarchy-overview --enable`
 
 <details>
-<summary><b>🐣 New & Emerging Appearance (146 plugins · 0–2 ⭐)</b></summary>
+<summary><b>🐣 New & Emerging Appearance (145 plugins · 0–2 ⭐)</b></summary>
 
 - **[omarchy-menubar-manager](https://github.com/kevclarkco/omarchy-menubar-manager)** : Bartender/Ice-style manager for the Omarchy bar: collapse other bar widgets into a hover-to-reveal drawer
-  - ⭐ **2** · 🍴 2 · Last updated: `2026-09-10` · `omarchy plugin add kevclarkco/omarchy-menubar-manager --enable`
+  - ⭐ **2** · 🍴 2 · Last updated: `2026-09-11` · `omarchy plugin add kevclarkco/omarchy-menubar-manager --enable`
+- **[hyprtile.equalizer](https://github.com/davidhbigelow/hyprtile.equalizer)** : Omarchy plugin.
+  - ⭐ **1** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add davidhbigelow/hyprtile.equalizer --enable`
+- **[omarchy-oligarchy-quickshell-lockscreen](https://github.com/thetxeagle/omarchy-oligarchy-quickshell-lockscreen)** : Omarchy plugin.
+  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-11` · `omarchy plugin add thetxeagle/omarchy-oligarchy-quickshell-lockscreen --enable`
+- **[Wallpaper-Engine-Omarchy](https://github.com/14brussell/Wallpaper-Engine-Omarchy)** : Steam Wallpaper Engine backgrounds for Omarchy and Hyprland, with per-display Quickshell controls.
+  - ⭐ **1** · 🍴 1 · Last updated: `2026-09-10` · `omarchy plugin add 14brussell/Wallpaper-Engine-Omarchy --enable`
 - **[omarchy_wled](https://github.com/chameleonbr/omarchy_wled)** : Omarchy Quattro WLED control
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-10` · `omarchy plugin add chameleonbr/omarchy_wled --enable`
 - **[bing-wallpaper-for-omarchy](https://github.com/odessa2/bing-wallpaper-for-omarchy)** : Omarchy Quattro plugin for automatically setting daily bing wallpaper
   - ⭐ **0** · 🍴 1 · Last updated: `2026-09-10` · `omarchy plugin add odessa2/bing-wallpaper-for-omarchy --enable`
+- **[omarchy-auto-dark-mode-plugin](https://github.com/digitalfrost84/omarchy-auto-dark-mode-plugin)** : Automatically switch Omarchy themes at local dawn and dusk.
+  - ⭐ **0** · 🍴 1 · Last updated: `2026-09-10` · `omarchy plugin add digitalfrost84/omarchy-auto-dark-mode-plugin --enable`
 - **[omarchy-empty-gap](https://github.com/syaifulmain/omarchy-empty-gap)** : Omarchy shell plugin: reserve a damaged screen edge with an empty strip (Quickshell)
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-10` · `omarchy plugin add syaifulmain/omarchy-empty-gap --enable`
-- **[omarchy-auto-dark-mode-plugin](https://github.com/digitalfrost84/omarchy-auto-dark-mode-plugin)** : Automatically switch Omarchy themes at local dawn and dusk.
-  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-10` · `omarchy plugin add digitalfrost84/omarchy-auto-dark-mode-plugin --enable`
+- **[omarchy-follow-your-team](https://github.com/paulohenrique000/omarchy-follow-your-team)** : An Omarchy bar widget for up to four teams, live scores, recent results, and fixtures.
+  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-10` · `omarchy plugin add paulohenrique000/omarchy-follow-your-team --enable`
+- **[omarchy-matrix-rain](https://github.com/nzkritik/omarchy-matrix-rain)** : Live matrix rain wallpaper that follows your Omarchy theme, plus looping video and animated GIF wallpapers
+  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-10` · `omarchy plugin add nzkritik/omarchy-matrix-rain --enable`
 - **[glassbar](https://github.com/guiestrela/glassbar)** : Omarchy plugin.
   - ⭐ **2** · 🍴 0 · Last updated: `2026-09-09` · `omarchy plugin add guiestrela/glassbar --enable`
 - **[omarchy-theme-forge](https://github.com/kairos-tech-oh/omarchy-theme-forge)** : Design an Omarchy theme in a real tiled window, with a live mock-desktop preview, a contrast-solved palette roller, and palette extraction from a wallpaper.
@@ -4881,15 +4893,13 @@
 - **[omarchy-horizon](https://github.com/owainharris/omarchy-span-wallpaper)** : Span one wallpaper continuously across selected monitors in Omarchy
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-09` · `omarchy plugin add owainharris/omarchy-span-wallpaper --enable`
 - **[omarchy-mxcontrol](https://github.com/zachwilke/omarchy-mxcontrol)** : Control your Logitech MX Devices on Omarchy
-  - ⭐ **2** · 🍴 2 · Last updated: `2026-09-08` · `omarchy plugin add zachwilke/omarchy-mxcontrol --enable`
+  - ⭐ **2** · 🍴 3 · Last updated: `2026-09-08` · `omarchy plugin add zachwilke/omarchy-mxcontrol --enable`
 - **[omarchy-shell-font](https://github.com/skuthus/omarchy-shell-font)** : Choose the Omarchy Quickshell font family and weight. Survives shell updates.
   - ⭐ **2** · 🍴 0 · Last updated: `2026-09-08` · `omarchy plugin add skuthus/omarchy-shell-font --enable`
 - **[omarchy-before-sunset](https://github.com/priard/omarchy-before-sunset)** : Follow the sun: one Omarchy theme through the day, another through the night, each with its own wallpaper, bar transparency and night light.
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-08` · `omarchy plugin add priard/omarchy-before-sunset --enable`
 - **[omarchy-grid-wallpaper-picker](https://github.com/rblalock/omarchy-grid-wallpaper-picker)** : Grid wallpaper picker for Omarchy themes, backgrounds, and a 3000+ theme gallery.
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-08` · `omarchy plugin add rblalock/omarchy-grid-wallpaper-picker --enable`
-- **[omarchy-oligarchy-quickshell-lockscreen](https://github.com/thetxeagle/omarchy-oligarchy-quickshell-lockscreen)** : Omarchy plugin.
-  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-08` · `omarchy plugin add thetxeagle/omarchy-oligarchy-quickshell-lockscreen --enable`
 - **[omarchy-theme-sync](https://github.com/geoochi/omarchy-theme-sync)** : Switch between a light and a dark Omarchy theme on a local-time schedule.
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-08` · `omarchy plugin add geoochi/omarchy-theme-sync --enable`
 - **[omarchy-dream-of-the-red-chamber-petals](https://github.com/beijingrong/omarchy-dream-of-the-red-chamber-petals)** : Falling chrysanthemum petals for opt-in Omarchy themes
@@ -4902,20 +4912,14 @@
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-07` · `omarchy plugin add parker-brown-family/omarchy-td-palette --enable`
 - **[Omachy-Pixels](https://github.com/plasticcupgames/Omachy-Pixels)** : An offline pixel-art space battle for the Omarchy desktop.
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-07` · `omarchy plugin add plasticcupgames/Omachy-Pixels --enable`
-- **[hyprtile.equalizer](https://github.com/davidhbigelow/hyprtile.equalizer)** : Omarchy plugin.
-  - ⭐ **1** · 🍴 0 · Last updated: `2026-09-06` · `omarchy plugin add davidhbigelow/hyprtile.equalizer --enable`
 - **[omarchy-lock-screen](https://github.com/iamcheyan/omarchy-lock-screen)** : Native Omarchy Lock Screen with the original interface, avatar fallback, status controls, and screenshot action.
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-06` · `omarchy plugin add iamcheyan/omarchy-lock-screen --enable`
 - **[omarchy-custom-bar](https://github.com/josejaguirre/omarchy-custom-bar)** : Omarchy plugin.
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-06` · `omarchy plugin add josejaguirre/omarchy-custom-bar --enable`
-- **[omarchy-matrix-rain](https://github.com/nzkritik/omarchy-matrix-rain)** : Live matrix rain wallpaper that follows your Omarchy theme, plus looping video and animated GIF wallpapers
-  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-06` · `omarchy plugin add nzkritik/omarchy-matrix-rain --enable`
 - **[lumen](https://github.com/delay/lumen)** : Plugin for changing display temperature, saturation and brightness in Omarchy.
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-05` · `omarchy plugin add delay/lumen --enable`
 - **[omarchy-sigil](https://github.com/Bert0424/omarchy-sigil)** : A coat of arms for your machine and no other — an Omarchy bar widget that draws a heraldic badge from your hardware, reads it back in plain English, and can engrave it into the About panel.
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-05` · `omarchy plugin add Bert0424/omarchy-sigil --enable`
-- **[omarchy-follow-your-team](https://github.com/paulohenrique000/omarchy-follow-your-team)** : An Omarchy bar widget for up to four teams, live scores, recent results, and fixtures.
-  - ⭐ **0** · 🍴 0 · Last updated: `2026-09-05` · `omarchy plugin add paulohenrique000/omarchy-follow-your-team --enable`
 - **[terminal-theme-studio](https://github.com/0-CYBERDYNE-SYSTEMS-0/terminal-theme-studio)** : GTK4 terminal palette studio for Foot on Omarchy — with one-click export to Alacritty, Ghostty, Kitty, WezTerm, and any other terminal. Installable as an Omarchy shell plugin.
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-05` · `omarchy plugin add 0-CYBERDYNE-SYSTEMS-0/terminal-theme-studio --enable`
 - **[cursor-theme-manager](https://github.com/sanjyay/cursor-theme-manager)** : Omarchy plugin.
@@ -4954,8 +4958,6 @@
   - ⭐ **0** · 🍴 0 · Last updated: `2026-09-03` · `omarchy plugin add closetheloop-dev/token-fish --enable`
 - **[omarchy-animated-backgrounds](https://github.com/ivanskodje/omarchy-animated-backgrounds)** : Omarchy plugin.
   - ⭐ **2** · 🍴 1 · Last updated: `2026-09-02` · `omarchy plugin add ivanskodje/omarchy-animated-backgrounds --enable`
-- **[Wallpaper-Engine-Omarchy](https://github.com/14brussell/Wallpaper-Engine-Omarchy)** : Steam Wallpaper Engine backgrounds for Omarchy and Hyprland, with per-display Quickshell controls.
-  - ⭐ **1** · 🍴 1 · Last updated: `2026-09-02` · `omarchy plugin add 14brussell/Wallpaper-Engine-Omarchy --enable`
 - **[omarcharium](https://github.com/DailenG/omarcharium)** : A living TTE-inspired tropical aquarium screensaver for Omarchy
   - ⭐ **1** · 🍴 1 · Last updated: `2026-09-02` · `omarchy plugin add DailenG/omarcharium --enable`
 - **[omarchy-themeflow](https://github.com/phuclh/omarchy-themeflow)** : Automatic day/night themes and wallpaper rotation for Omarchy
@@ -5128,8 +5130,6 @@
   - ⭐ **0** · 🍴 0 · Last updated: `2026-08-18` · `omarchy plugin add Deoxizn/BarDisplay --enable`
 - **[omarchy-coingecko](https://github.com/hegjon/omarchy-coingecko)** : CoinGecko cryptocurrency price ticker for the Omarchy bar
   - ⭐ **0** · 🍴 0 · Last updated: `2026-08-18` · `omarchy plugin add hegjon/omarchy-coingecko --enable`
-- **[omarchy-aether-wallpapers](https://github.com/smillunchick/omarchy-aether-wallpapers)** : Browse 4K omarchy-themes wallpapers and apply the matching Aether theme from the Omarchy bar
-  - ⭐ **2** · 🍴 0 · Last updated: `2026-08-17` · `omarchy plugin add smillunchick/omarchy-aether-wallpapers --enable`
 - **[omarchy-theme-scheduler](https://github.com/acrogenesis/omarchy-theme-scheduler)** : Automatically switch between light and dark Omarchy themes on a daily schedule.
   - ⭐ **1** · 🍴 2 · Last updated: `2026-08-17` · `omarchy plugin add acrogenesis/omarchy-theme-scheduler --enable`
 - **[omarchy-theme-roulette](https://github.com/haydenmckay/omarchy-theme-roulette)** : Omarchy plugin.
@@ -5153,6 +5153,8 @@
 
 ### Other
 
+- **[canon](https://github.com/RamenPacket84/canon)** : Omarchy plugin.
+  - ⭐ **5** · 🍴 3 · Last updated: `2026-09-11` · `omarchy plugin add RamenPacket84/canon --enable`
 - **[equalizer](https://github.com/ParvvOK/equalizer)** : Omarchy plugin.
   - ⭐ **5** · 🍴 0 · Last updated: `2026-09-09` · `omarchy plugin add ParvvOK/equalizer --enable`
 - **[omarchy-ytdl](https://github.com/BibekBhusal0/omarchy-ytdl)** : Download videos from YouTube and other sites via yt-dlp with parallel downloads and a persistent history.
@@ -5160,21 +5162,21 @@
 - **[keycade](https://github.com/luneth90/keycade)** : A shortcut recall arcade for Omarchy, herdr, tmux, Vim, Neovim and LazyVim — six cabinets, each with its own deck, progress and mastery.
   - ⭐ **7** · 🍴 1 · Last updated: `2026-09-05` · `omarchy plugin add luneth90/keycade --enable`
 - **[omagotchi](https://github.com/SLcode777/omagotchi)** : A 1-bit desktop pet for Omarchy: it lives in your bar, grows up, roams your screen and climbs your windows
-  - ⭐ **17** · 🍴 6 · Last updated: `2026-09-03` · `omarchy plugin add SLcode777/omagotchi --enable`
+  - ⭐ **18** · 🍴 6 · Last updated: `2026-09-03` · `omarchy plugin add SLcode777/omagotchi --enable`
 - **[omARR](https://github.com/luccast/omARR)** : The Omarchy Arr stack plugin for homelabs in the Omarchy bar, with live Sonarr, Radarr, SABnzbd, and qBittorrent controls and notifications.
   - ⭐ **3** · 🍴 2 · Last updated: `2026-09-02` · `omarchy plugin add luccast/omARR --enable`
 - **[omarchy-yt-dlp-plugin](https://github.com/AlexZeitler/omarchy-yt-dlp-plugin)** : A download queue for yt-dlp in the Omarchy bar. Paste a link, pick video or audio, and watch the queue work through it.
   - ⭐ **7** · 🍴 0 · Last updated: `2026-08-27` · `omarchy plugin add AlexZeitler/omarchy-yt-dlp-plugin --enable`
 - **[omalibre](https://github.com/AlexZeitler/omalibre)** : The AI native bookshelf for Omarchy
   - ⭐ **23** · 🍴 2 · Last updated: `2026-08-23` · `omarchy plugin add AlexZeitler/omalibre --enable`
-- **[canon](https://github.com/RamenPacket84/canon)** : Omarchy plugin.
-  - ⭐ **5** · 🍴 2 · Last updated: `2026-08-22` · `omarchy plugin add RamenPacket84/canon --enable`
 - **[omarchy-my-tetris](https://github.com/Ycaro-Oleg/omarchy-my-tetris)** : Omarchy plugin.
   - ⭐ **7** · 🍴 2 · Last updated: `2026-08-16` · `omarchy plugin add Ycaro-Oleg/omarchy-my-tetris --enable`
 
 <details>
 <summary><b>🐣 New & Emerging Other (58 plugins · 0–2 ⭐)</b></summary>
 
+- **[omarchy-plugin-rpgdice](https://github.com/crueber/omarchy-plugin-rpgdice)** : Omarchy shell plugin: RPG dice roller (standard, Fate, and custom dice)
+  - ⭐ **1** · 🍴 1 · Last updated: `2026-09-11` · `omarchy plugin add crueber/omarchy-plugin-rpgdice --enable`
 - **[Solitaire](https://github.com/rohan-patnaik/Solitaire)** : An original offline collection of classic patience games for Omarchy Quattro
   - ⭐ **1** · 🍴 0 · Last updated: `2026-09-10` · `omarchy plugin add rohan-patnaik/Solitaire --enable`
 - **[rhythm-forge](https://github.com/itsVoid-TV/rhythm-forge)** : Turn music-video links into a one-key rhythm game for Omarchy
@@ -5249,8 +5251,6 @@
   - ⭐ **0** · 🍴 0 · Last updated: `2026-08-24` · `omarchy plugin add mic-kul/quakattro --enable`
 - **[omarchy-persona](https://github.com/ya-luotao/omarchy-persona)** : Take the Open Extended Jungian Type Scales test from your Omarchy bar: 32 questions fullscreen, scored by openjung.org's public API, with your type's rarity in their open dataset.
   - ⭐ **0** · 🍴 0 · Last updated: `2026-08-24` · `omarchy plugin add ya-luotao/omarchy-persona --enable`
-- **[omarchy-plugin-rpgdice](https://github.com/crueber/omarchy-plugin-rpgdice)** : Omarchy shell plugin: RPG dice roller (standard, Fate, and custom dice)
-  - ⭐ **1** · 🍴 1 · Last updated: `2026-08-23` · `omarchy plugin add crueber/omarchy-plugin-rpgdice --enable`
 - **[OmaDeezer](https://github.com/Deunnis/OmaDeezer)** : Deezer now-playing widget and popup player for Omarchy
   - ⭐ **0** · 🍴 0 · Last updated: `2026-08-23` · `omarchy plugin add Deunnis/OmaDeezer --enable`
 - **[omaraoke](https://github.com/igor-gorohovsky/omaraoke)** : Karaoke overlay for the Omarchy shell: synced lyrics on your wallpaper from one keybinding
